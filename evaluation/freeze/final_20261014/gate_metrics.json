@@ -1,0 +1,37 @@
+{
+  "schema_version": "final_adjudication_metrics_v1",
+  "status": "pending_nlp_adjudication",
+  "v1_total": 15,
+  "gate_counted": 14,
+  "gate_excluded_pending": 1,
+  "pending_review_ids": [
+    "V1_Optimized_Rules|comparison_transfer|2|https://openalex.org/W1888026739|31"
+  ],
+  "confusion_on_adjudicated_subset": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6
+  },
+  "gate_precision": 1.0,
+  "gate_precision_denominator": 8,
+  "gate_recall_final": null,
+  "gate_recall_reason": "NLP paper remains unadjudicated; do not report a final denominator or recall",
+  "irrelevant_evidence_rate": 0.0,
+  "irrelevant_evidence_numerator": 0,
+  "irrelevant_evidence_denominator": 8,
+  "ranking_status": "provisional_due_to_pending_nlp_relevance",
+  "v0_precision_at_5": 0.05,
+  "v0_ndcg_at_5": 0.10766913951834826,
+  "v1_precision_at_5_provisional": 0.7999999999999999,
+  "v1_ndcg_at_5_provisional": 0.8111268666151382,
+  "definitions": {
+    "relevance_threshold": 1,
+    "ranking_unit": "raw top-5 per branch; macro mean across 4 V0 / 3 V1 branches",
+    "gate_positive": "rule_status == Evidence Eligible",
+    "gate_reference": "human Evidence Generation yes/no, excluding pending adjudication",
+    "gate_precision_denominator": "TP+FP among system-admitted papers",
+    "gate_recall_denominator": "TP+FN after all pending labels are resolved",
+    "v0_gate": "N/A; no gate existed"
+  }
+}

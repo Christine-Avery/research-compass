@@ -1,0 +1,698 @@
+{
+  "schema_version": "day2_paired_v1",
+  "interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+  "intent": {
+    "original_interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+    "theme": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+    "approach": "",
+    "goal": "methods",
+    "constraints": "低数据量，安全性"
+  },
+  "planned": {
+    "branches": [
+      {
+        "key": "techniques",
+        "title": "技术路线",
+        "purpose": "比较这一主题中的不同技术或模型",
+        "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 algorithms models methods 低数据量，安全性"
+      },
+      {
+        "key": "evaluation",
+        "title": "评估与边界",
+        "purpose": "寻找评估条件、失败模式和局限",
+        "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 evaluation robustness limitations 低数据量，安全性"
+      }
+    ],
+    "search": {
+      "mode": "live",
+      "papers": [
+        {
+          "id": "https://openalex.org/W4255073332",
+          "title": "太阳风暴的日冕行星际过程三维数值研究进展",
+          "year": 2011,
+          "abstract": "如何能够提前几个小时到几天的时间预报空间天气不仅是空间天气研究的重要课题, 而且也是现代科技发展对空间天气预报的重大需求. 基于物理的以强大计算能力为基础的太阳风暴日冕行星际过程三维数值研究已经成为灾害性空间天气预报建模的重要手段,并在近几年取得了很大的发展. 本文聚焦于背景太阳风状态和太阳扰动事件在行星际空间传播的三维数值模型的发展状况, 总结现有基于物理的主要模型的算法特点及其研究成果,评述太阳风暴的日冕行星际过程三维数值研究在今后工作中应该关注的问题. 最后指出, 随日地空间探测发展和人们对日地空间天气基本物理过程了解的不断深入, 将更多观测和对新物理过程的认识融入数值预报模型, 建立由观测约束驱动的、快捷高效稳定的、高时空分辨率的日地空间天气全球耦合数值预报模型, 是发展未来空间天气数值预报模型研究的努力方向, 它将推动空间天气预报从客观分析向数值预报转变, 加速实现数值模型对太阳风暴的全程追踪, 初步满足人类对空间天气预报的需求.",
+          "source_url": "https://doi.org/10.1360/zd-2011-41-1-1",
+          "openalex_url": "https://openalex.org/W4255073332",
+          "doi": "https://doi.org/10.1360/zd-2011-41-1-1",
+          "found_by": [
+            "techniques"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7207844290",
+          "title": "美术死后怎样:亚文性与艺术事件的元语法",
+          "year": 2026,
+          "abstract": "《美术死后怎样:亚文性与艺术事件的元语法》从事件出发,以一套新视角为艺术建立了一种横跨文化、媒介的共同语法,让不同媒介、学科、文化与评论体系中的艺术判断能够彼此定位、比较和翻译,为游戏的作品本体、人工智能与人类创作等课题提供了新洞见。全书以事件(Gelimp)为基本单位,提出“亚文性”、“亚文体验”等概念,并赋予“艺术性”一词新的解读,尝试调和艺术的审美论与制度论、美学的唯实论与观念论这两组矛盾。 本书还在现有学科建设较为充分的西方艺术史中提出“三次艺术危机”叙事,引出八类亚文性与“十艺”艺术分类,这些工具的新视角为更加全球化、更加去西方中心化、去殖民化的艺术史重述提供方法基础。书末,作者以阿布拉莫维奇《韵律系列》与《我的世界》作为案例,在相差较为悬殊的两个尺度下对系统进行了压力测试,验证了这套语法的分析实践能力。 When Art Fails to Be Fine: Arvincing, the Grammar of Art develops an event-based grammar for art across cultures and media. It provides a shared descriptive interface through which artistic judgments from different media, disciplines, cultures, and critical traditions can be located, compared, and translated, while offering new ways to approach questions such as the ontology of games and the changing relation between artificial intelligence and human creation. Taking the gelimp (event) as its basic unit, the book introduces concepts including “Arvincing”, “Arvincing Experience”, and “Artisity,” attempting to mediate two long-standing tensions: between aesthetic and institutional accounts of art, and between realist and idealist accounts of aesthetics. Taking the comparatively well-developed field of Western art history as a point of entry, the book proposes a narrative of three “crises of art,” from which it develops the Eight Modes of Arvincing and the Ten Arts taxonomy. The analytical tools developed through this account extend beyond Western art history, offering a foundation for more global and decolonial histories of art that no longer take the West as their default center. The book closes with Marina Abramović’s Rhythm Series and Minecraft as two cases at radically different scales, stress-testing the system and demonstrating the grammar’s practical analytical range.",
+          "source_url": "https://philpapers.org/rec/WURPRC",
+          "openalex_url": "https://openalex.org/W7207844290",
+          "doi": "https://doi.org/10.5281/zenodo.22261212",
+          "found_by": [
+            "techniques"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4405087897",
+          "title": "Research progress and trends on models and structures of cognitive machines",
+          "year": 2024,
+          "abstract": "机器如何与人一样具有认知能力？认知能力可用智能度量，人的智能是认知过程的涌现，人们从认知的模型出发研究其结构，结构决定机器的认知功能。本文旨在探讨机器认知的模型和构建方法，为设计新一代认知机器提供新的模型、结构和方法论。本文用分析、归纳和演绎的方法综述认知机器模型和结构的起源、演进与发展趋势。首先，从20世纪初计算机器的发明和DNA双螺旋结构模型的发现谈起，阐述了“图灵机模型 + 冯·诺依曼结构”划时代意义的科学研究成果的形成，这一模型和结构催生了通用计算机器的发明，并对计算机科学与技术等新学科的形成起到奠基作用；此后，图灵的天问“机器能思维吗”及 “图灵测试”对后来创立人工智能有重大启示和影响；然后评述近20年来 “深度学习模型 + 卷积神经网络结构”以及 “大语言模型 + 转换器结构”等的里程碑式进展和存在的问题；在最新进展部分综述当前国内外有代表性的3位科学家提出的模型和结构：“世界模型”、“空间智能”和“四要素说”，特别是以“四要素说”为基础的认知物理学，为人的认知和机器认知提供了统一的理论框架，构成了机器认知的4种基本模式——认知螺旋模型和OOXA结构链，讨论了认知核、洋葱模型和负熵概念，以驾驶脑认知为案例进行具身智能的实验验证；最后，展望了本领域未来研究和发展趋势。模型定义了机器认知的约束边界，结构决定认知机器的涌现性，通过模型 + 结构的研究方法和评价，为探索“人和机器认知的机制”和解决“机器如何认知”这样的人工智能发展的重大问题提供了一种新研究视角、路径和范式。",
+          "source_url": "https://doi.org/10.11834/jig.240108",
+          "openalex_url": "https://openalex.org/W4405087897",
+          "doi": "https://doi.org/10.11834/jig.240108",
+          "found_by": [
+            "techniques"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4247993644",
+          "title": "Intelligent Monitoring and Control Technology of Cutting Chatter",
+          "year": 2020,
+          "abstract": "摘要： 切削加工颤振智能监控技术是智能机床中不可或缺的一部分，是智能加工的一个重要发展方向。它对于提高零件的加工精度与效率，增加企业的运营绩效具有重要的意义。以传感器的选择、特征提取、颤振识别和颤振抑制为主线，系统的综述了切削加工过程中颤振智能监控的研究进展。分析颤振信号的选择和时域、频域、时频域以及特征自适应智能提取的特征提取方法；分析神经网络、支持向量机、隐马尔科夫模型、混合模型和在线智能进化模型在颤振识别中的应用；着重分析基于主轴转速调整的颤振智能控制方法。在此基础上，对切削加工颤振智能监控的研究难点进行了分析，并总结了目前存在的问题。最后，对切削加工颤振智能监控技术今后的发展趋势进行了展望。",
+          "source_url": "https://doi.org/10.3901/jme.2020.24.001",
+          "openalex_url": "https://openalex.org/W4247993644",
+          "doi": "https://doi.org/10.3901/jme.2020.24.001",
+          "found_by": [
+            "techniques"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4417478872",
+          "title": "Interpretable Network Construction for Intelligent Monitoring and Diagnosis,and Application in Inter-shaft Bearing Diagnosis While Aero-engine Test",
+          "year": 2024,
+          "abstract": "摘要： 航空发动机故障预测与健康管理是提高航空发动机安全性、可靠性以及经济可承受性的关键技术。基于深度学习的人工智能方法在机械故障诊断领域受到广泛关注并开展了深入研究，但现有深度学习“黑箱算法”的现状仍然存在模型可解释性差、理论基础薄弱等问题。针对航空发动机健康管理与智能运维的迫切需求，提出航空发动机可解释性智能监测诊断网络，并在某型涡扇发动机整机长试试验中验证了异常检测与中介轴承故障诊断的有效性。将发动机振动信号先验信息融入稀疏表示模型，对模型的迭代求解算法进行展开得到结构具有可解释性的核心网络；针对航空发动机异常检测与智能诊断任务构造了基于对抗训练框架的可解释性异常检测子网络和基于特征提取框架的可解释性故障诊断子网络。本文提出的基于迭代算法展开的网络构造框架具备明确的理论基础，即网络设计有依据；稀疏表示模型驱动的可视化方法能够检验网络是否学到了与发动机故障相符的有意义的特征，即学习结果可信任。最后，通过某型涡扇发动机整机长试试验积累的超过500小时的试车数据，验证了本文提出的模型驱动的可解释性智能监测诊断网络在航空发动机异常检测与中介轴承故障诊断方面的有效性与可靠性。",
+          "source_url": "https://doi.org/10.3901/jme.2024.12.090",
+          "openalex_url": "https://openalex.org/W4417478872",
+          "doi": "https://doi.org/10.3901/jme.2024.12.090",
+          "found_by": [
+            "techniques"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4416399009",
+          "title": "A survey on adversarial attacks on community detection in complex networks",
+          "year": 2025,
+          "abstract": "随着复杂网络分析技术的快速发展，社群检测技术在挖掘网络结构特征的同时也引发了隐私泄露风险. 因此，社群检测的对抗攻击技术应运而生，其旨在通过有限预算下的网络扰动隐藏真实社群，保护数据安全. 本文首先介绍了社群检测对抗攻击研究的背景，提出社群隐藏问题的统一建模框架，并汇总了常用的数据集信息. 随后，综述了社群隐藏效果评估的度量指标及相关方法，创新性地将现有方法分为全局社群隐藏、目标社群隐藏及灵活社群隐藏3大类，梳理分析了不同算法的核心思想、技术优势及局限性，并进行了归纳总结. 最后，结合我们自身在社群隐藏方面的研究基础，对该领域的研究动机、难点问题及未来研究方向进行了探索与讨论.",
+          "source_url": "https://doi.org/10.1360/ssi-2025-0354",
+          "openalex_url": "https://openalex.org/W4416399009",
+          "doi": "https://doi.org/10.1360/ssi-2025-0354",
+          "found_by": [
+            "evaluation"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4387753693",
+          "title": "人工智能伦理计算",
+          "year": 2023,
+          "abstract": "AI research has encountered significant ethical debates since its inception as a research discipline aiming to investigate, emulate, and augment human intelligence. The rapid progress in AI technology and the burgeoning proliferation of its technical applications has underscored the urgent and immediate necessity for the implementation of effective ethical governance in AI research. Despite significant efforts dedicated to ethical governance theory, there remains a lack of efficient practical methods due to the abstract nature of ethical theory. This study proposes AI ethical computation as a prospective approach to bridging the disconnect between ethical theory and ethical practice, providing a pathway to synchronize ethical principles with concrete applications. Based on its practical necessity and potential for development, the importance of ethical computation is clarified. Simultaneously, two paradigms of ethical computation methods for artificial intelligence are established based on the degree of ethical awareness and the autonomy of ethical decision-making as classification criteria. Through the abstraction of these paradigms, the study introduces three computation levels: ethical metrics, ethical inference, and ethical decision-making. Moreover, this study exemplifies ethical embedding and fair machine learning as instances to elucidate the characteristics and technical methods of the two research paradigms. The study concludes by presenting the construction of an ethical governance system and offering an outlook on the development of ethical computation.",
+          "source_url": "http://dx.doi.org/10.1360/ssi-2023-0076",
+          "openalex_url": "https://openalex.org/W4387753693",
+          "doi": "https://doi.org/10.1360/ssi-2023-0076",
+          "found_by": [
+            "evaluation"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7154539217",
+          "title": "C-ReD: A Comprehensive Chinese Benchmark for AI-Generated Text Detection Derived from Real-World Prompts",
+          "year": 2026,
+          "abstract": "Recently, large language models (LLMs) are capable of generating highly fluent textual content. While they offer significant convenience to humans, they also introduce various risks, like phishing and academic dishonesty. Numerous research efforts have been dedicated to developing algorithms for detecting AI-generated text and constructing relevant datasets. However, in the domain of Chinese corpora, challenges remain, including limited model diversity and data homogeneity. To address these issues, we propose C-ReD: a comprehensive Chinese Real-prompt AI-generated Detection benchmark. Experiments demonstrate that C-ReD not only enables reliable in-domain detection but also supports strong generalization to unseen LLMs and external Chinese datasets-addressing critical gaps in model diversity, domain coverage, and prompt realism that have limited prior Chinese detection benchmarks. We release our resources at https://github.com/HeraldofLight/C-ReD.",
+          "source_url": "https://arxiv.org/abs/2604.11796",
+          "openalex_url": "https://openalex.org/W7154539217",
+          "doi": null,
+          "found_by": [
+            "evaluation"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7166879896",
+          "title": "C-ReD: A Comprehensive Chinese Benchmark for AI-Generated Text Detection Derived from Real-World Prompts",
+          "year": 2026,
+          "abstract": "Recently, large language models (LLMs) are capable of generating highly fluent textual content.While they offer significant convenience to humans, they also introduce various risks, like phishing and academic dishonesty.Numerous research efforts have been dedicated to developing algorithms for detecting AI-generated text and constructing relevant datasets.However, in the domain of Chinese corpora, challenges remain, including limited model diversity and data homogeneity.To address these issues, we propose C-ReD: a comprehensive Chinese Real-prompt AI-generated text Detection benchmark.Experiments demonstrate that C-ReD not only enables reliable in-domain detection but also supports strong generalization to unseen LLMs and external Chinese datasets-addressing critical gaps in model diversity, domain coverage, and prompt realism that have limited prior Chinese detection benchmarks.We release our resources at https://github.com/ HeraldofLight/C-ReD.",
+          "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.2119",
+          "openalex_url": "https://openalex.org/W7166879896",
+          "doi": "https://doi.org/10.18653/v1/2026.findings-acl.2119",
+          "found_by": [
+            "evaluation"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7167614847",
+          "title": "Government AI Use as a Monitoring Primitive: A Public Document Pilot Study",
+          "year": 2026,
+          "abstract": "Governments are important actors in frontier AI governance, but many facts about their adoption and use of AI systems are difficult to observe directly. Procurement disclosures and official statements are useful, but can also be delayed, selective, and better suited to measuring formal adoption than actual day-to-day use. We propose a complementary monitoring primitive: measuring traces of language-model assistance in public government documents. The approach is lightweight, externally reproducible, and based on revealed behavior rather than stated intent. In a pilot study of ten public document streams from U.S. and PRC government-related sources, we find that, while 2021 baselines are consistently near zero, by 2026, four of our ten sources show statistically significant signs of AI-assisted writing. In our sample, the U.S. signal concentrates in publications downstream of policy work; the PRC signal concentrates closer to it. We close by discussing how this signal could complement existing instruments for monitoring government AI adoption, and where it falls short.",
+          "source_url": "https://arxiv.org/abs/2607.04543",
+          "openalex_url": "https://openalex.org/W7167614847",
+          "doi": "https://doi.org/10.48550/arxiv.2607.04543",
+          "found_by": [
+            "evaluation"
+          ],
+          "is_demo": false
+        }
+      ],
+      "queries": [
+        {
+          "branch_key": "techniques",
+          "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 algorithms models methods 低数据量，安全性",
+          "returned_ids": [
+            "https://openalex.org/W4255073332",
+            "https://openalex.org/W7207844290",
+            "https://openalex.org/W4405087897",
+            "https://openalex.org/W4247993644",
+            "https://openalex.org/W4417478872"
+          ],
+          "error": null,
+          "ranked_results": [
+            {
+              "rank": 1,
+              "paper_id": "https://openalex.org/W4255073332"
+            },
+            {
+              "rank": 2,
+              "paper_id": "https://openalex.org/W7207844290"
+            },
+            {
+              "rank": 3,
+              "paper_id": "https://openalex.org/W4405087897"
+            },
+            {
+              "rank": 4,
+              "paper_id": "https://openalex.org/W4247993644"
+            },
+            {
+              "rank": 5,
+              "paper_id": "https://openalex.org/W4417478872"
+            }
+          ]
+        },
+        {
+          "branch_key": "evaluation",
+          "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 evaluation robustness limitations 低数据量，安全性",
+          "returned_ids": [
+            "https://openalex.org/W4416399009",
+            "https://openalex.org/W4387753693",
+            "https://openalex.org/W7154539217",
+            "https://openalex.org/W7166879896",
+            "https://openalex.org/W7167614847"
+          ],
+          "error": null,
+          "ranked_results": [
+            {
+              "rank": 1,
+              "paper_id": "https://openalex.org/W4416399009"
+            },
+            {
+              "rank": 2,
+              "paper_id": "https://openalex.org/W4387753693"
+            },
+            {
+              "rank": 3,
+              "paper_id": "https://openalex.org/W7154539217"
+            },
+            {
+              "rank": 4,
+              "paper_id": "https://openalex.org/W7166879896"
+            },
+            {
+              "rank": 5,
+              "paper_id": "https://openalex.org/W7167614847"
+            }
+          ]
+        }
+      ],
+      "retrieved_at": "2026-10-13T17:23:29.080143+00:00",
+      "notice": null
+    },
+    "generation": {
+      "method": "extractive_rules_v1",
+      "scope": "仅覆盖本轮 OpenAlex 检索到的摘要；不是系统性综述或全文核验。",
+      "landscape": [
+        {
+          "branch_key": "techniques",
+          "branch_title": "技术路线",
+          "paper_ids": [
+            "https://openalex.org/W4255073332",
+            "https://openalex.org/W7207844290",
+            "https://openalex.org/W4405087897",
+            "https://openalex.org/W4247993644",
+            "https://openalex.org/W4417478872"
+          ],
+          "representative_titles": [
+            "太阳风暴的日冕行星际过程三维数值研究进展",
+            "美术死后怎样:亚文性与艺术事件的元语法"
+          ]
+        },
+        {
+          "branch_key": "evaluation",
+          "branch_title": "评估与边界",
+          "paper_ids": [
+            "https://openalex.org/W4416399009",
+            "https://openalex.org/W4387753693",
+            "https://openalex.org/W7154539217",
+            "https://openalex.org/W7166879896",
+            "https://openalex.org/W7167614847"
+          ],
+          "representative_titles": [
+            "A survey on adversarial attacks on community detection in complex networks",
+            "人工智能伦理计算"
+          ]
+        }
+      ],
+      "current_work": [
+        {
+          "kind": "current_work",
+          "quote": "This study proposes AI ethical computation as a prospective approach to bridging the disconnect between ethical theory and ethical practice, providing a pathway to synchronize ethical principles with concrete applications.",
+          "paper_id": "https://openalex.org/W4387753693",
+          "paper_title": "人工智能伦理计算",
+          "source_url": "http://dx.doi.org/10.1360/ssi-2023-0076",
+          "openalex_url": "https://openalex.org/W4387753693",
+          "branch_keys": [
+            "evaluation"
+          ]
+        },
+        {
+          "kind": "current_work",
+          "quote": "To address these issues, we propose C-ReD: a comprehensive Chinese Real-prompt AI-generated Detection benchmark.",
+          "paper_id": "https://openalex.org/W7154539217",
+          "paper_title": "C-ReD: A Comprehensive Chinese Benchmark for AI-Generated Text Detection Derived from Real-World Prompts",
+          "source_url": "https://arxiv.org/abs/2604.11796",
+          "openalex_url": "https://openalex.org/W7154539217",
+          "branch_keys": [
+            "evaluation"
+          ]
+        },
+        {
+          "kind": "current_work",
+          "quote": "We propose a complementary monitoring primitive: measuring traces of language-model assistance in public government documents.",
+          "paper_id": "https://openalex.org/W7167614847",
+          "paper_title": "Government AI Use as a Monitoring Primitive: A Public Document Pilot Study",
+          "source_url": "https://arxiv.org/abs/2607.04543",
+          "openalex_url": "https://openalex.org/W7167614847",
+          "branch_keys": [
+            "evaluation"
+          ]
+        }
+      ],
+      "explicit_limitations": [
+        {
+          "kind": "explicit_limitation",
+          "quote": "《美术死后怎样:亚文性与艺术事件的元语法》从事件出发,以一套新视角为艺术建立了一种横跨文化、媒介的共同语法,让不同媒介、学科、文化与评论体系中的艺术判断能够彼此定位、比较和翻译,为游戏的作品本体、人工智能与人类创作等课题提供了新洞见。全书以事件(Gelimp)为基本单位,提出“亚文性”、“亚文体验”等概念,并赋予“艺术性”一词新的解读,尝试调和艺术的审美论与制度论、美学的唯实论与观念论这两组矛盾。 本书还在现有学科建设较为充分的西方艺术史中提出“三次艺术危机”叙事,引出八类亚文性与“十艺”艺术分类,这些工具的新视角为更加全球化、更加去西方中心化、去殖民化的艺术史重述提供方法基础。书末,作者以阿布拉莫维奇《韵律系列》与《我的世界》作为案例,在相差较为悬殊的两个尺度下对系统进行了压力测试,验证了这套语法的分析实践能力。 When Art Fails to Be Fine: Arvincing, the Grammar of Art develops an event-based grammar for art across cultures and media.",
+          "paper_id": "https://openalex.org/W7207844290",
+          "paper_title": "美术死后怎样:亚文性与艺术事件的元语法",
+          "source_url": "https://philpapers.org/rec/WURPRC",
+          "openalex_url": "https://openalex.org/W7207844290",
+          "branch_keys": [
+            "techniques"
+          ]
+        },
+        {
+          "kind": "explicit_limitation",
+          "quote": "Despite significant efforts dedicated to ethical governance theory, there remains a lack of efficient practical methods due to the abstract nature of ethical theory.",
+          "paper_id": "https://openalex.org/W4387753693",
+          "paper_title": "人工智能伦理计算",
+          "source_url": "http://dx.doi.org/10.1360/ssi-2023-0076",
+          "openalex_url": "https://openalex.org/W4387753693",
+          "branch_keys": [
+            "evaluation"
+          ]
+        }
+      ],
+      "candidate_questions": [
+        {
+          "text": "以《美术死后怎样:亚文性与艺术事件的元语法》讨论的问题为起点，在低数据量，安全性条件下，哪些神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究方法能缓解其摘要报告的局限，如何验证？",
+          "status": "inferred_unverified",
+          "rationale": "由单篇摘要启发的问题草案；所引文献只支持摘录内容，不证明研究空白。",
+          "evidence_paper_ids": [
+            "https://openalex.org/W7207844290"
+          ],
+          "verification_step": "扩大检索范围，追溯相关工作与全文，再定义对照实验和评价指标。"
+        },
+        {
+          "text": "以《人工智能伦理计算》讨论的问题为起点，在低数据量，安全性条件下，哪些神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究方法能缓解其摘要报告的局限，如何验证？",
+          "status": "inferred_unverified",
+          "rationale": "由单篇摘要启发的问题草案；所引文献只支持摘录内容，不证明研究空白。",
+          "evidence_paper_ids": [
+            "https://openalex.org/W4387753693"
+          ],
+          "verification_step": "扩大检索范围，追溯相关工作与全文，再定义对照实验和评价指标。"
+        }
+      ]
+    }
+  },
+  "baseline": {
+    "branches": [
+      {
+        "key": "overview",
+        "title": "整体了解",
+        "purpose": "先看这个领域正在研究什么",
+        "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性"
+      },
+      {
+        "key": "methods",
+        "title": "常见方法",
+        "purpose": "寻找常用方法和技术路线",
+        "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性 methods approaches"
+      },
+      {
+        "key": "applications",
+        "title": "应用场景",
+        "purpose": "寻找具体任务和使用场景",
+        "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性 applications"
+      },
+      {
+        "key": "challenges",
+        "title": "困难与局限",
+        "purpose": "寻找论文讨论的挑战，不据此断言研究空白",
+        "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性 challenges limitations"
+      }
+    ],
+    "search": {
+      "mode": "live",
+      "papers": [
+        {
+          "id": "https://openalex.org/W7151286858",
+          "title": "21世纪新一代人工神经网络—具身认知神经网络",
+          "year": 2026,
+          "abstract": "面向21世纪，为构建一种具有自适应结构、可解释、泛化强和能效高的人工神经网络（ANN），探索新一代ANN的基础理论、模型和架构。ANN从20世纪40年代首次提出，发展至今已80多年，并将延展至21世纪中叶。本文按五个维度特征将ANN划分成五个时代。当前，处在第四代ANN，其主要特征是数据拟合、深度学习、注意力机制和Transformer结构，以大语言模型为基础的ChatGPT为代表，通过了对话式图灵测试，但属于“黑箱”测试，并局限于离身智能的涌现。根源是基于规模扩展缩放定律的大语言模型本质上不对称性，缺乏对现实世界物理规律的理解，多模态、多形态输出智能呈锯齿型且能效低；而具身智能形态机器人的神经网络还缺少自主智能，只能按预设程序完成规定动作，ANN在离身智能和具身智能之间出现巨大鸿沟。为解决第四代ANN的这些重大缺陷，需要新的理论、模型和架构支撑。当前，围绕下一代ANN的发展方向和技术路线，出现了很多争论和分歧。本文追溯前四代ANN主流理论、模型和架构的发展，重点分析了几种第四代ANN及其增强版的特点，评述了面向第五代ANN的世界模型与联合嵌入预测架构、认知螺旋模型与智痕元胞网络架构。最后，以认知物理学理论和驾驶脑认知技术实践为基础，提出一种具有第五代ANN核心特征的具身认知物理神经网（E-CoPNN）轻量化架构。结论和意义：当今，构建面向21世纪的新一代ANN，在哲学上将从身心二元论转向具身知觉一元论；在理论上，将从20世纪的生物物理学拓展到21世纪的认知物理学；在模型上，将推动ANN研究范式从数据拟合转向结构重构；在应用上，将填补ANN发展中离身智能与具身智能的鸿沟；在代际上，将从第四代ANN跃升到具有类脑认知和自适应结构等特征的第五代ANN；并为实现会学习、自成长、自纠错、可交互的具身认知机器人广泛应用奠定基础，支撑认知为融合先导的四大科技“纳米-生物-信息-认知”（NBIC）聚合发展，提高人类智能能力，迎接认知革命。",
+          "source_url": "https://doi.org/10.11834/jig.260112",
+          "openalex_url": "https://openalex.org/W7151286858",
+          "doi": "https://doi.org/10.11834/jig.260112",
+          "found_by": [
+            "overview"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4244482171",
+          "title": "翻译操控论：从严复和鲁迅的翻译理论相关的例句实践看意识形态作用",
+          "year": 2006,
+          "abstract": "翻译行为一直伴随人类活动。翻译理论却往往是“一堆意见”。翻译操控论正是这样一个值得争论的命题。 本文以翻译研究的语言学转向、文化转向和史学转向为背景，以赫曼斯的翻译操控论为理论架构，研究翻译过程中的意识形态作用，以便于理解翻译过程中的译者主体作用或操控行为。 本文拾起严复和鲁迅的老话题，是希望每次阅读都创造出不同于以往的历史主义的关怀和方法，以便在现在和历史的对话中加深对过去的理解，从中演绎出新意，进而服务于将来。在翻译实践中，严复和鲁迅实施两种截然 不同的翻译操控。本文通过具体的文本比对和译界传统的追溯研究，解读多元因素作用下的翻译实践，回答了前人(例如梁实秋)尚未解决的鲁迅硬译的缘由，贯穿了翻译的操控历史和历史在操控中进化的主题，同时也疏理了操控阵营的理论要点。赫曼斯所代表的操控学派缘起于具有激进倾向的因素作用研究，同时又强调中立描述的稳健立场。这为该派开展翻译规范研究和尝试普遍适用的理论假设提供了转机。鉴于意识形态缺乏恒定值，造成特殊性的普遍存在和普遍性的假想性质，操控学派中的因素论锐气渐弱，规范研究却力度渐强。籍此，本文在以下几个方面做了积极的论证。一、意识形态有若干特征，其关键特征是一时之态。理解意识形态的这种动态变化有利于减少意识形态的一时失态，促进意识形态的相互宽容和相互借鉴。二、本文将翻译操控论施诸严复和鲁迅的个案，界定了“信、达、雅”的“游移性、不确 定性、隐喻性、延异性”，从而揭示了“信、达、雅”变量的可选性、指导翻译实践的方向性和译者自主把握尺度的灵活性。三、在翻译操控论形成之前就有翻译的操控实践。只是在翻译中，操控乏力有碍交流，操控过度就超出了翻译范畴，操控适当才能有利于思想交流。本文指出，译员不操控等于不作为，不利于文本的认知、解读和阐释。查翻译操控论的未来走向，规范研究将促使翻译操控论转变激进立场，或者至少可以由规范研究来把握操控的信度和效度。",
+          "source_url": "https://doi.org/10.14793/tran_etd.7",
+          "openalex_url": "https://openalex.org/W4244482171",
+          "doi": "https://doi.org/10.14793/tran_etd.7",
+          "found_by": [
+            "overview",
+            "methods",
+            "applications",
+            "challenges"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4255073332",
+          "title": "太阳风暴的日冕行星际过程三维数值研究进展",
+          "year": 2011,
+          "abstract": "如何能够提前几个小时到几天的时间预报空间天气不仅是空间天气研究的重要课题, 而且也是现代科技发展对空间天气预报的重大需求. 基于物理的以强大计算能力为基础的太阳风暴日冕行星际过程三维数值研究已经成为灾害性空间天气预报建模的重要手段,并在近几年取得了很大的发展. 本文聚焦于背景太阳风状态和太阳扰动事件在行星际空间传播的三维数值模型的发展状况, 总结现有基于物理的主要模型的算法特点及其研究成果,评述太阳风暴的日冕行星际过程三维数值研究在今后工作中应该关注的问题. 最后指出, 随日地空间探测发展和人们对日地空间天气基本物理过程了解的不断深入, 将更多观测和对新物理过程的认识融入数值预报模型, 建立由观测约束驱动的、快捷高效稳定的、高时空分辨率的日地空间天气全球耦合数值预报模型, 是发展未来空间天气数值预报模型研究的努力方向, 它将推动空间天气预报从客观分析向数值预报转变, 加速实现数值模型对太阳风暴的全程追踪, 初步满足人类对空间天气预报的需求.",
+          "source_url": "https://doi.org/10.1360/zd-2011-41-1-1",
+          "openalex_url": "https://openalex.org/W4255073332",
+          "doi": "https://doi.org/10.1360/zd-2011-41-1-1",
+          "found_by": [
+            "overview",
+            "applications"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4242765243",
+          "title": "大数据时代下信息管理科学领域的研究",
+          "year": 2019,
+          "abstract": "从信息管理的角度出发，介绍了在大数据时代下信息管理科学领域研究的热门应用与现状。文章分析了大数据应用和信息管理科学领域相结合产生的新变化，阐述了其对商务智能、信息分析和数据挖掘等方面的作用及影响。",
+          "source_url": "https://doi.org/10.18686/jsjxt.v1i1.113",
+          "openalex_url": "https://openalex.org/W4242765243",
+          "doi": "https://doi.org/10.18686/jsjxt.v1i1.113",
+          "found_by": [
+            "overview",
+            "methods",
+            "applications"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W3036907739",
+          "title": "史蒂文·平克的《思想的东西》回顾(2008年) (Review of The Stuff of Thought by Steven Pinker (2008)) (2019年修订版)",
+          "year": 2020,
+          "abstract": "我首先从哲学家(心理学家)路德维希·维特根斯坦的一些著名评论开始,因为平克与大多数人(由于我们进化的先天心理学的默认设置)分享了对心灵功能的某些偏见,以及因为维特根斯坦提供了独特而深刻的见解,了解语言、思想和现实(他认为或多或少是共性)在其他地方所没有的。本卷只提到维特根斯坦,这是最不幸的,因为他是最聪明和原始的语言分析家。 在最后一章中,他用柏拉图洞穴的著名比喻,完美地概括了这本书,概述了头脑(语言、思想、故意心理)——盲目自私的产物,只是通过自动利他主义来缓和。携带我们基因副本的亲戚(包容性健身)——自动工作,但试图以乐观的结局结束,给我们希望,我们仍然可以利用其巨大的能力进行合作,使世界成为一个体面的生活场所。 平克当然知道,但很少说,我们的心理被遗漏了比包括更多。在人类自然的窗口,被排除在外或给予最少的关注是数学和几何,音乐和声音,图像,事件和因果关系,本体论(类的东西或我们所知道的),大多数认识论(我们如何知道),处置(相信,思考,判断,打算等)和行动,神经递质和内生,精神状态(如,萨托里和启蒙,大脑刺激和记录,脑损伤和行为的故意心理学的其余部分缺陷和障碍,游戏和运动,决策理论(包括博弈论和行为经济学),动物行为(很少语言,但10亿年的共同遗传学)。许多关于有意心理学领域的书籍已经写好了。本书中的数据是描述,而不是说明为什么我们的大脑这样做或它是如何做到的解释。我们怎么知道用各种方式使用句子(即,知道它们的所有含义)？这是进化心理学,在更基本的水平运作——维特根斯坦最活跃的水平。人们对使用词语的背景关注甚少——这是维特根斯坦开创的舞台。 然而,这是一部经典作品,这些警告仍然值得一读。 那些希望从现代两个系统的观点来看为人类行为建立一个全面的最新框架的人,可以查阅我的书《路德维希的哲学、心理学、Min d和语言的逻辑结构》维特根斯坦和约翰·西尔的《第二部》(2019年)。那些对我更多的作品感兴趣的人可能会看到《会说话的猴子——一个末日星球上的哲学、心理学、科学、宗教和政治——文章和评论2006-2019年第3次(2019年)和自杀乌托邦幻想21篇世纪4日 (2019)",
+          "source_url": "https://philarchive.org/rec/STARO-3",
+          "openalex_url": "https://openalex.org/W3036907739",
+          "doi": null,
+          "found_by": [
+            "overview"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4251929020",
+          "title": "翻译研究的对话性路径 : 巴赫金思想与翻译研究",
+          "year": 2008,
+          "abstract": "翻译研究已经成为一门独立的学科，研究领域逐渐扩大，研究方法也在不 断完善；与此同时，巴赫金研究在世界范围内，也吸引了越来越多的目光和注 意力，为语言学、文学、文化研究、哲学等相关或相邻学科提供了丰富的理论 资源。在这样一个大背景下，本项研究采取了跨学科的研究模式，概念分析与个案研究相结合，力图说明巴赫金思想对翻译研究的适用性，在二者之间寻找理论挪用的契合点。 本文在回顾以往研究的基础上，提出了新的研究问题和假设，充分借鉴巴赫金思想，分析和解释与翻译相关的诸多问题和现象。本文提出从基于表述的主体间言语交际来看翻译过程，从杂语的角度来分析原文和译文，从声音的角 度来看译者的叙述在场及其主体性实现，从对话的角度来看翻译中涉及主体之间的主体间性，从声音和杂语的角度来思考翻译与身份认同的问题，从而对于我们理解翻译过程的实质、理解翻译过程的艰难、理解翻译中译者的主体性与翻译中的主体间性、理解翻译与身份认同的关系等等，试图提供可行的分析模 式和有意义的思考路径。在这个意义上来说，本项研究对于推进翻译研究具有一定的理论贡献。同时，本文借助文学翻译、电影字幕翻译等实际个案 (特别是台湾作家王祯和的长篇小说《玫瑰玫瑰我爱你》英语译本)，印证本文提出的分析模式的有效性和可行性。",
+          "source_url": "https://doi.org/10.14793/tran_etd.2",
+          "openalex_url": "https://openalex.org/W4251929020",
+          "doi": "https://doi.org/10.14793/tran_etd.2",
+          "found_by": [
+            "methods",
+            "applications"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7155595472",
+          "title": "中国家族企业职场排斥与职业经理人创新行为的关系研究 : 情绪耗竭的中介作用与离职倾向的调节作用",
+          "year": 2025,
+          "abstract": "随着社会经济的高速发展和商业竞争格局的不断变化，传统中国家族企业把所有权与经营权“两权合一”的管理模式将无法适应现代企业治理的要求，成为制约企业规模化发展的瓶颈。为此，许多中国家族企业借鉴西方家族企业“两权分离”的治理模式，希望通过引入职业经理人来实现家族治理与职业化管理相融合的创新变革。然而，家族企业特有的组织文化、权利与资源分配形式却制约着职业经理人的创新举措，各种排斥干扰使得变革无法持续，导致相关企业面临因职业治理难以为继而重返家族治理的尴尬局面。究其原因，职业经理人在应对家族企业职场排斥的过程中，额外消耗了大量的心理能量和个人资源，且无法通过正常工作社交获得补充和帮助，使其产生情绪耗竭。这种疲劳状态迫使职业经理人削减工作投入、降低创新意愿直至主动离职。为验证职场排斥对创新行为的影响机制，本文基于资源保存理论构建了包含中介和调节的研究模型，用以检验家族企业职场排斥对其职业经理人创新行为的消极影响。在将情绪耗竭作为中介变量以揭示职场排斥对创新行为作用机制的同时，引入离职倾向作为调节变量，用以检验其在研究路径中的调节作用。 本文应用文献研究法对职场排斥、创新行为、情绪耗竭、离职倾向四个主变量的定义和研究现状进行了梳理，并选定了理论框架与研究模型；在借鉴学术界具有良好信度和效度的成熟量表进行调查问卷设计后，使用问卷调查法收集研究所需的相关数据。问卷调查以中国内地不同省份家族企业中的职业经理人为对象，通过分阶段发放并回收电子问卷，最终获得有效样本数据284份。随后，利用信度和效度分析、验证性因子分析、相关性分析、层级回归分析和Bootstrap检验等多种统计方式，对四个变量间的关联关系和作用机制进行了逐一检验。根据统计数据结果，获得下列结论：（1）家族企业职场排斥与职业经理人创新行为负向关联；（2）职业经理人的情绪耗竭在职场排斥与其创新行为之间起完全中介作用；（3）职业经理人的离职倾向在其情绪耗竭对创新行为的负向影响中起正向调节作用。 本文经研究证实，职业经理人的创新行为受职场排斥和离职倾向的综合影响。我们发现，在家族企业职场排斥下，职业经理人的离职倾向不仅可以削弱情绪耗竭对创新行为的负面影响，还使其由负向转为正向影响，促使职业经理人的短期创新行为增加。文章以此建议，家族企业主应视职业经理人为合作伙伴，给予完整的知情和决策权，在保证职业经理人与企业快速融合的同时，推动符合企业利益的长期创新活动。当职业经理人因职场排斥而产生离职倾向，并选择忽视企业和股东利益进行短期利己创新时，家族企业不但要进行及时的干预和心理疏导，还要注意知识产权保护，防止创新投入和成果遭受损失，以期为中国家族企业的管理实践和创新发展提供借鉴。 With the changing and advancement of economy development and business competition, the ‘two-as-one’ management method of combing ownership and management power in traditional family business is not adapting to modern corporate governance, becoming the bottleneck that restricts the development of the business. Therefore, a number of Chinese family businesses have imported the governance of separation of ownership and control from their Western counterparties to achieve the reform of combing family ownership with professional management. However, the characteristic organizational culture and power and resource distribution of family business restricts managers’ innovative measures, ostracism is intervening and affecting the sustainability of managers’ reforms. Family businesses are in danger of reverting to their original family governance model if professional governance is absent. To investigate further, workplace ostracism over-consumed managers’ psychological energy and personal resources, managers can regain neither such energy nor help through their work and social interactions, causing emotional exhaustion. Such fatigue forces managers to reduce work inputs and their willingness to innovate, until finally resigning. In order to prove the mechanism of workplace ostracism on innovative activities, this piece of work constructed a mediation-moderation integration research model to test the negative influences on professional managers’ innovative activities from workplace ostracism in family businesses. Emotional exhaustion is deployed as a mediating variable to disclose the mechanism of how workplace ostracism affects innovative activities, while turnover intention is introduced as a moderating variable to test its moderation effect. This paper reviews the extant studies of the four main variables: workplace ostracism, innovative behavior, emotional exhaustion and turnover intention. It then selected a theoretical framework and research model. A questionnaire is designed referencing mature academic scales with good reliability and validity for data collection. The questionnaire respondents are professional managers in family businesses across different provinces in mainland China. After the distribution and collection of e-questionnaires, a valid sample of 284 is obtained. Multiple statistical methods were employed to test the correlation and mechanism between variables one after another. The statistical results obtained as following: 1. workplace ostracism in family business has a negative correlation with professional managers’ innovative behavior; 2. professional managers’ emotional exhaustion have the full mediation between workplace ostracism and their innovative behaviors; 3. professional managers’ turnover intentions positively moderate the effect of managers’ emotional exhaustions on their innovative behaviors. This research suggests that professional managers’ innovative behaviors are jointly affected by workplace ostracisms and turnover intentions. Under resistances like workplace ostracism, professional managers’ turnover intentions can reduce the negative influence that emotional exhaustion has on innovative behaviors and enhance managers’ innovative behaviors in a short run. This research therefore suggests that owners of the family businesses should see professional managers as business partners, providing them with full rights of information and rights of decision-making, to ensure professional managers can integrate into the business quickly and promote long term innovative behaviors that meet the interest of the business. If professional managers shown turnover intention caused by workplace ostracism while still conducting short term self-interested innovative activities that neglect business or shareholder interests, family businesses need to intervene immediately with psychological counselling. Meanwhile, they should pay attention to intellectual property protection to prevent losses related to innovative expenditure and violations on intellectual property rights. It’s hoped that findings of this work can provide references for the management practices and innovative development of Chinese family businesses.",
+          "source_url": "https://commons.ln.edu.hk/otd_tpg/61",
+          "openalex_url": "https://openalex.org/W7155595472",
+          "doi": null,
+          "found_by": [
+            "methods"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7207844290",
+          "title": "美术死后怎样:亚文性与艺术事件的元语法",
+          "year": 2026,
+          "abstract": "《美术死后怎样:亚文性与艺术事件的元语法》从事件出发,以一套新视角为艺术建立了一种横跨文化、媒介的共同语法,让不同媒介、学科、文化与评论体系中的艺术判断能够彼此定位、比较和翻译,为游戏的作品本体、人工智能与人类创作等课题提供了新洞见。全书以事件(Gelimp)为基本单位,提出“亚文性”、“亚文体验”等概念,并赋予“艺术性”一词新的解读,尝试调和艺术的审美论与制度论、美学的唯实论与观念论这两组矛盾。 本书还在现有学科建设较为充分的西方艺术史中提出“三次艺术危机”叙事,引出八类亚文性与“十艺”艺术分类,这些工具的新视角为更加全球化、更加去西方中心化、去殖民化的艺术史重述提供方法基础。书末,作者以阿布拉莫维奇《韵律系列》与《我的世界》作为案例,在相差较为悬殊的两个尺度下对系统进行了压力测试,验证了这套语法的分析实践能力。 When Art Fails to Be Fine: Arvincing, the Grammar of Art develops an event-based grammar for art across cultures and media. It provides a shared descriptive interface through which artistic judgments from different media, disciplines, cultures, and critical traditions can be located, compared, and translated, while offering new ways to approach questions such as the ontology of games and the changing relation between artificial intelligence and human creation. Taking the gelimp (event) as its basic unit, the book introduces concepts including “Arvincing”, “Arvincing Experience”, and “Artisity,” attempting to mediate two long-standing tensions: between aesthetic and institutional accounts of art, and between realist and idealist accounts of aesthetics. Taking the comparatively well-developed field of Western art history as a point of entry, the book proposes a narrative of three “crises of art,” from which it develops the Eight Modes of Arvincing and the Ten Arts taxonomy. The analytical tools developed through this account extend beyond Western art history, offering a foundation for more global and decolonial histories of art that no longer take the West as their default center. The book closes with Marina Abramović’s Rhythm Series and Minecraft as two cases at radically different scales, stress-testing the system and demonstrating the grammar’s practical analytical range.",
+          "source_url": "https://philpapers.org/rec/WURPRC",
+          "openalex_url": "https://openalex.org/W7207844290",
+          "doi": "https://doi.org/10.5281/zenodo.22261212",
+          "found_by": [
+            "methods"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7144276572",
+          "title": "对外词汇教学过程中的语词搭配与语块的问题研究",
+          "year": null,
+          "abstract": "する日本人学習者の場合、義務教育の段階で習得した常用漢字表にある 1,945 字＋α",
+          "source_url": "https://kansai-u.repo.nii.ac.jp/records/71",
+          "openalex_url": "https://openalex.org/W7144276572",
+          "doi": "https://doi.org/10.32286/00000058",
+          "found_by": [
+            "applications"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W7167299833",
+          "title": "太和说：生成存在论与实境分析论（The Discourse of Supreme Harmony: Generative Ontology and Situational Analysis）",
+          "year": null,
+          "abstract": "这是一部体系性的原创哲学著作。全书由内篇（古典文言）与外篇（现代学术论证）构成复调结构：内篇以“道体语法”让道体在概念的相互映照中自行显现，外篇以生成存在论与实境分析论为两大支柱，构建了从存在论、认知论到方法论、实践哲学的完整体系。 本书直面中国哲学现代化的根本困境——当线性命题思辨被视为唯一合法的哲学言说方式时，中国哲学中那些在思辨退场后直接显现的体证智慧便面临系统性的意义流失。为此，本书提出“自明性类型理论”，揭示实体性与功能性思辨在自我指涉处的必然碰壁，并论证“事件显现性自明”是人类认知中不可还原的独立维度；进而提出“道体语法”（网络化思辨），为“怎么说”的百年文体困境提供建设性方案。 在建构部分，本书以“朴器道德”双轴体系建立可操作的中观分析工具，以“场域结构差异”重新诊断内圣外王的千年断裂，以生成衰竭论解释王朝兴衰的深层逻辑，并以前沿AI伦理实验检验理论的可公共操作性。全书贯通形上与形下，融合中西哲学资源，是中国哲学从“格义”走向“创构”的一次系统性尝试。 （This is a systematic work of original philosophy, composed in a contrapuntal structure of classical Chinese Inner Chapters and modern analytical Outer Chapters. The Inner Chapters enact Dao-Grammar, allowing the ultimate Dao to disclose itself through the mutual illumination of concepts; the Outer Chapters construct a complete philosophical system spanning ontology, epistemology, methodology, and practical philosophy, anchored by Generative Ontology and Situational Analysis. The book confronts a fundamental predicament in the modernization of Chinese philosophy: when linear propositional speculation is treated as the sole legitimate mode of philosophical discourse, the distinctive wisdom of embodied realization—disclosed only when speculation withdraws—undergoes systematic loss of meaning. To address this, the work develops a Typology of Self-Evidence, revealing that both substantial and functional discursive thinking inevitably encounter structural impasse when turned upon themselves, and establishing event-manifestational self-evidence as an irreducible, independent dimension of human cognition. On this basis, it proposes Dao-Grammar as a constructive solution to the century-old stylistic dilemma of \"how to speak\" in Chinese philosophy. The book further constructs a meso-level analytical toolkit built on the dual-axis framework of Pu-Qi-Dao-De, re-diagnoses the millennium-old rupture between inner sageliness and outer kingliness through the lens of field-structural difference, explains the deep logic of dynastic rise and fall through the theory of generative exhaustion, and tests the theory's public operability through a cutting-edge AI ethics experiment. Integrating metaphysical depth with concrete application and drawing on both Chinese and Western philosophical resources, this work represents a systematic attempt to move Chinese philosophy from \"interpretive matching\" to \"independent construction.\"）",
+          "source_url": "https://philpapers.org/rec/LITDOP",
+          "openalex_url": "https://openalex.org/W7167299833",
+          "doi": null,
+          "found_by": [
+            "challenges"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4386141176",
+          "title": "关于“半电路、半电磁场”电路（fiecuit）思考的7份资料汇集",
+          "year": 2023,
+          "abstract": "电磁学中的麦克斯韦方程（Maxwell equation）是一种分布参数系统（distributed parameter system）。在满足基尔霍夫定律的情况下，电磁场的作用可以被简化为“电路”。随着集成电路的发展，芯片内部导体、半导体之间的空间距离越来越近，彼此之间的电磁场相互影响会越来越明显。直接利用电磁场进行芯片设计就成为一个应该关注的思路。同时利用“载流子”、“电磁场”工作的电路（广义的电路），就是“半电路、半电磁场”电路（fiecuit）。",
+          "source_url": "https://doi.org/10.31219/osf.io/6mj9u",
+          "openalex_url": "https://openalex.org/W4386141176",
+          "doi": "https://doi.org/10.31219/osf.io/6mj9u",
+          "found_by": [
+            "challenges"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4416399009",
+          "title": "A survey on adversarial attacks on community detection in complex networks",
+          "year": 2025,
+          "abstract": "随着复杂网络分析技术的快速发展，社群检测技术在挖掘网络结构特征的同时也引发了隐私泄露风险. 因此，社群检测的对抗攻击技术应运而生，其旨在通过有限预算下的网络扰动隐藏真实社群，保护数据安全. 本文首先介绍了社群检测对抗攻击研究的背景，提出社群隐藏问题的统一建模框架，并汇总了常用的数据集信息. 随后，综述了社群隐藏效果评估的度量指标及相关方法，创新性地将现有方法分为全局社群隐藏、目标社群隐藏及灵活社群隐藏3大类，梳理分析了不同算法的核心思想、技术优势及局限性，并进行了归纳总结. 最后，结合我们自身在社群隐藏方面的研究基础，对该领域的研究动机、难点问题及未来研究方向进行了探索与讨论.",
+          "source_url": "https://doi.org/10.1360/ssi-2025-0354",
+          "openalex_url": "https://openalex.org/W4416399009",
+          "doi": "https://doi.org/10.1360/ssi-2025-0354",
+          "found_by": [
+            "challenges"
+          ],
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4405087897",
+          "title": "Research progress and trends on models and structures of cognitive machines",
+          "year": 2024,
+          "abstract": "机器如何与人一样具有认知能力？认知能力可用智能度量，人的智能是认知过程的涌现，人们从认知的模型出发研究其结构，结构决定机器的认知功能。本文旨在探讨机器认知的模型和构建方法，为设计新一代认知机器提供新的模型、结构和方法论。本文用分析、归纳和演绎的方法综述认知机器模型和结构的起源、演进与发展趋势。首先，从20世纪初计算机器的发明和DNA双螺旋结构模型的发现谈起，阐述了“图灵机模型 + 冯·诺依曼结构”划时代意义的科学研究成果的形成，这一模型和结构催生了通用计算机器的发明，并对计算机科学与技术等新学科的形成起到奠基作用；此后，图灵的天问“机器能思维吗”及 “图灵测试”对后来创立人工智能有重大启示和影响；然后评述近20年来 “深度学习模型 + 卷积神经网络结构”以及 “大语言模型 + 转换器结构”等的里程碑式进展和存在的问题；在最新进展部分综述当前国内外有代表性的3位科学家提出的模型和结构：“世界模型”、“空间智能”和“四要素说”，特别是以“四要素说”为基础的认知物理学，为人的认知和机器认知提供了统一的理论框架，构成了机器认知的4种基本模式——认知螺旋模型和OOXA结构链，讨论了认知核、洋葱模型和负熵概念，以驾驶脑认知为案例进行具身智能的实验验证；最后，展望了本领域未来研究和发展趋势。模型定义了机器认知的约束边界，结构决定认知机器的涌现性，通过模型 + 结构的研究方法和评价，为探索“人和机器认知的机制”和解决“机器如何认知”这样的人工智能发展的重大问题提供了一种新研究视角、路径和范式。",
+          "source_url": "https://doi.org/10.11834/jig.240108",
+          "openalex_url": "https://openalex.org/W4405087897",
+          "doi": "https://doi.org/10.11834/jig.240108",
+          "found_by": [
+            "challenges"
+          ],
+          "is_demo": false
+        }
+      ],
+      "queries": [
+        {
+          "branch_key": "overview",
+          "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性",
+          "returned_ids": [
+            "https://openalex.org/W7151286858",
+            "https://openalex.org/W4244482171",
+            "https://openalex.org/W4255073332",
+            "https://openalex.org/W4242765243",
+            "https://openalex.org/W3036907739"
+          ],
+          "error": null,
+          "ranked_results": [
+            {
+              "rank": 1,
+              "paper_id": "https://openalex.org/W7151286858"
+            },
+            {
+              "rank": 2,
+              "paper_id": "https://openalex.org/W4244482171"
+            },
+            {
+              "rank": 3,
+              "paper_id": "https://openalex.org/W4255073332"
+            },
+            {
+              "rank": 4,
+              "paper_id": "https://openalex.org/W4242765243"
+            },
+            {
+              "rank": 5,
+              "paper_id": "https://openalex.org/W3036907739"
+            }
+          ]
+        },
+        {
+          "branch_key": "methods",
+          "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性 methods approaches",
+          "returned_ids": [
+            "https://openalex.org/W4244482171",
+            "https://openalex.org/W4242765243",
+            "https://openalex.org/W4251929020",
+            "https://openalex.org/W7155595472",
+            "https://openalex.org/W7207844290"
+          ],
+          "error": null,
+          "ranked_results": [
+            {
+              "rank": 1,
+              "paper_id": "https://openalex.org/W4244482171"
+            },
+            {
+              "rank": 2,
+              "paper_id": "https://openalex.org/W4242765243"
+            },
+            {
+              "rank": 3,
+              "paper_id": "https://openalex.org/W4251929020"
+            },
+            {
+              "rank": 4,
+              "paper_id": "https://openalex.org/W7155595472"
+            },
+            {
+              "rank": 5,
+              "paper_id": "https://openalex.org/W7207844290"
+            }
+          ]
+        },
+        {
+          "branch_key": "applications",
+          "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性 applications",
+          "returned_ids": [
+            "https://openalex.org/W4255073332",
+            "https://openalex.org/W4244482171",
+            "https://openalex.org/W4242765243",
+            "https://openalex.org/W7144276572",
+            "https://openalex.org/W4251929020"
+          ],
+          "error": null,
+          "ranked_results": [
+            {
+              "rank": 1,
+              "paper_id": "https://openalex.org/W4255073332"
+            },
+            {
+              "rank": 2,
+              "paper_id": "https://openalex.org/W4244482171"
+            },
+            {
+              "rank": 3,
+              "paper_id": "https://openalex.org/W4242765243"
+            },
+            {
+              "rank": 4,
+              "paper_id": "https://openalex.org/W7144276572"
+            },
+            {
+              "rank": 5,
+              "paper_id": "https://openalex.org/W4251929020"
+            }
+          ]
+        },
+        {
+          "branch_key": "challenges",
+          "query": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究 低数据量，安全性 challenges limitations",
+          "returned_ids": [
+            "https://openalex.org/W4244482171",
+            "https://openalex.org/W7167299833",
+            "https://openalex.org/W4386141176",
+            "https://openalex.org/W4416399009",
+            "https://openalex.org/W4405087897"
+          ],
+          "error": null,
+          "ranked_results": [
+            {
+              "rank": 1,
+              "paper_id": "https://openalex.org/W4244482171"
+            },
+            {
+              "rank": 2,
+              "paper_id": "https://openalex.org/W7167299833"
+            },
+            {
+              "rank": 3,
+              "paper_id": "https://openalex.org/W4386141176"
+            },
+            {
+              "rank": 4,
+              "paper_id": "https://openalex.org/W4416399009"
+            },
+            {
+              "rank": 5,
+              "paper_id": "https://openalex.org/W4405087897"
+            }
+          ]
+        }
+      ],
+      "retrieved_at": "2026-10-13T17:23:37.573661+00:00",
+      "notice": null
+    }
+  }
+}

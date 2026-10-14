@@ -1,0 +1,66 @@
+{
+  "schema_version": "final_adjudication_v1",
+  "status": "pending_one_user_decision",
+  "recorded_at_utc": "2026-10-14T09:19:31.659147+00:00",
+  "source_reviewed_sha256": "030e13613fbbce39edf7d14b0032ced36693d7720b83396f849f086624a7dd7d",
+  "original_labels_sha256": "00168b25e1c614bb9a53b6349a99bb177f145adcf16354b989322e7fe770b0aa",
+  "decisions": [
+    {
+      "review_id": "V1_Optimized_Rules|target_method|4|https://openalex.org/W2798274031|28",
+      "paper_id": "https://openalex.org/W2798274031",
+      "title": "Learning and Control Using Gaussian Processes",
+      "branch": "target_method",
+      "raw_rank": "4",
+      "before": {
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes"
+      },
+      "after": {
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "no"
+      },
+      "status": "user_confirmed",
+      "reason": "论文相关；用户接受其摘要不准入当前 Evidence Generation。",
+      "recorded_at_utc": "2026-10-14T09:19:31.659147+00:00",
+      "authority": "user instruction in current conversation"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|target_method|5|https://openalex.org/W2619551236|29",
+      "paper_id": "https://openalex.org/W2619551236",
+      "title": "Cautious Model Predictive Control Using Gaussian Process Regression",
+      "branch": "target_method",
+      "raw_rank": "5",
+      "before": {
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes"
+      },
+      "after": {
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "no"
+      },
+      "status": "user_confirmed",
+      "reason": "论文相关；用户接受其摘要不准入当前 Evidence Generation。",
+      "recorded_at_utc": "2026-10-14T09:19:31.659147+00:00",
+      "authority": "user instruction in current conversation"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|2|https://openalex.org/W1888026739|31",
+      "paper_id": "https://openalex.org/W1888026739",
+      "title": "A Primer on Neural Network Models for Natural Language Processing",
+      "branch": "comparison_transfer",
+      "raw_rank": "2",
+      "before": {
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes"
+      },
+      "after": {
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes"
+      },
+      "status": "pending_user_decision",
+      "reason": "相关性与准入标签原样保留；复核理由与标签不一致，待用户最终裁定。",
+      "recorded_at_utc": "2026-10-14T09:19:31.659147+00:00",
+      "authority": "user instruction in current conversation"
+    }
+  ]
+}

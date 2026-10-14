@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-10-14T16:45:52Z",
+  "credentials_configured": true,
+  "public_deployment": true,
+  "public_qwen_enabled": false,
+  "public_qwen_security_review_passed": false,
+  "model_api_calls": 0,
+  "redis_mutating_commands_sent": 0,
+  "live_acceptance_status": "BLOCKED_BEFORE_REDIS_AUTH",
+  "connectivity_diagnostic": {
+    "dns": "resolved",
+    "tls": "SSLCertVerificationError",
+    "tls_verify_code": 10,
+    "tls_verify_message": "certificate has expired",
+    "windows_root_certificate_count": 275,
+    "http_status": null,
+    "eval_reached_upstash": false
+  },
+  "notes": [
+    "TLS verification was not disabled or bypassed.",
+    "No Redis key was read or written; no formal or test budget was changed.",
+    "The configured REST endpoint, token, and HMAC key were present; their values were not recorded."
+  ]
+}

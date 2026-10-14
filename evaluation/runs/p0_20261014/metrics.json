@@ -1,0 +1,116 @@
+{
+  "schema_version": "p0_metrics_v1",
+  "sample": {
+    "golden_cases": 1,
+    "other_multilingual_cases": 2,
+    "other_case_status": "unit-test assertions only; not human-adjudicated metric sample"
+  },
+  "metric_definitions": {
+    "Intent Preservation": "exactly matched gold slots / 6 per case: domain, source method, target method, task, direction, explicit constraints; aggregate case-level mean.",
+    "Precision@5": "human-labeled relevant works among first 5 original-ranked works / 5 per branch; not scored until adjudication file is completed.",
+    "Direction Coverage": "gold directions with >=1 human-labeled relevant result / number of gold directions; result must be tied to actual branch retrieval.",
+    "Irrelevant Evidence Rate": "human-labeled irrelevant works used by landscape/factual claims/RQs / all works used by those outputs; undefined with zero outputs.",
+    "Claim Support Rate": "human-adjudicated supported factual claims / all factual claims; exact quote substring is reported separately and is not substituted for semantic support.",
+    "Latency": "wall-clock milliseconds for recorded local planning/retrieval/generation stages; historic V0 latency unavailable; offline replay latency excludes API.",
+    "Cost": "actual billed LLM cost; no LLM calls in this run, so $0. OpenAlex free API cost is $0; limits/rate caps still apply."
+  },
+  "Intent Preservation": {
+    "V0": {
+      "matches": 0,
+      "denominator": 6,
+      "score": 0.0,
+      "slots": {
+        "domain": false,
+        "source_method": false,
+        "target_method": false,
+        "task": false,
+        "relationship": false,
+        "explicit_constraints": false
+      },
+      "n_cases": 1
+    },
+    "V1": {
+      "matches": 2,
+      "denominator": 6,
+      "score": 0.3333,
+      "slots": {
+        "domain": true,
+        "source_method": false,
+        "target_method": false,
+        "task": false,
+        "relationship": false,
+        "explicit_constraints": true
+      },
+      "n_cases": 1
+    },
+    "V2": {
+      "matches": 6,
+      "denominator": 6,
+      "score": 1.0,
+      "slots": {
+        "domain": true,
+        "source_method": true,
+        "target_method": true,
+        "task": true,
+        "relationship": true,
+        "explicit_constraints": true
+      },
+      "n_cases": 1
+    },
+    "V3": {
+      "matches": 6,
+      "denominator": 6,
+      "score": 1.0,
+      "slots": {
+        "domain": true,
+        "source_method": true,
+        "target_method": true,
+        "task": true,
+        "relationship": true,
+        "explicit_constraints": true
+      },
+      "n_cases": 1
+    }
+  },
+  "Precision@5": {
+    "result": null,
+    "reason": "human relevance labels pending",
+    "denominator": "5 per branch with results; see human_review.csv"
+  },
+  "Direction Coverage": {
+    "result": null,
+    "reason": "snapshot replay is not fresh branch retrieval; manual review plus real retrieval required"
+  },
+  "Irrelevant Evidence Rate": {
+    "result": null,
+    "reason": "semantic human labels pending"
+  },
+  "Claim Support Rate": {
+    "result": null,
+    "reason": "semantic support labels pending",
+    "mechanical_exact_span": {
+      "numerator": 5,
+      "denominator": 5
+    }
+  },
+  "latency_ms": {
+    "V0": null,
+    "V1": null,
+    "V2_planning": 6.36,
+    "V3_offline_gate_included_in_total": true
+  },
+  "cost_usd": {
+    "llm": 0,
+    "openalex": 0
+  },
+  "gate_replay": {
+    "candidate_pool_size": 10,
+    "evidence_eligible_ids_by_branch": {
+      "source_method": [
+        "https://openalex.org/W4247993644"
+      ],
+      "target_method": [],
+      "comparison_transfer": []
+    }
+  }
+}

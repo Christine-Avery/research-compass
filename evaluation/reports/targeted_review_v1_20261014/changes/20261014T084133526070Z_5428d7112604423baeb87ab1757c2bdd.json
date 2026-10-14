@@ -1,0 +1,25 @@
+{
+  "schema_version": "targeted_human_review_v1",
+  "timestamp_utc": "2026-10-14T08:41:33.525553+00:00",
+  "snapshot_sha256": "00168b25e1c614bb9a53b6349a99bb177f145adcf16354b989322e7fe770b0aa",
+  "review_id": "V1_Optimized_Rules|comparison_transfer|4|https://openalex.org/W2910155483|33",
+  "version": "V1_Optimized_Rules",
+  "branch": "comparison_transfer",
+  "raw_rank": "4",
+  "paper_id": "https://openalex.org/W2910155483",
+  "before": {
+    "human_relevance_label": "0",
+    "human_evidence_eligible_label": "yes",
+    "evidence_reason": "和神经网络高度相关但是完全不是控制理论应用场景",
+    "reviewer": "",
+    "review_status": "complete"
+  },
+  "after": {
+    "human_relevance_label": "0",
+    "human_evidence_eligible_label": "no",
+    "evidence_reason": "和神经网络高度相关但是完全不是控制理论应用场景",
+    "reviewer": "",
+    "review_status": "complete"
+  },
+  "change_reason": "和神经网络高度相关但是完全不是控制理论应用场景"
+}

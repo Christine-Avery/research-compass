@@ -1,0 +1,80 @@
+{
+  "run_id": "3f56c7a901f34ccf8e56cf749c8c886c",
+  "timestamp_utc": "2026-10-14T17:30:54.173139+00:00",
+  "credentials_configured": true,
+  "public_qwen_enabled": false,
+  "public_qwen_security_review_passed": false,
+  "model_api_calls": 0,
+  "isolated_key_prefix": "rc-test:acceptance:3f56c7a901f34ccf8e56cf749c8c886c",
+  "formal_budget_namespace_touched": false,
+  "tests": {
+    "unauthenticated_tls_preflight": {
+      "dns": "resolved",
+      "tls": "verified_http_error",
+      "http_status": 401,
+      "eval": "not_run"
+    },
+    "real_upstash_eval": "PASS"
+  },
+  "atomic_concurrency_limit": {
+    "status": "PASS",
+    "requests": 8,
+    "admitted": 2,
+    "limit": 2,
+    "elapsed_ms": 274.2
+  },
+  "concurrent_duplicate_idempotency": {
+    "status": "PASS",
+    "racing_requests": 8,
+    "admitted": 1,
+    "rejected_as_duplicate": 7
+  },
+  "persistence_and_cross_process_sharing": {
+    "status": "PASS",
+    "manager_reconstruction": true,
+    "separate_process": true
+  },
+  "cross_process_budget_and_concurrency_state": {
+    "status": "PASS",
+    "separate_processes": 2,
+    "shared_reserved_microcny": 100000,
+    "concurrent_slots_observed": 2,
+    "third_reservation_denied": true
+  },
+  "five_cny_budget_boundary": {
+    "status": "PASS",
+    "budget_cny": 5.0,
+    "reservation_cny": 0.05,
+    "accepted_reservations": 100,
+    "101st_result": "budget_exhausted",
+    "reserved_microcny": 5000000
+  },
+  "daily_visitor_limit": {
+    "status": "PASS",
+    "limit": 2,
+    "third_request_denied": true
+  },
+  "timeout_reservation_not_refunded": {
+    "status": "PASS",
+    "provider_call": false,
+    "reservation_retained_microcny": 50000,
+    "active_slot_retained": true
+  },
+  "authentication_failure_fail_closed": {
+    "status": "PASS",
+    "expected_http_rejection": true
+  },
+  "redis_write_error_fail_closed": {
+    "status": "PASS",
+    "isolated_test_key_only": true
+  },
+  "transport_timeout_disconnect_fail_closed": {
+    "status": "PASS",
+    "mode": "injected transport faults",
+    "timeout": "fail_closed",
+    "disconnect": "fail_closed"
+  },
+  "status": "PASS",
+  "isolated_namespace_only": true,
+  "report_path": "evaluation/security_acceptance/upstash_live_3f56c7a901f34ccf8e56cf749c8c886c.json"
+}

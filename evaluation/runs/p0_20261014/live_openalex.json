@@ -1,0 +1,148 @@
+{
+  "schema_version": "p0_live_openalex_v1",
+  "input_case": "badcase_001",
+  "api_key_loaded": true,
+  "retrieval_mode": "demo",
+  "retrieved_at": "2026-10-13T18:24:42.181849+00:00",
+  "notice": "实时检索失败：OpenAlex 网络请求失败或超时",
+  "intent": {
+    "original_interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+    "theme": "Control Theory / Control Systems: Neural Networks, Gaussian Processes",
+    "approach": "Neural Networks, Gaussian Processes",
+    "goal": "transfer",
+    "constraints": "",
+    "domain": "Control Theory / Control Systems",
+    "source_method": "Neural Networks",
+    "target_method": "Gaussian Processes",
+    "task": "方法比较与研究思路迁移",
+    "relationship": "Neural Networks → Gaussian Processes",
+    "explicit_constraints": [],
+    "inferred": [
+      "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+      "方法概念由中英文术语词表规范化，需用户确认角色"
+    ],
+    "unconfirmed": [
+      "具体应用任务或控制对象"
+    ],
+    "concepts": [
+      "Neural Networks",
+      "Gaussian Processes"
+    ],
+    "parser_version": "rules_v2"
+  },
+  "branches": [
+    {
+      "key": "source_method",
+      "title": "Neural Networks 文献",
+      "query": "Control Theory Control Systems neural networks Neural Networks",
+      "focus_method": "Neural Networks",
+      "required_methods": [
+        "Neural Networks"
+      ],
+      "query_aliases": [
+        "neural network",
+        "neural networks",
+        "artificial neural network",
+        "artificial neural networks",
+        "神经网络",
+        "人工神经网络"
+      ]
+    },
+    {
+      "key": "target_method",
+      "title": "Gaussian Processes 文献",
+      "query": "Control Theory Control Systems gaussian processes Gaussian Processes",
+      "focus_method": "Gaussian Processes",
+      "required_methods": [
+        "Gaussian Processes"
+      ],
+      "query_aliases": [
+        "gaussian process",
+        "gaussian processes",
+        "gaussian process regression",
+        "gaussian process models",
+        "高斯过程",
+        "高斯过程回归"
+      ]
+    },
+    {
+      "key": "comparison_transfer",
+      "title": "方法比较与迁移",
+      "query": "Control Theory Control Systems Neural Networks Gaussian Processes comparison",
+      "focus_method": "",
+      "required_methods": [
+        "Neural Networks",
+        "Gaussian Processes"
+      ],
+      "query_aliases": [
+        "neural network",
+        "neural networks",
+        "artificial neural network",
+        "artificial neural networks",
+        "神经网络",
+        "人工神经网络",
+        "gaussian process",
+        "gaussian processes",
+        "gaussian process regression",
+        "gaussian process models",
+        "高斯过程",
+        "高斯过程回归"
+      ]
+    }
+  ],
+  "search": {
+    "mode": "demo",
+    "papers": [
+      {
+        "id": "demo-1",
+        "title": "[DEMO 示例] 论文结果卡片 A",
+        "year": null,
+        "abstract": "这是用于演示页面布局的模拟数据，不代表真实论文、摘要或研究证据。",
+        "source_url": null,
+        "openalex_url": null,
+        "doi": null,
+        "found_by": [],
+        "is_demo": true
+      },
+      {
+        "id": "demo-2",
+        "title": "[DEMO 示例] 论文结果卡片 B",
+        "year": null,
+        "abstract": "配置免费 OpenAlex API key 后，可在相同页面查看实时检索结果。",
+        "source_url": null,
+        "openalex_url": null,
+        "doi": null,
+        "found_by": [],
+        "is_demo": true
+      }
+    ],
+    "queries": [
+      {
+        "branch_key": "source_method",
+        "query": "Control Theory Control Systems neural networks Neural Networks",
+        "returned_ids": [],
+        "error": "OpenAlex 网络请求失败或超时",
+        "ranked_results": [],
+        "raw_results": []
+      },
+      {
+        "branch_key": "target_method",
+        "query": "Control Theory Control Systems gaussian processes Gaussian Processes",
+        "returned_ids": [],
+        "error": "OpenAlex 网络请求失败或超时",
+        "ranked_results": [],
+        "raw_results": []
+      },
+      {
+        "branch_key": "comparison_transfer",
+        "query": "Control Theory Control Systems Neural Networks Gaussian Processes comparison",
+        "returned_ids": [],
+        "error": "OpenAlex 网络请求失败或超时",
+        "ranked_results": [],
+        "raw_results": []
+      }
+    ],
+    "retrieved_at": "2026-10-13T18:24:42.181849+00:00",
+    "notice": "实时检索失败：OpenAlex 网络请求失败或超时"
+  }
+}

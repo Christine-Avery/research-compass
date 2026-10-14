@@ -1,0 +1,4 @@
+streamlit>=1.40,<2
+pyalex>=0.21,<1
+python-dotenv>=1,<2
+certifi>=2025.1.31,<2027

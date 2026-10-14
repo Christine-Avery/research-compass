@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+*.py[cod]
+evaluation/runs/v3_20261014/qwen_ledger.json
+evaluation/runs/v3_20261014/qwen_ledger.tmp

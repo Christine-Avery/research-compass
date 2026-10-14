@@ -1,0 +1,40 @@
+{
+  "case_id": "badcase_001",
+  "annotation_type": "human_expected_intent",
+  "source_trace": "original_trace.json",
+  "source_trace_sha256": "42245808de0b10663652a8d2f28cd27458e4a7aba00c57d78134586e7ef09658",
+  "domain": {
+    "name": "Control Theory",
+    "original_term": "控制理论"
+  },
+  "concepts": [
+    {
+      "name": "Neural Networks",
+      "original_term": "神经网络",
+      "role": "现有文献与启发来源"
+    },
+    {
+      "name": "Gaussian Processes",
+      "original_term": "高斯过程",
+      "role": "拟探索的研究方法"
+    }
+  ],
+  "research_goal": "比较神经网络与高斯过程在控制理论研究中的思路，并从已有神经网络文献寻找可迁移到高斯过程研究的启发。",
+  "idea_transfer": {
+    "from": "Neural Networks",
+    "to": "Gaussian Processes",
+    "relation": "研究思路迁移与启发，不预设两者性能高低或研究空白已经成立"
+  },
+  "constraints": {
+    "confirmed_hard_constraints_from_original_interest": [],
+    "present_in_trace_intent_but_not_original_interest": [
+      "低数据量",
+      "安全性"
+    ],
+    "interpretation": "上述两项不作为本案例人工预期意图中的用户硬约束；Trace 无法单独证明其输入来源。"
+  },
+  "open_questions": [
+    "具体控制任务或系统尚未明确。",
+    "需要检索文献验证哪些神经网络研究思路适合迁移到高斯过程。"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "case_id": "badcase_001",
+  "source": "live_qwen",
+  "created_at": "2026-10-14T09:37:28.902021+00:00",
+  "intent": {
+    "original_interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+    "theme": "Control Theory",
+    "approach": "Neural Networks, Gaussian Processes, Model Predictive Control, Reinforcement Learning",
+    "goal": "transfer",
+    "constraints": "",
+    "domain": "Control Theory",
+    "source_method": "Neural Networks",
+    "target_method": "Gaussian Processes",
+    "task": "Comparative analysis and methodological transfer for control applications",
+    "relationship": "Neural Networks → Gaussian Processes",
+    "explicit_constraints": [],
+    "inferred": [
+      "Focus on uncertainty quantification advantages of GPs over NNs in control",
+      "Identify specific architectural or training insights from NN literature applicable to GP-based controllers",
+      "Context likely involves Model Predictive Control (MPC) or Reinforcement Learning (RL)"
+    ],
+    "unconfirmed": [
+      "Specific type of Neural Network architecture (e.g., MLP, CNN, Transformer)",
+      "Specific control problem formulation (e.g., linear vs. nonlinear systems)",
+      "Desired balance between theoretical comparison and practical implementation guidance"
+    ],
+    "concepts": [
+      "Neural Networks",
+      "Gaussian Processes",
+      "Model Predictive Control",
+      "Reinforcement Learning"
+    ],
+    "field_provenance": {
+      "domain": "Qwen 推断；需用户确认",
+      "concepts": "从原文规范化；需用户确认",
+      "source_method_role": "Qwen 根据上下文识别；需用户确认",
+      "target_method_role": "Qwen 根据上下文识别；需用户确认",
+      "task": "Qwen 理解；需用户确认",
+      "relationship_direction": "Qwen 理解；需用户确认",
+      "constraints": "未明确提出",
+      "goal": "Qwen 推断；需用户确认"
+    },
+    "parser_version": "qwen_intent_v1"
+  },
+  "branches": [
+    {
+      "key": "uncertainty_comparison",
+      "title": "Uncertainty Quantification in Control: NN vs GP",
+      "purpose": "To identify how Gaussian Process uncertainty estimation differs from neural network approaches and what lessons can be drawn for robust control design.",
+      "query": "Comparison of uncertainty quantification methods in neural networks versus Gaussian processes for model predictive control",
+      "focus_method": "Gaussian Processes",
+      "required_methods": [
+        "Gaussian Processes",
+        "Neural Networks",
+        "Model Predictive Control"
+      ],
+      "query_aliases": []
+    },
+    {
+      "key": "architecture_insights",
+      "title": "Architectural Inspirations from Deep Learning for GP Controllers",
+      "purpose": "To find recent neural network architectures or training strategies that could inspire improvements in scalable or deep Gaussian process models for control tasks.",
+      "query": "Deep learning inspired architectures and training strategies for scalable Gaussian process regression in control theory",
+      "focus_method": "Gaussian Processes",
+      "required_methods": [
+        "Gaussian Processes",
+        "Neural Networks",
+        "Reinforcement Learning"
+      ],
+      "query_aliases": []
+    },
+    {
+      "key": "hybrid_control_strategies",
+      "title": "Hybrid NN-GP Approaches in Adaptive Control",
+      "purpose": "To explore existing hybrid frameworks where neural networks handle high-dimensional features while GPs manage residual dynamics or safety constraints, providing a template for GP-centric research.",
+      "query": "Hybrid neural network and Gaussian process frameworks for adaptive control and reinforcement learning",
+      "focus_method": "Gaussian Processes",
+      "required_methods": [
+        "Gaussian Processes",
+        "Neural Networks",
+        "Reinforcement Learning"
+      ],
+      "query_aliases": []
+    }
+  ],
+  "metadata": {
+    "call_id": "qwen-03",
+    "model": "qwen3.8-flash",
+    "latency_ms": 19546.96,
+    "input_tokens": 280,
+    "output_tokens": 651,
+    "cost_cny": 0.0019817,
+    "status": "success",
+    "raw_response": {
+      "intent": {
+        "domain": "Control Theory",
+        "concepts": [
+          "Neural Networks",
+          "Gaussian Processes",
+          "Model Predictive Control",
+          "Reinforcement Learning"
+        ],
+        "source_method": "Neural Networks",
+        "target_method": "Gaussian Processes",
+        "task": "Comparative analysis and methodological transfer for control applications",
+        "relationship_type": "comparison_transfer",
+        "explicit_constraints": [],
+        "inferred": [
+          "Focus on uncertainty quantification advantages of GPs over NNs in control",
+          "Identify specific architectural or training insights from NN literature applicable to GP-based controllers",
+          "Context likely involves Model Predictive Control (MPC) or Reinforcement Learning (RL)"
+        ],
+        "unconfirmed": [
+          "Specific type of Neural Network architecture (e.g., MLP, CNN, Transformer)",
+          "Specific control problem formulation (e.g., linear vs. nonlinear systems)",
+          "Desired balance between theoretical comparison and practical implementation guidance"
+        ],
+        "goal": "transfer"
+      },
+      "branches": [
+        {
+          "key": "uncertainty_comparison",
+          "title": "Uncertainty Quantification in Control: NN vs GP",
+          "purpose": "To identify how Gaussian Process uncertainty estimation differs from neural network approaches and what lessons can be drawn for robust control design.",
+          "query": "Comparison of uncertainty quantification methods in neural networks versus Gaussian processes for model predictive control",
+          "focus_method": "Gaussian Processes",
+          "required_methods": [
+            "Gaussian Processes",
+            "Neural Networks",
+            "Model Predictive Control"
+          ]
+        },
+        {
+          "key": "architecture_insights",
+          "title": "Architectural Inspirations from Deep Learning for GP Controllers",
+          "purpose": "To find recent neural network architectures or training strategies that could inspire improvements in scalable or deep Gaussian process models for control tasks.",
+          "query": "Deep learning inspired architectures and training strategies for scalable Gaussian process regression in control theory",
+          "focus_method": "Gaussian Processes",
+          "required_methods": [
+            "Gaussian Processes",
+            "Neural Networks",
+            "Reinforcement Learning"
+          ]
+        },
+        {
+          "key": "hybrid_control_strategies",
+          "title": "Hybrid NN-GP Approaches in Adaptive Control",
+          "purpose": "To explore existing hybrid frameworks where neural networks handle high-dimensional features while GPs manage residual dynamics or safety constraints, providing a template for GP-centric research.",
+          "query": "Hybrid neural network and Gaussian process frameworks for adaptive control and reinforcement learning",
+          "focus_method": "Gaussian Processes",
+          "required_methods": [
+            "Gaussian Processes",
+            "Neural Networks",
+            "Reinforcement Learning"
+          ]
+        }
+      ]
+    }
+  }
+}

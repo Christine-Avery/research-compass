@@ -1,0 +1,25 @@
+{
+  "schema_version": "targeted_human_review_v1",
+  "timestamp_utc": "2026-10-14T08:39:26.387070+00:00",
+  "snapshot_sha256": "00168b25e1c614bb9a53b6349a99bb177f145adcf16354b989322e7fe770b0aa",
+  "review_id": "V1_Optimized_Rules|target_method|5|https://openalex.org/W2619551236|29",
+  "version": "V1_Optimized_Rules",
+  "branch": "target_method",
+  "raw_rank": "5",
+  "paper_id": "https://openalex.org/W2619551236",
+  "before": {
+    "human_relevance_label": "2",
+    "human_evidence_eligible_label": "yes",
+    "evidence_reason": "属于GP在控制理论的应用（还需综合考虑其权威性和时效）",
+    "reviewer": "",
+    "review_status": "complete"
+  },
+  "after": {
+    "human_relevance_label": "2",
+    "human_evidence_eligible_label": "yes",
+    "evidence_reason": "属于GP在控制理论的应用（还需综合考虑其权威性和时效）",
+    "reviewer": "",
+    "review_status": "complete"
+  },
+  "change_reason": "虽然不是神经网络在控制领域的应用，但是知道GP在控制领域怎么用也有助于方法迁移。"
+}

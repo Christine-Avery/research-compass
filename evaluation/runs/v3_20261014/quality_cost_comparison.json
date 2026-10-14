@@ -1,0 +1,76 @@
+{
+  "schema_version": "v3_quality_cost_report_v1",
+  "sample_size": {
+    "V0_intent": 1,
+    "V1_intent": 3,
+    "V2_intent": 0,
+    "V3_intent": 3,
+    "live_openalex_Golden": 1,
+    "manual_review_rows": 35,
+    "manual_review_completed": 0
+  },
+  "intent_preservation_formula": "Exact slot matches / (7 annotated slots per case); slots: domain, exact concept set, source, target, task type, directed relationship, explicit-constraint set.",
+  "precision_at_5_formula": "Human-labelled relevant items in ranks 1-5 / all human-labelled items in ranks 1-5, per strategy.",
+  "direction_coverage_formula": "Expected Golden directions with >=1 Evidence Eligible result / 3 directions (source method, target method, comparison/transfer). Provisional until human review.",
+  "irrelevant_evidence_rate_formula": "Human-labelled irrelevant Evidence Eligible items / all manually judged Evidence Eligible items.",
+  "human_review_complete": 0,
+  "v1_gate_eligible_occurrences": 8,
+  "qwen_attempts": 2,
+  "qwen_failures": 2,
+  "qwen_reserved_max_cny": 0.01692,
+  "strategies": [
+    {
+      "version": "V0 · archived rules",
+      "intent_preservation": "0/7 (n=1 archived case)",
+      "precision_at_5": "待人工标注",
+      "direction_coverage": "N/A · no structured directions / gate",
+      "irrelevant_evidence_rate": "待人工标注",
+      "latency": "6791 ms, 1 Live run (4 queries)",
+      "cost": "LLM ¥0; OpenAlex no charge recorded",
+      "failure_rate": "0/4 query failures"
+    },
+    {
+      "version": "V1 · optimized rules",
+      "intent_preservation": "21/21 (n=3; hand-authored paired set)",
+      "precision_at_5": "待人工标注",
+      "direction_coverage": "2/3 (provisional gate coverage; 3 branches)",
+      "irrelevant_evidence_rate": "待人工标注",
+      "latency": "5626 ms, 1 Live run (3 queries); parser avg 2.14 ms",
+      "cost": "LLM ¥0; OpenAlex no charge recorded",
+      "failure_rate": "0/3 query failures"
+    },
+    {
+      "version": "V2 · Qwen planner",
+      "intent_preservation": "N/A · no valid Qwen response",
+      "precision_at_5": "N/A · no V2 retrieval",
+      "direction_coverage": "N/A",
+      "irrelevant_evidence_rate": "N/A",
+      "latency": "N/A · no successful response",
+      "cost": "2 attempted; usage/bill unknown; reserve upper bound ¥0.01692",
+      "failure_rate": "2/2 Qwen request failures (URLError)"
+    },
+    {
+      "version": "V3 · hybrid (offline simulation)",
+      "intent_preservation": "21/21 (n=3; rules fallback this run)",
+      "precision_at_5": "待人工标注; no separate retrieval",
+      "direction_coverage": "2/3 inherited from V1 fallback; provisional",
+      "irrelevant_evidence_rate": "待人工标注",
+      "latency": "N/A · routing only; no deployed E2E measurement",
+      "cost": "Incremental simulation ¥0; deployed hybrid cost unmeasured",
+      "failure_rate": "Qwen unavailable; all routed cases fell back to rules"
+    }
+  ],
+  "limitations": [
+    "The three manually authored intent cases are a small smoke set, not a representative benchmark; no significance claim is supported.",
+    "V0 intent is measurable only on the one archived structured trace. V0 retrieval is a new Live replay of its saved legacy query strings.",
+    "Precision@5 and irrelevant-evidence rate are intentionally null pending human labels; automated relevance scores are not reference labels.",
+    "V2 has no valid model output, so this run cannot answer whether Qwen improves quality or whether its cost is worthwhile.",
+    "V3 is offline only. Because Qwen failed, it fell back to V1 rules; its score is not evidence of hybrid-model quality."
+  ],
+  "source_files": [
+    "planner_comparison.json",
+    "live_openalex_golden.json",
+    "qwen_ledger.json",
+    "live_openalex_human_review.csv"
+  ]
+}

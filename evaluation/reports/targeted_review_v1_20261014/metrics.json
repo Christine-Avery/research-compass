@@ -1,0 +1,248 @@
+{
+  "status": "final",
+  "candidate_count": 7,
+  "reviewed_candidate_count": 7,
+  "event_count": 11,
+  "changed_labels": [
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|1|https://openalex.org/W1545951971|30",
+      "branch": "comparison_transfer",
+      "raw_rank": "1",
+      "paper_id": "https://openalex.org/W1545951971",
+      "title": "Gaussian Process Regression Networks",
+      "relevance_before": "1",
+      "relevance_after": "0",
+      "evidence_before": "yes",
+      "evidence_after": "no"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|2|https://openalex.org/W1888026739|31",
+      "branch": "comparison_transfer",
+      "raw_rank": "2",
+      "paper_id": "https://openalex.org/W1888026739",
+      "title": "A Primer on Neural Network Models for Natural Language Processing",
+      "relevance_before": "0",
+      "relevance_after": "2",
+      "evidence_before": "yes",
+      "evidence_after": "yes"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|3|https://openalex.org/W2611706523|32",
+      "branch": "comparison_transfer",
+      "raw_rank": "3",
+      "paper_id": "https://openalex.org/W2611706523",
+      "title": "Phase-functioned neural networks for character control",
+      "relevance_before": "2",
+      "relevance_after": "1",
+      "evidence_before": "yes",
+      "evidence_after": "no"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|4|https://openalex.org/W2910155483|33",
+      "branch": "comparison_transfer",
+      "raw_rank": "4",
+      "paper_id": "https://openalex.org/W2910155483",
+      "title": "Deep Neural Network Approximation Theory",
+      "relevance_before": "0",
+      "relevance_after": "0",
+      "evidence_before": "yes",
+      "evidence_after": "no"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|5|https://openalex.org/W2913473169|34",
+      "branch": "comparison_transfer",
+      "raw_rank": "5",
+      "paper_id": "https://openalex.org/W2913473169",
+      "title": "Scaling Limits of Wide Neural Networks with Weight Sharing: Gaussian Process Behavior, Gradient Independence, and Neural Tangent Kernel Derivation",
+      "relevance_before": "0",
+      "relevance_after": "0",
+      "evidence_before": "",
+      "evidence_after": "no"
+    }
+  ],
+  "original": {
+    "v1_rows": 15,
+    "evidence_judged": 14,
+    "evidence_missing": 1,
+    "tp": 8,
+    "fp": 0,
+    "fn": 6,
+    "tn": 0,
+    "precision": 1.0,
+    "precision_denominator": 8,
+    "recall": 0.5714285714285714,
+    "recall_denominator": 14,
+    "v0": {
+      "branch_count": 4,
+      "complete_top_k_branches": 4,
+      "precision_at_k": 0.05,
+      "ndcg_at_k": 0.10766913951834826,
+      "irrelevant_evidence_rate": null,
+      "irrelevant_evidence_numerator": 0,
+      "irrelevant_evidence_denominator": 0,
+      "judged_relevance_rows": 20,
+      "total_rows": 20,
+      "evidence_gate": null
+    },
+    "v1": {
+      "branch_count": 3,
+      "complete_top_k_branches": 3,
+      "precision_at_k": 0.7999999999999999,
+      "ndcg_at_k": 0.8209692253278226,
+      "irrelevant_evidence_rate": 0.0,
+      "irrelevant_evidence_numerator": 0,
+      "irrelevant_evidence_denominator": 8,
+      "judged_relevance_rows": 15,
+      "total_rows": 15,
+      "evidence_gate": {
+        "labeled_denominator": 14,
+        "false_accept_count": 0,
+        "false_reject_count": 6,
+        "false_accepts": [],
+        "false_rejects": [
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "target_method",
+            "raw_rank": "4",
+            "paper_id": "https://openalex.org/W2798274031",
+            "title": "Learning and Control Using Gaussian Processes"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "target_method",
+            "raw_rank": "5",
+            "paper_id": "https://openalex.org/W2619551236",
+            "title": "Cautious Model Predictive Control Using Gaussian Process Regression"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "comparison_transfer",
+            "raw_rank": "1",
+            "paper_id": "https://openalex.org/W1545951971",
+            "title": "Gaussian Process Regression Networks"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "comparison_transfer",
+            "raw_rank": "2",
+            "paper_id": "https://openalex.org/W1888026739",
+            "title": "A Primer on Neural Network Models for Natural Language Processing"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "comparison_transfer",
+            "raw_rank": "3",
+            "paper_id": "https://openalex.org/W2611706523",
+            "title": "Phase-functioned neural networks for character control"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "comparison_transfer",
+            "raw_rank": "4",
+            "paper_id": "https://openalex.org/W2910155483",
+            "title": "Deep Neural Network Approximation Theory"
+          }
+        ]
+      }
+    }
+  },
+  "corrected": {
+    "v1_rows": 15,
+    "evidence_judged": 15,
+    "evidence_missing": 0,
+    "tp": 8,
+    "fp": 0,
+    "fn": 3,
+    "tn": 4,
+    "precision": 1.0,
+    "precision_denominator": 8,
+    "recall": 0.7272727272727273,
+    "recall_denominator": 11,
+    "v0": {
+      "branch_count": 4,
+      "complete_top_k_branches": 4,
+      "precision_at_k": 0.05,
+      "ndcg_at_k": 0.10766913951834826,
+      "irrelevant_evidence_rate": null,
+      "irrelevant_evidence_numerator": 0,
+      "irrelevant_evidence_denominator": 0,
+      "judged_relevance_rows": 20,
+      "total_rows": 20,
+      "evidence_gate": null
+    },
+    "v1": {
+      "branch_count": 3,
+      "complete_top_k_branches": 3,
+      "precision_at_k": 0.7999999999999999,
+      "ndcg_at_k": 0.8111268666151382,
+      "irrelevant_evidence_rate": 0.0,
+      "irrelevant_evidence_numerator": 0,
+      "irrelevant_evidence_denominator": 8,
+      "judged_relevance_rows": 15,
+      "total_rows": 15,
+      "evidence_gate": {
+        "labeled_denominator": 15,
+        "false_accept_count": 0,
+        "false_reject_count": 3,
+        "false_accepts": [],
+        "false_rejects": [
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "target_method",
+            "raw_rank": "4",
+            "paper_id": "https://openalex.org/W2798274031",
+            "title": "Learning and Control Using Gaussian Processes"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "target_method",
+            "raw_rank": "5",
+            "paper_id": "https://openalex.org/W2619551236",
+            "title": "Cautious Model Predictive Control Using Gaussian Process Regression"
+          },
+          {
+            "version": "V1_Optimized_Rules",
+            "branch": "comparison_transfer",
+            "raw_rank": "2",
+            "paper_id": "https://openalex.org/W1888026739",
+            "title": "A Primer on Neural Network Models for Natural Language Processing"
+          }
+        ]
+      }
+    }
+  },
+  "remaining_relevant_gate_misses": [
+    {
+      "review_id": "V1_Optimized_Rules|target_method|4|https://openalex.org/W2798274031|28",
+      "branch": "target_method",
+      "raw_rank": "4",
+      "paper_id": "https://openalex.org/W2798274031",
+      "title": "Learning and Control Using Gaussian Processes",
+      "human_relevance_label": "2"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|target_method|5|https://openalex.org/W2619551236|29",
+      "branch": "target_method",
+      "raw_rank": "5",
+      "paper_id": "https://openalex.org/W2619551236",
+      "title": "Cautious Model Predictive Control Using Gaussian Process Regression",
+      "human_relevance_label": "2"
+    },
+    {
+      "review_id": "V1_Optimized_Rules|comparison_transfer|2|https://openalex.org/W1888026739|31",
+      "branch": "comparison_transfer",
+      "raw_rank": "2",
+      "paper_id": "https://openalex.org/W1888026739",
+      "title": "A Primer on Neural Network Models for Natural Language Processing",
+      "human_relevance_label": "2"
+    }
+  ],
+  "remaining_direct_target_method_misses": [
+    "V1_Optimized_Rules|target_method|4|https://openalex.org/W2798274031|28",
+    "V1_Optimized_Rules|target_method|5|https://openalex.org/W2619551236|29"
+  ],
+  "remaining_transfer_branch_judgments": [
+    "V1_Optimized_Rules|comparison_transfer|2|https://openalex.org/W1888026739|31"
+  ],
+  "remaining_v1_relevance_evidence_conflicts": []
+}

@@ -1,7 +1,66 @@
 # Research Compass
 
-AI Exploratory Search for early-stage researchers.
+Research Compass helps novice researchers turn a broad interest into a source-grounded next research step. It focuses on **what to search when you do not yet know what to search for**, rather than presenting itself as another paper database.
 
-An AI-powered research exploration tool that helps users turn ambiguous research interests into evidence-grounded research questions.
+## Product flow
 
-Status: MVP in development.
+1. **AI Intent Studio** — enter a natural-language interest, optionally clarify one key ambiguity, review and edit the structured intent. The interface distinguishes live Qwen, rule fallback and a historical snapshot.
+2. **Research Path Explorer** — compare two or three exploration paths and English queries. Selecting a path triggers OpenAlex retrieval. Results retain OpenAlex IDs, abstracts, original links, rank and relevance explanation.
+3. **Evidence & Next Steps** — organize the retrieved abstract evidence, distinguish paper relevance from eligibility for evidence generation, provide candidate questions as hypotheses to verify, and copy a Research Plan Summary.
+
+## Architecture
+
+```text
+Streamlit pages + session workflow
+  ├─ Intent/query planning: Qwen (explicitly gated) or transparent V1 rules
+  ├─ Retrieval: PyAlex → OpenAlex API
+  ├─ Relevance/evidence gate: existing rule modules and abstract-only evidence
+  ├─ Evaluation: frozen traces + human judgments + read-only public view
+  └─ Public Qwen budget: Upstash Redis REST EVAL, default disabled
+```
+
+Core retrieval uses [PyAlex](https://github.com/J535D165/pyalex) and [OpenAlex](https://openalex.org/). Qwen is limited to intent understanding and dynamic query planning; it does not establish research gaps. The persistent budget gate passed isolated local Upstash acceptance, but public Qwen is default-off pending stale concurrency-slot recovery, GitHub Actions and cloud deployment checks.
+
+## Evaluation snapshot
+
+On one frozen Chinese Golden Case, the rule baseline V0 scored Precision@5 **0.0500** and nDCG@5 **0.1077**; optimized rules V1 scored **0.8000** and **0.8111**. V0 and V1 had different branch sets, so this is an initial case comparison, not a controlled paired experiment and not evidence of Qwen uplift. See [the evaluation case study](docs/EVALUATION_CASE_STUDY.md).
+
+## Screenshots
+
+The three editable Streamlit pages have real browser-rendered prototype captures: [Intent Studio](docs/prototypes/01_AI_Intent_Studio.png), [Path Explorer](docs/prototypes/02_Research_Path_Explorer.png), and [Evidence & Next Steps](docs/prototypes/03_Evidence_Next_Steps.png). The browser viewport during capture was 932×654 CSS pixels. Although image canvases are 1440×900, the unused area is blank; these are **not full 1440×900 desktop-layout validation**. See [design spec](docs/prototypes/DESIGN_SPEC.md).
+
+## Run locally
+
+Use Python 3.11 (the current development version):
+
+```powershell
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+streamlit run app.py
+```
+
+Set `OPENALEX_API_KEY` in the ignored local `.env` or `.streamlit/secrets.toml` for live OpenAlex retrieval. Qwen uses `DASHSCOPE_API_KEY`, but the existing development ledger is already exhausted. No Qwen call is needed to view the historical snapshot or use rule planning. Run tests with:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
+
+## Scope and limitations
+
+- OpenAlex results can be noisy. A retrieved paper is not automatically relevant or evidence-eligible.
+- Abstract-only evidence is not full-text verification; every supported statement needs a source excerpt.
+- Small search samples cannot prove a topic is unexplored or that a research gap exists.
+- Public Evaluation is read-only. Historical traces, human labels and frozen reports are retained as research evidence.
+- No production user study, public deployment, usage growth or public Qwen call has been completed. Isolated live Upstash budget-gate checks passed locally; they are not a cloud deployment test.
+- Public URL: **not deployed yet**.
+
+## Product and release docs
+
+- [PRD v1](docs/PRD_v1.md)
+- [Evaluation case study](docs/EVALUATION_CASE_STUDY.md)
+- [Release checklist and Cloud setup](docs/RELEASE_CHECKLIST.md)
+- [Resume project summary](docs/RESUME_PROJECT.md)
+- [3-minute demo script](docs/DEMO_SCRIPT.md)
+- [Interview Q&A](docs/INTERVIEW_QA.md)
+- [Delivery status](docs/DELIVERY_STATUS.md)

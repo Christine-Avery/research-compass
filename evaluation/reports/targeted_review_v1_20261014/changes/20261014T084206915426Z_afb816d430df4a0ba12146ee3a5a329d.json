@@ -1,0 +1,25 @@
+{
+  "schema_version": "targeted_human_review_v1",
+  "timestamp_utc": "2026-10-14T08:42:06.915426+00:00",
+  "snapshot_sha256": "00168b25e1c614bb9a53b6349a99bb177f145adcf16354b989322e7fe770b0aa",
+  "review_id": "V1_Optimized_Rules|comparison_transfer|2|https://openalex.org/W1888026739|31",
+  "version": "V1_Optimized_Rules",
+  "branch": "comparison_transfer",
+  "raw_rank": "2",
+  "paper_id": "https://openalex.org/W1888026739",
+  "before": {
+    "human_relevance_label": "0",
+    "human_evidence_eligible_label": "yes",
+    "evidence_reason": "仅与神经网络有关，未考虑控制理论场景",
+    "reviewer": "",
+    "review_status": "complete"
+  },
+  "after": {
+    "human_relevance_label": "2",
+    "human_evidence_eligible_label": "yes",
+    "evidence_reason": "仅与神经网络有关，未考虑控制理论场景",
+    "reviewer": "",
+    "review_status": "complete"
+  },
+  "change_reason": "仅与神经网络有关，未考虑控制理论场景"
+}

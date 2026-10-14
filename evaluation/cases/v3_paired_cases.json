@@ -1,0 +1,46 @@
+{
+  "schema_version": "v3_paired_intent_cases_v1",
+  "annotation_note": "Small manually authored smoke set for paired strategy comparison; not a representative benchmark.",
+  "cases": [
+    {
+      "case_id": "badcase_001",
+      "source": "evaluation/cases/badcase_001/original_trace.json",
+      "interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+      "gold": {
+        "domain": "Control Theory / Control Systems",
+        "concepts": ["Neural Networks", "Gaussian Processes"],
+        "source_method": "Neural Networks",
+        "target_method": "Gaussian Processes",
+        "task_type": "comparison_transfer",
+        "relationship": "Neural Networks → Gaussian Processes",
+        "explicit_constraints": []
+      }
+    },
+    {
+      "case_id": "en_transfer_001",
+      "interest": "Compare neural networks and Gaussian processes for control systems. I want ideas from neural-network research to guide Gaussian-process research.",
+      "gold": {
+        "domain": "Control Theory / Control Systems",
+        "concepts": ["Neural Networks", "Gaussian Processes"],
+        "source_method": "Neural Networks",
+        "target_method": "Gaussian Processes",
+        "task_type": "comparison_transfer",
+        "relationship": "Neural Networks → Gaussian Processes",
+        "explicit_constraints": []
+      }
+    },
+    {
+      "case_id": "zh_methods_001",
+      "interest": "我想了解机器人控制中常见的神经网络方法。",
+      "gold": {
+        "domain": "Control Theory / Control Systems",
+        "concepts": ["Neural Networks"],
+        "source_method": "",
+        "target_method": "",
+        "task_type": "topic_map",
+        "relationship": "",
+        "explicit_constraints": []
+      }
+    }
+  ]
+}

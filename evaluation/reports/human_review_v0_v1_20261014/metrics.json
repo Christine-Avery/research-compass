@@ -1,0 +1,530 @@
+{
+  "schema_version": "human_review_analysis_v1",
+  "input_sha256": "00168b25e1c614bb9a53b6349a99bb177f145adcf16354b989322e7fe770b0aa",
+  "row_count": 35,
+  "review_status_counts": {
+    "complete": 34,
+    "in_progress": 1
+  },
+  "relevance_judged": 35,
+  "evidence_judged": 34,
+  "both_judged": 34,
+  "explicit_skipped": 0,
+  "incomplete": [
+    {
+      "version": "V1_Optimized_Rules",
+      "branch": "comparison_transfer",
+      "raw_rank": "5",
+      "paper_id": "https://openalex.org/W2913473169",
+      "title": "Scaling Limits of Wide Neural Networks with Weight Sharing: Gaussian Process Behavior, Gradient Independence, and Neural Tangent Kernel Derivation",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "",
+      "evidence_reason": "属于神经网络相关内容，但是和控制理论背景完全无关",
+      "review_status": "in_progress"
+    }
+  ],
+  "relevance_counts_by_version": {
+    "V0_Day1_Baseline": {
+      "0": 19,
+      "1": 1
+    },
+    "V1_Optimized_Rules": {
+      "1": 3,
+      "2": 9,
+      "0": 3
+    }
+  },
+  "unique_paper_ids_by_version": {
+    "V0_Day1_Baseline": 13,
+    "V1_Optimized_Rules": 15
+  },
+  "ranking_metrics": {
+    "k": 5,
+    "relevance_threshold": 1,
+    "versions": {
+      "V0_Day1_Baseline": {
+        "branch_count": 4,
+        "complete_top_k_branches": 4,
+        "precision_at_k": 0.05,
+        "ndcg_at_k": 0.10766913951834826,
+        "irrelevant_evidence_rate": null,
+        "irrelevant_evidence_numerator": 0,
+        "irrelevant_evidence_denominator": 0,
+        "judged_relevance_rows": 20,
+        "total_rows": 20,
+        "evidence_gate": null
+      },
+      "V1_Optimized_Rules": {
+        "branch_count": 3,
+        "complete_top_k_branches": 3,
+        "precision_at_k": 0.7999999999999999,
+        "ndcg_at_k": 0.8209692253278226,
+        "irrelevant_evidence_rate": 0.0,
+        "irrelevant_evidence_numerator": 0,
+        "irrelevant_evidence_denominator": 8,
+        "judged_relevance_rows": 15,
+        "total_rows": 15,
+        "evidence_gate": {
+          "labeled_denominator": 14,
+          "false_accept_count": 0,
+          "false_reject_count": 6,
+          "false_accepts": [],
+          "false_rejects": [
+            {
+              "version": "V1_Optimized_Rules",
+              "branch": "target_method",
+              "raw_rank": "4",
+              "paper_id": "https://openalex.org/W2798274031",
+              "title": "Learning and Control Using Gaussian Processes"
+            },
+            {
+              "version": "V1_Optimized_Rules",
+              "branch": "target_method",
+              "raw_rank": "5",
+              "paper_id": "https://openalex.org/W2619551236",
+              "title": "Cautious Model Predictive Control Using Gaussian Process Regression"
+            },
+            {
+              "version": "V1_Optimized_Rules",
+              "branch": "comparison_transfer",
+              "raw_rank": "1",
+              "paper_id": "https://openalex.org/W1545951971",
+              "title": "Gaussian Process Regression Networks"
+            },
+            {
+              "version": "V1_Optimized_Rules",
+              "branch": "comparison_transfer",
+              "raw_rank": "2",
+              "paper_id": "https://openalex.org/W1888026739",
+              "title": "A Primer on Neural Network Models for Natural Language Processing"
+            },
+            {
+              "version": "V1_Optimized_Rules",
+              "branch": "comparison_transfer",
+              "raw_rank": "3",
+              "paper_id": "https://openalex.org/W2611706523",
+              "title": "Phase-functioned neural networks for character control"
+            },
+            {
+              "version": "V1_Optimized_Rules",
+              "branch": "comparison_transfer",
+              "raw_rank": "4",
+              "paper_id": "https://openalex.org/W2910155483",
+              "title": "Deep Neural Network Approximation Theory"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "branch_metrics": [
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "overview",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "precision_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "methods",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "precision_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "applications",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "precision_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "challenges",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "precision_at_5": 0.2,
+      "ndcg_at_5": 0.43067655807339306
+    },
+    {
+      "version": "V1_Optimized_Rules",
+      "branch": "source_method",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "precision_at_5": 1.0,
+      "ndcg_at_5": 0.7743787950430012
+    },
+    {
+      "version": "V1_Optimized_Rules",
+      "branch": "target_method",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "precision_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "version": "V1_Optimized_Rules",
+      "branch": "comparison_transfer",
+      "returned_top_5": 5,
+      "judged_top_5": 5,
+      "scores_in_raw_rank_order": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "precision_at_5": 0.4,
+      "ndcg_at_5": 0.6885288809404666
+    }
+  ],
+  "v1_gate_audit": {
+    "admitted_total": 8,
+    "admitted_with_relevance_label": 8,
+    "gate_judged_total": 14,
+    "human_eligible_yes": 14,
+    "human_eligible_no": 0,
+    "false_accepts": [],
+    "false_rejects": [
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "target_method",
+        "raw_rank": "4",
+        "paper_id": "https://openalex.org/W2798274031",
+        "title": "Learning and Control Using Gaussian Processes",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于高斯过程在控制理论的应用（还需综合考虑其权威性和时效）",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "target_method",
+        "raw_rank": "5",
+        "paper_id": "https://openalex.org/W2619551236",
+        "title": "Cautious Model Predictive Control Using Gaussian Process Regression",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于GP在控制理论的应用（还需综合考虑其权威性和时效）",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "comparison_transfer",
+        "raw_rank": "1",
+        "paper_id": "https://openalex.org/W1545951971",
+        "title": "Gaussian Process Regression Networks",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "1",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于神经网络和高斯过程结合，但是没有考虑应用场景。",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "comparison_transfer",
+        "raw_rank": "2",
+        "paper_id": "https://openalex.org/W1888026739",
+        "title": "A Primer on Neural Network Models for Natural Language Processing",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "0",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "仅与神经网络有关，未考虑控制理论场景",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "comparison_transfer",
+        "raw_rank": "3",
+        "paper_id": "https://openalex.org/W2611706523",
+        "title": "Phase-functioned neural networks for character control",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于神经网络在控制理论的应用（还需综合考虑其权威性和时效）",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "comparison_transfer",
+        "raw_rank": "4",
+        "paper_id": "https://openalex.org/W2910155483",
+        "title": "Deep Neural Network Approximation Theory",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "0",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "和神经网络高度相关但是完全不是控制理论应用场景",
+        "review_status": "complete"
+      }
+    ],
+    "relevant_false_rejects": [
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "target_method",
+        "raw_rank": "4",
+        "paper_id": "https://openalex.org/W2798274031",
+        "title": "Learning and Control Using Gaussian Processes",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于高斯过程在控制理论的应用（还需综合考虑其权威性和时效）",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "target_method",
+        "raw_rank": "5",
+        "paper_id": "https://openalex.org/W2619551236",
+        "title": "Cautious Model Predictive Control Using Gaussian Process Regression",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于GP在控制理论的应用（还需综合考虑其权威性和时效）",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "comparison_transfer",
+        "raw_rank": "1",
+        "paper_id": "https://openalex.org/W1545951971",
+        "title": "Gaussian Process Regression Networks",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "1",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于神经网络和高斯过程结合，但是没有考虑应用场景。",
+        "review_status": "complete"
+      },
+      {
+        "version": "V1_Optimized_Rules",
+        "branch": "comparison_transfer",
+        "raw_rank": "3",
+        "paper_id": "https://openalex.org/W2611706523",
+        "title": "Phase-functioned neural networks for character control",
+        "rule_status": "Retrieved",
+        "human_relevance_label": "2",
+        "human_evidence_eligible_label": "yes",
+        "evidence_reason": "属于神经网络在控制理论的应用（还需综合考虑其权威性和时效）",
+        "review_status": "complete"
+      }
+    ]
+  },
+  "annotation_conflicts_relevance_0_evidence_yes": [
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "overview",
+      "raw_rank": "1",
+      "paper_id": "https://openalex.org/W7151286858",
+      "title": "21世纪新一代人工神经网络—具身认知神经网络",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "与控制理论关联很弱，仅是神经网络在具身智能方向上的综述。",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "overview",
+      "raw_rank": "2",
+      "paper_id": "https://openalex.org/W4244482171",
+      "title": "翻译操控论：从严复和鲁迅的翻译理论相关的例句实践看意识形态作用",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "完全不相关，控制理论和操控论是两个领域。",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "overview",
+      "raw_rank": "3",
+      "paper_id": "https://openalex.org/W4255073332",
+      "title": "太阳风暴的日冕行星际过程三维数值研究进展",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "完全不相关。首先应用场景非理论，其次数值模型本身也不完全符合搜索的两个主题。",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "overview",
+      "raw_rank": "4",
+      "paper_id": "https://openalex.org/W4242765243",
+      "title": "大数据时代下信息管理科学领域的研究",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "和控制理论无关，信息管理和神经网络也不完全相关",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "overview",
+      "raw_rank": "5",
+      "paper_id": "https://openalex.org/W3036907739",
+      "title": "史蒂文·平克的《思想的东西》回顾(2008年) (Review of The Stuff of Thought by Steven Pinker (2008)) (2019年修订版)",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "心理学领域，与控制理论完全不相关。",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "methods",
+      "raw_rank": "3",
+      "paper_id": "https://openalex.org/W4251929020",
+      "title": "翻译研究的对话性路径 : 巴赫金思想与翻译研究",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "翻译领域和目标领域完全不一致。",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "methods",
+      "raw_rank": "4",
+      "paper_id": "https://openalex.org/W7155595472",
+      "title": "中国家族企业职场排斥与职业经理人创新行为的关系研究 : 情绪耗竭的中介作用与离职倾向的调节作用",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "社科领域研究和控制理论不相关。",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "methods",
+      "raw_rank": "5",
+      "paper_id": "https://openalex.org/W7207844290",
+      "title": "美术死后怎样:亚文性与艺术事件的元语法",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "艺术领域和控制领域完全不相关",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "applications",
+      "raw_rank": "4",
+      "paper_id": "https://openalex.org/W7144276572",
+      "title": "对外词汇教学过程中的语词搭配与语块的问题研究",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "语言领域和控制领域不相关",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "challenges",
+      "raw_rank": "2",
+      "paper_id": "https://openalex.org/W7167299833",
+      "title": "太和说：生成存在论与实境分析论（The Discourse of Supreme Harmony: Generative Ontology and Situational Analysis）",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "完全不相关，非控制领域",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "challenges",
+      "raw_rank": "3",
+      "paper_id": "https://openalex.org/W4386141176",
+      "title": "关于“半电路、半电磁场”电路（fiecuit）思考的7份资料汇集",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "和控制领域、数据驱动方法不相关",
+      "review_status": "complete"
+    },
+    {
+      "version": "V0_Day1_Baseline",
+      "branch": "challenges",
+      "raw_rank": "5",
+      "paper_id": "https://openalex.org/W4405087897",
+      "title": "Research progress and trends on models and structures of cognitive machines",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "和神经网络有关但是和控制完全无关",
+      "review_status": "complete"
+    },
+    {
+      "version": "V1_Optimized_Rules",
+      "branch": "comparison_transfer",
+      "raw_rank": "2",
+      "paper_id": "https://openalex.org/W1888026739",
+      "title": "A Primer on Neural Network Models for Natural Language Processing",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "仅与神经网络有关，未考虑控制理论场景",
+      "review_status": "complete"
+    },
+    {
+      "version": "V1_Optimized_Rules",
+      "branch": "comparison_transfer",
+      "raw_rank": "4",
+      "paper_id": "https://openalex.org/W2910155483",
+      "title": "Deep Neural Network Approximation Theory",
+      "rule_status": "Retrieved",
+      "human_relevance_label": "0",
+      "human_evidence_eligible_label": "yes",
+      "evidence_reason": "和神经网络高度相关但是完全不是控制理论应用场景",
+      "review_status": "complete"
+    }
+  ]
+}

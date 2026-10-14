@@ -1,0 +1,582 @@
+{
+  "schema_version": "v3_planner_comparison_v1",
+  "source_hashes": {
+    "original_trace.json": "42245808de0b10663652a8d2f28cd27458e4a7aba00c57d78134586e7ef09658",
+    "expected_intent.json": "3bddc07a692cf10d9a1fbf7f172e77ba0b20b70e61b47b00901132306ce1442f",
+    "v3_paired_cases.json": "81317245b246909c11410823057689786699e9aae1572266aa7eb018e09b8d24"
+  },
+  "qwen": {
+    "status": "not_run_or_failed",
+    "error": "Qwen 网络请求失败；没有自动重试，预算按单次上限预留。",
+    "usage": null
+  },
+  "strategies": {
+    "V1": {
+      "badcase_001": {
+        "intent": {
+          "original_interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+          "theme": "Control Theory / Control Systems: Neural Networks, Gaussian Processes",
+          "approach": "Neural Networks, Gaussian Processes",
+          "goal": "transfer",
+          "constraints": "",
+          "domain": "Control Theory / Control Systems",
+          "source_method": "Neural Networks",
+          "target_method": "Gaussian Processes",
+          "task": "方法比较与研究思路迁移",
+          "relationship": "Neural Networks → Gaussian Processes",
+          "explicit_constraints": [],
+          "inferred": [
+            "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+            "方法概念由中英文术语词表规范化，需用户确认角色"
+          ],
+          "unconfirmed": [
+            "具体应用任务或控制对象"
+          ],
+          "concepts": [
+            "Neural Networks",
+            "Gaussian Processes"
+          ],
+          "field_provenance": {
+            "domain": "explicit term; canonical label normalized",
+            "concepts": "explicit bilingual terms; canonical labels normalized",
+            "source_method_role": "inferred from mention order and transfer cue",
+            "target_method_role": "inferred from mention order and target cue",
+            "task": "inferred from comparison and transfer language",
+            "relationship_direction": "inferred from concept order and transfer wording",
+            "constraints": "none stated",
+            "goal": "inferred from wording"
+          },
+          "parser_version": "rules_v2"
+        },
+        "branches": [
+          {
+            "key": "source_method",
+            "title": "Neural Networks 文献",
+            "purpose": "从来源方法研究中提取可迁移思路：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          },
+          {
+            "key": "target_method",
+            "title": "Gaussian Processes 文献",
+            "purpose": "检索目标方法在该领域的已有工作：Gaussian Processes",
+            "query": "Control Theory Systems gaussian processes process",
+            "focus_method": "Gaussian Processes",
+            "required_methods": [
+              "Gaussian Processes"
+            ]
+          },
+          {
+            "key": "comparison_transfer",
+            "title": "方法比较与思路迁移",
+            "purpose": "比较 Neural Networks 与 Gaussian Processes 并追踪思路迁移",
+            "query": "Control Theory Systems neural networks gaussian processes comparison",
+            "focus_method": "",
+            "required_methods": [
+              "Neural Networks",
+              "Gaussian Processes"
+            ]
+          }
+        ]
+      },
+      "en_transfer_001": {
+        "intent": {
+          "original_interest": "Compare neural networks and Gaussian processes for control systems. I want ideas from neural-network research to guide Gaussian-process research.",
+          "theme": "Control Theory / Control Systems: Neural Networks, Gaussian Processes",
+          "approach": "Neural Networks, Gaussian Processes",
+          "goal": "transfer",
+          "constraints": "",
+          "domain": "Control Theory / Control Systems",
+          "source_method": "Neural Networks",
+          "target_method": "Gaussian Processes",
+          "task": "方法比较与研究思路迁移",
+          "relationship": "Neural Networks → Gaussian Processes",
+          "explicit_constraints": [],
+          "inferred": [
+            "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+            "方法概念由中英文术语词表规范化，需用户确认角色"
+          ],
+          "unconfirmed": [
+            "具体应用任务或控制对象"
+          ],
+          "concepts": [
+            "Neural Networks",
+            "Gaussian Processes"
+          ],
+          "field_provenance": {
+            "domain": "explicit term; canonical label normalized",
+            "concepts": "explicit bilingual terms; canonical labels normalized",
+            "source_method_role": "inferred from mention order and transfer cue",
+            "target_method_role": "inferred from mention order and target cue",
+            "task": "inferred from comparison and transfer language",
+            "relationship_direction": "inferred from concept order and transfer wording",
+            "constraints": "none stated",
+            "goal": "inferred from wording"
+          },
+          "parser_version": "rules_v2"
+        },
+        "branches": [
+          {
+            "key": "source_method",
+            "title": "Neural Networks 文献",
+            "purpose": "从来源方法研究中提取可迁移思路：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          },
+          {
+            "key": "target_method",
+            "title": "Gaussian Processes 文献",
+            "purpose": "检索目标方法在该领域的已有工作：Gaussian Processes",
+            "query": "Control Theory Systems gaussian processes process",
+            "focus_method": "Gaussian Processes",
+            "required_methods": [
+              "Gaussian Processes"
+            ]
+          },
+          {
+            "key": "comparison_transfer",
+            "title": "方法比较与思路迁移",
+            "purpose": "比较 Neural Networks 与 Gaussian Processes 并追踪思路迁移",
+            "query": "Control Theory Systems neural networks gaussian processes comparison",
+            "focus_method": "",
+            "required_methods": [
+              "Neural Networks",
+              "Gaussian Processes"
+            ]
+          }
+        ]
+      },
+      "zh_methods_001": {
+        "intent": {
+          "original_interest": "我想了解机器人控制中常见的神经网络方法。",
+          "theme": "Control Theory / Control Systems Neural Networks",
+          "approach": "Neural Networks",
+          "goal": "map",
+          "constraints": "",
+          "domain": "Control Theory / Control Systems",
+          "source_method": "",
+          "target_method": "",
+          "task": "探索研究版图",
+          "relationship": "",
+          "explicit_constraints": [],
+          "inferred": [
+            "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+            "方法概念由中英文术语词表规范化，需用户确认角色"
+          ],
+          "unconfirmed": [
+            "具体应用任务或控制对象"
+          ],
+          "concepts": [
+            "Neural Networks"
+          ],
+          "field_provenance": {
+            "domain": "explicit term; canonical label normalized",
+            "concepts": "explicit bilingual terms; canonical labels normalized",
+            "source_method_role": "unconfirmed",
+            "target_method_role": "unconfirmed",
+            "task": "unconfirmed",
+            "relationship_direction": "unconfirmed",
+            "constraints": "none stated",
+            "goal": "inferred from wording"
+          },
+          "parser_version": "rules_v2"
+        },
+        "branches": [
+          {
+            "key": "source_method",
+            "title": "Neural Networks 文献",
+            "purpose": "从来源方法研究中提取可迁移思路：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          },
+          {
+            "key": "target_method",
+            "title": "Neural Networks 文献",
+            "purpose": "检索目标方法在该领域的已有工作：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          }
+        ]
+      }
+    },
+    "V2": {},
+    "V3": {
+      "badcase_001": {
+        "intent": {
+          "original_interest": "神经网络和高斯过程在控制理论学术上的区别，我希望能从已经很多的神经网络文章中找到一些灵感，指导我做高斯过程相关的研究",
+          "theme": "Control Theory / Control Systems: Neural Networks, Gaussian Processes",
+          "approach": "Neural Networks, Gaussian Processes",
+          "goal": "transfer",
+          "constraints": "",
+          "domain": "Control Theory / Control Systems",
+          "source_method": "Neural Networks",
+          "target_method": "Gaussian Processes",
+          "task": "方法比较与研究思路迁移",
+          "relationship": "Neural Networks → Gaussian Processes",
+          "explicit_constraints": [],
+          "inferred": [
+            "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+            "方法概念由中英文术语词表规范化，需用户确认角色"
+          ],
+          "unconfirmed": [
+            "具体应用任务或控制对象"
+          ],
+          "concepts": [
+            "Neural Networks",
+            "Gaussian Processes"
+          ],
+          "field_provenance": {
+            "domain": "explicit term; canonical label normalized",
+            "concepts": "explicit bilingual terms; canonical labels normalized",
+            "source_method_role": "inferred from mention order and transfer cue",
+            "target_method_role": "inferred from mention order and target cue",
+            "task": "inferred from comparison and transfer language",
+            "relationship_direction": "inferred from concept order and transfer wording",
+            "constraints": "none stated",
+            "goal": "inferred from wording"
+          },
+          "parser_version": "rules_v2"
+        },
+        "branches": [
+          {
+            "key": "source_method",
+            "title": "Neural Networks 文献",
+            "purpose": "从来源方法研究中提取可迁移思路：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          },
+          {
+            "key": "target_method",
+            "title": "Gaussian Processes 文献",
+            "purpose": "检索目标方法在该领域的已有工作：Gaussian Processes",
+            "query": "Control Theory Systems gaussian processes process",
+            "focus_method": "Gaussian Processes",
+            "required_methods": [
+              "Gaussian Processes"
+            ]
+          },
+          {
+            "key": "comparison_transfer",
+            "title": "方法比较与思路迁移",
+            "purpose": "比较 Neural Networks 与 Gaussian Processes 并追踪思路迁移",
+            "query": "Control Theory Systems neural networks gaussian processes comparison",
+            "focus_method": "",
+            "required_methods": [
+              "Neural Networks",
+              "Gaussian Processes"
+            ]
+          }
+        ]
+      },
+      "en_transfer_001": {
+        "intent": {
+          "original_interest": "Compare neural networks and Gaussian processes for control systems. I want ideas from neural-network research to guide Gaussian-process research.",
+          "theme": "Control Theory / Control Systems: Neural Networks, Gaussian Processes",
+          "approach": "Neural Networks, Gaussian Processes",
+          "goal": "transfer",
+          "constraints": "",
+          "domain": "Control Theory / Control Systems",
+          "source_method": "Neural Networks",
+          "target_method": "Gaussian Processes",
+          "task": "方法比较与研究思路迁移",
+          "relationship": "Neural Networks → Gaussian Processes",
+          "explicit_constraints": [],
+          "inferred": [
+            "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+            "方法概念由中英文术语词表规范化，需用户确认角色"
+          ],
+          "unconfirmed": [
+            "具体应用任务或控制对象"
+          ],
+          "concepts": [
+            "Neural Networks",
+            "Gaussian Processes"
+          ],
+          "field_provenance": {
+            "domain": "explicit term; canonical label normalized",
+            "concepts": "explicit bilingual terms; canonical labels normalized",
+            "source_method_role": "inferred from mention order and transfer cue",
+            "target_method_role": "inferred from mention order and target cue",
+            "task": "inferred from comparison and transfer language",
+            "relationship_direction": "inferred from concept order and transfer wording",
+            "constraints": "none stated",
+            "goal": "inferred from wording"
+          },
+          "parser_version": "rules_v2"
+        },
+        "branches": [
+          {
+            "key": "source_method",
+            "title": "Neural Networks 文献",
+            "purpose": "从来源方法研究中提取可迁移思路：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          },
+          {
+            "key": "target_method",
+            "title": "Gaussian Processes 文献",
+            "purpose": "检索目标方法在该领域的已有工作：Gaussian Processes",
+            "query": "Control Theory Systems gaussian processes process",
+            "focus_method": "Gaussian Processes",
+            "required_methods": [
+              "Gaussian Processes"
+            ]
+          },
+          {
+            "key": "comparison_transfer",
+            "title": "方法比较与思路迁移",
+            "purpose": "比较 Neural Networks 与 Gaussian Processes 并追踪思路迁移",
+            "query": "Control Theory Systems neural networks gaussian processes comparison",
+            "focus_method": "",
+            "required_methods": [
+              "Neural Networks",
+              "Gaussian Processes"
+            ]
+          }
+        ]
+      },
+      "zh_methods_001": {
+        "intent": {
+          "original_interest": "我想了解机器人控制中常见的神经网络方法。",
+          "theme": "Control Theory / Control Systems Neural Networks",
+          "approach": "Neural Networks",
+          "goal": "map",
+          "constraints": "",
+          "domain": "Control Theory / Control Systems",
+          "source_method": "",
+          "target_method": "",
+          "task": "探索研究版图",
+          "relationship": "",
+          "explicit_constraints": [],
+          "inferred": [
+            "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+            "方法概念由中英文术语词表规范化，需用户确认角色"
+          ],
+          "unconfirmed": [
+            "具体应用任务或控制对象"
+          ],
+          "concepts": [
+            "Neural Networks"
+          ],
+          "field_provenance": {
+            "domain": "explicit term; canonical label normalized",
+            "concepts": "explicit bilingual terms; canonical labels normalized",
+            "source_method_role": "unconfirmed",
+            "target_method_role": "unconfirmed",
+            "task": "unconfirmed",
+            "relationship_direction": "unconfirmed",
+            "constraints": "none stated",
+            "goal": "inferred from wording"
+          },
+          "parser_version": "rules_v2"
+        },
+        "branches": [
+          {
+            "key": "source_method",
+            "title": "Neural Networks 文献",
+            "purpose": "从来源方法研究中提取可迁移思路：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          },
+          {
+            "key": "target_method",
+            "title": "Neural Networks 文献",
+            "purpose": "检索目标方法在该领域的已有工作：Neural Networks",
+            "query": "Control Theory Systems neural networks network",
+            "focus_method": "Neural Networks",
+            "required_methods": [
+              "Neural Networks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "V1": {
+      "intent_preservation": {
+        "correct": 21,
+        "denominator": 21,
+        "rate": 1.0,
+        "case_count": 3
+      },
+      "per_case": {
+        "badcase_001": {
+          "checks": {
+            "domain": true,
+            "concepts_exact": true,
+            "source_method": true,
+            "target_method": true,
+            "task_type": true,
+            "relationship": true,
+            "explicit_constraints": true
+          },
+          "correct": 7,
+          "denominator": 7
+        },
+        "en_transfer_001": {
+          "checks": {
+            "domain": true,
+            "concepts_exact": true,
+            "source_method": true,
+            "target_method": true,
+            "task_type": true,
+            "relationship": true,
+            "explicit_constraints": true
+          },
+          "correct": 7,
+          "denominator": 7
+        },
+        "zh_methods_001": {
+          "checks": {
+            "domain": true,
+            "concepts_exact": true,
+            "source_method": true,
+            "target_method": true,
+            "task_type": true,
+            "relationship": true,
+            "explicit_constraints": true
+          },
+          "correct": 7,
+          "denominator": 7
+        }
+      }
+    },
+    "V2": {
+      "intent_preservation": {
+        "correct": 0,
+        "denominator": 0,
+        "rate": null,
+        "case_count": 0
+      },
+      "per_case": {}
+    },
+    "V3": {
+      "intent_preservation": {
+        "correct": 21,
+        "denominator": 21,
+        "rate": 1.0,
+        "case_count": 3
+      },
+      "per_case": {
+        "badcase_001": {
+          "checks": {
+            "domain": true,
+            "concepts_exact": true,
+            "source_method": true,
+            "target_method": true,
+            "task_type": true,
+            "relationship": true,
+            "explicit_constraints": true
+          },
+          "correct": 7,
+          "denominator": 7
+        },
+        "en_transfer_001": {
+          "checks": {
+            "domain": true,
+            "concepts_exact": true,
+            "source_method": true,
+            "target_method": true,
+            "task_type": true,
+            "relationship": true,
+            "explicit_constraints": true
+          },
+          "correct": 7,
+          "denominator": 7
+        },
+        "zh_methods_001": {
+          "checks": {
+            "domain": true,
+            "concepts_exact": true,
+            "source_method": true,
+            "target_method": true,
+            "task_type": true,
+            "relationship": true,
+            "explicit_constraints": true
+          },
+          "correct": 7,
+          "denominator": 7
+        }
+      }
+    },
+    "V0": {
+      "intent_preservation": {
+        "correct": 0,
+        "denominator": 7,
+        "rate": 0.0,
+        "case_count": 1
+      },
+      "per_case": {
+        "badcase_001": {
+          "checks": {
+            "domain": false,
+            "concepts_exact": false,
+            "source_method": false,
+            "target_method": false,
+            "task_type": false,
+            "relationship": false,
+            "explicit_constraints": false
+          },
+          "correct": 0,
+          "denominator": 7
+        }
+      },
+      "note": "Only badcase_001 has an archived structured V0 trace; no outputs fabricated for new cases."
+    }
+  },
+  "cost_latency": {
+    "V0": {
+      "api_calls": 0,
+      "cost": "historical; not recorded"
+    },
+    "V1": {
+      "api_calls": 0,
+      "planner_latency_ms_by_case": {
+        "badcase_001": 5.788,
+        "en_transfer_001": 0.342,
+        "zh_methods_001": 0.28
+      },
+      "cost_cny": 0
+    },
+    "V2": {
+      "api_calls": 0,
+      "latency_ms": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_cny": null
+    },
+    "V3": {
+      "api_calls": 0,
+      "cost_cny": 0,
+      "note": "offline routing simulation reuses recorded V2 plans; not a deployed hybrid latency/cost estimate"
+    }
+  },
+  "retrieval_quality": {
+    "precision_at_5": null,
+    "direction_coverage": null,
+    "irrelevant_evidence_rate": null,
+    "reason": "Awaiting live retrieval and human relevance adjudication; model/rule gates are not ground truth."
+  }
+}
