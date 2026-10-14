@@ -2,6 +2,8 @@
 
 Research Compass helps novice researchers turn a broad interest into a source-grounded next research step. It focuses on **what to search when you do not yet know what to search for**, rather than presenting itself as another paper database.
 
+**Public demo:** [research-compass-ai.streamlit.app](https://research-compass-ai.streamlit.app/). The public app offers V1 rule planning, OpenAlex retrieval, and a clearly labeled historical snapshot. Live public Qwen planning is disabled while its concurrency recovery awaits safety review.
+
 ## Product flow
 
 1. **AI Intent Studio** — enter a natural-language interest, optionally clarify one key ambiguity, review and edit the structured intent. The interface distinguishes live Qwen, rule fallback and a historical snapshot.
@@ -19,7 +21,7 @@ Streamlit pages + session workflow
   └─ Public Qwen budget: Upstash Redis REST EVAL, default disabled
 ```
 
-Core retrieval uses [PyAlex](https://github.com/J535D165/pyalex) and [OpenAlex](https://openalex.org/). Qwen is limited to intent understanding and dynamic query planning; it does not establish research gaps. The persistent budget gate passed isolated local Upstash acceptance, but public Qwen is default-off pending stale concurrency-slot recovery, GitHub Actions and cloud deployment checks.
+Core retrieval uses [PyAlex](https://github.com/J535D165/pyalex) and [OpenAlex](https://openalex.org/). Qwen is limited to intent understanding and dynamic query planning; it does not establish research gaps. The persistent budget gate passed isolated local Upstash acceptance, and Linux CI passed. Live public Qwen remains off pending stale concurrency-slot recovery and cloud security review.
 
 ## Evaluation snapshot
 
@@ -52,8 +54,8 @@ python -m pytest -q
 - Abstract-only evidence is not full-text verification; every supported statement needs a source excerpt.
 - Small search samples cannot prove a topic is unexplored or that a research gap exists.
 - Public Evaluation is read-only. Historical traces, human labels and frozen reports are retained as research evidence.
-- No production user study, public deployment, usage growth or public Qwen call has been completed. Isolated live Upstash budget-gate checks passed locally; they are not a cloud deployment test.
-- Public URL: **not deployed yet**.
+- No production user study, usage-growth result, or live public Qwen call has been completed. Isolated live Upstash budget-gate checks passed locally; they are not a cloud Qwen safety test.
+- Public URL: [https://research-compass-ai.streamlit.app/](https://research-compass-ai.streamlit.app/) (rules and historical snapshot; live public Qwen disabled).
 
 ## Product and release docs
 

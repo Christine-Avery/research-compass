@@ -9,6 +9,7 @@ import streamlit as st
 
 from research_compass.planning import ResearchIntent, build_planned_branches, normalize_concepts, parse_intent
 from research_compass.prototype_snapshot import activate_golden_snapshot, load_golden_snapshot
+from research_compass.public_budget import public_budget_enabled
 from research_compass.qwen_planning import LEDGER, MAX_CALLS, QwenPlanningError, plan_with_qwen
 from research_compass.ui_theme import render_header
 
@@ -37,17 +38,28 @@ def _needs_one_question(intent: ResearchIntent) -> bool:
 
 st.title("从模糊兴趣开始")
 st.caption("AI Intent Studio · 把自然语言兴趣整理成可确认的研究目标与探索路径。")
-try:
-    used_calls = int(json.loads(LEDGER.read_text(encoding="utf-8")).get("attempts", 0))
-    if used_calls >= MAX_CALLS:
-        st.info(f"本轮 Qwen 测试额度已用完（{used_calls}/{MAX_CALLS}）；新输入将明确使用规则降级，不会再发付费请求。")
-except (OSError, ValueError):
-    st.warning("无法读取 Qwen 预算账本；付费调用将被预算保护阻止。")
+public_deployment = os.getenv("PUBLIC_DEPLOYMENT", "false").lower() == "true"
+public_qwen_ready = public_budget_enabled() if public_deployment else True
+if public_deployment:
+    if not public_qwen_ready:
+        st.info("实时 AI 暂未开放，当前可使用规则搜索或历史演示。")
+else:
+    try:
+        used_calls = int(json.loads(LEDGER.read_text(encoding="utf-8")).get("attempts", 0))
+        if used_calls >= MAX_CALLS:
+            st.info(f"本轮 Qwen 测试额度已用完（{used_calls}/{MAX_CALLS}）；新输入将明确使用规则降级，不会再发付费请求。")
+    except (OSError, ValueError):
+        st.warning("无法读取 Qwen 预算账本；付费调用将被预算保护阻止。")
+mode_help = ("实时 AI 暂未开放；选择后将使用本地规则，不会发送付费请求。"
+             if public_deployment and not public_qwen_ready else
+             "公网实时 AI 受服务端预算保护。" if public_deployment else
+             "Qwen 调用受现有开发预算账本限制；失败后会明确标记规则降级。")
 with st.form("interest_form"):
     interest = st.text_area("你的研究兴趣", value=st.session_state.get("interest", ""),
                             placeholder="例如：想比较神经网络和高斯过程在控制理论中的研究思路……")
-    mode = st.radio("规划方式", ["Qwen AI", "本地规则 V1"], horizontal=True,
-                    help="Qwen 调用受现有预算账本限制；失败后会明确标记规则降级。")
+    mode = st.radio("规划方式", ["Qwen AI", "本地规则 V1"],
+                    index=1 if public_deployment and not public_qwen_ready else 0,
+                    horizontal=True, help=mode_help)
     submitted = st.form_submit_button("理解研究意图", type="primary")
 
 snapshot_clicked = st.button("载入已验证 Golden Case（历史 Snapshot · 不调用 API）", help=
@@ -75,7 +87,12 @@ if submitted:
             st.session_state.pop(key, None)
         st.session_state.interest = interest.strip()
         st.session_state.plan_notice = ""
-        if mode == "Qwen AI":
+        if mode == "Qwen AI" and public_deployment and not public_qwen_ready:
+            intent = parse_intent(interest.strip())
+            branches = build_planned_branches(intent)[:3]
+            st.session_state.plan_source = "rules_fallback"
+            st.session_state.plan_notice = "实时 AI 暂未开放；已使用本地规则 V1，没有调用 Qwen。"
+        elif mode == "Qwen AI":
             _deployment_secrets()
             try:
                 with st.spinner("Qwen 正在理解意图并规划 2–3 条路径……"):

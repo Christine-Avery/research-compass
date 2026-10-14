@@ -3,6 +3,7 @@
 from pathlib import Path
 import json
 
+import pytest
 from streamlit.testing.v1 import AppTest
 
 from research_compass.evidence import build_report
@@ -51,16 +52,70 @@ def test_key_ambiguity_asks_at_most_once_and_can_skip():
 def test_qwen_failure_is_labeled_rule_fallback(monkeypatch):
     import research_compass.qwen_planning as qwen
 
+    monkeypatch.setenv("PUBLIC_DEPLOYMENT", "false")
+
     def offline_failure(*args, **kwargs):
         raise QwenPlanningError("离线故障注入")
 
     monkeypatch.setattr(qwen, "plan_with_qwen", offline_failure)
     app = _app()
     app.text_area[0].set_value("Compare neural networks and Gaussian processes in control theory")
+    app.radio[0].set_value("Qwen AI")
     _button(app, "理解研究意图").click().run()
     assert not app.exception
     assert app.session_state.plan_source == "rules_fallback"
     assert any("本地规则结果" in item.value for item in app.warning)
+
+
+@pytest.mark.parametrize(("enabled", "review_passed"), [
+    ("false", "false"), ("true", "false"), ("false", "true"),
+])
+def test_public_qwen_off_defaults_to_rules_and_never_reads_dev_ledger_or_calls_model(
+    monkeypatch, enabled, review_passed,
+):
+    import research_compass.qwen_planning as qwen
+
+    monkeypatch.setenv("PUBLIC_DEPLOYMENT", "true")
+    monkeypatch.setenv("PUBLIC_QWEN_ENABLED", enabled)
+    monkeypatch.setenv("PUBLIC_QWEN_SECURITY_REVIEW_PASSED", review_passed)
+
+    class ForbiddenLedger:
+        def read_text(self, *args, **kwargs):
+            raise AssertionError("Public page must not read the development ledger")
+
+    model_calls = []
+
+    def forbidden_model_call(*args, **kwargs):
+        model_calls.append((args, kwargs))
+        raise AssertionError("Disabled public Qwen must not be called")
+
+    monkeypatch.setattr(qwen, "LEDGER", ForbiddenLedger())
+    monkeypatch.setattr(qwen, "plan_with_qwen", forbidden_model_call)
+    app = _app()
+    assert not app.exception
+    assert app.radio[0].value == "本地规则 V1"
+    assert any("实时 AI 暂未开放" in item.value for item in app.info)
+    assert not any("账本" in item.value for item in app.warning)
+
+    app.text_area[0].set_value("Compare neural networks and Gaussian processes in control theory")
+    app.radio[0].set_value("Qwen AI")
+    _button(app, "理解研究意图").click().run()
+    assert not app.exception
+    assert model_calls == []
+    assert app.session_state.plan_source == "rules_fallback"
+    assert any("没有调用 Qwen" in item.value for item in app.warning)
+
+
+def test_public_page_never_reads_development_ledger_even_when_switches_are_on(monkeypatch):
+    import research_compass.qwen_planning as qwen
+
+    monkeypatch.setenv("PUBLIC_DEPLOYMENT", "true")
+    monkeypatch.setenv("PUBLIC_QWEN_ENABLED", "true")
+    monkeypatch.setenv("PUBLIC_QWEN_SECURITY_REVIEW_PASSED", "true")
+    monkeypatch.setattr(qwen, "LEDGER", None)
+    app = _app()
+    assert not app.exception
+    assert not any("账本" in item.value for item in [*app.info, *app.warning])
 
 
 def test_openalex_failure_is_demo_and_has_no_evidence(monkeypatch):
