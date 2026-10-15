@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-10-15T16:54:38.250735+00:00",
+  "test_queries_sha256": "dfb37d8b2dd98a93e13c18e9f225d5ae8952def2d285e018b56407ae26a4ba6c",
+  "case_count": 16,
+  "category_counts": {
+    "S1": 4,
+    "S2": 4,
+    "S3": 4,
+    "S4": 4
+  },
+  "source": "synthetic needs, not user interview data",
+  "preregistered_top5_rule": "Before relevance judgments, select the branch with the greatest lexical/semantic match to retrieval_task using intent fields and branch title/purpose/query only; ties resolve by branch order. Apply this same target to both systems. If either has no matching branch, record planning failure and no Top-5 metrics for the pair."
+}

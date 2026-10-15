@@ -1,0 +1,795 @@
+{
+  "frozen_set": {
+    "n": 16,
+    "unique_ids": 16,
+    "run_rows": 16,
+    "run_unique_ids": 16,
+    "query_ids_missing_runs": [],
+    "run_ids_not_in_queries": [],
+    "sha256": "dfb37d8b2dd98a93e13c18e9f225d5ae8952def2d285e018b56407ae26a4ba6c"
+  },
+  "labels": {
+    "rows": 119,
+    "unique_query_paper_pairs": 119,
+    "duplicate_query_paper_keys": 0,
+    "grade_counts": {
+      "0": 29,
+      "1": 38,
+      "2": 52
+    },
+    "missing_top5_labels": [],
+    "human_review_status_counts": {
+      "pending": 119
+    },
+    "label_status_counts": {
+      "provisional_machine_assisted_initial": 119
+    },
+    "ai_assisted_counts": {
+      "yes": 119
+    }
+  },
+  "coverage": {
+    "A_complete_ids": [
+      "S1-01",
+      "S1-02",
+      "S1-03",
+      "S1-04",
+      "S2-01",
+      "S2-02",
+      "S2-03",
+      "S2-04",
+      "S3-01",
+      "S3-02",
+      "S3-03",
+      "S3-04"
+    ],
+    "B_complete_ids": [
+      "S1-01",
+      "S1-02",
+      "S1-03",
+      "S1-04",
+      "S2-01",
+      "S2-03",
+      "S2-04",
+      "S3-01",
+      "S3-02",
+      "S3-03",
+      "S3-04",
+      "S4-03"
+    ],
+    "A_only": [
+      "S2-02"
+    ],
+    "B_only": [
+      "S4-03"
+    ],
+    "paired_ids": [
+      "S1-01",
+      "S1-02",
+      "S1-03",
+      "S1-04",
+      "S2-01",
+      "S2-03",
+      "S2-04",
+      "S3-01",
+      "S3-02",
+      "S3-03",
+      "S3-04"
+    ],
+    "paired_n": 11,
+    "unpaired_ids": [
+      "S2-02",
+      "S4-01",
+      "S4-02",
+      "S4-03",
+      "S4-04"
+    ],
+    "S4_paired_n": 0
+  },
+  "metrics": {
+    "A": {
+      "n": 11,
+      "mean_precision_at_5": 0.6363636363636364,
+      "mean_ndcg_at_5": 0.7171314978932744
+    },
+    "B": {
+      "n": 11,
+      "mean_precision_at_5": 0.8363636363636364,
+      "mean_ndcg_at_5": 0.9050602866048726
+    },
+    "delta_precision_at_5": 0.20000000000000007,
+    "delta_ndcg_at_5": 0.18792878871159824,
+    "wins_precision": {
+      "Qwen": 4,
+      "Rules": 1,
+      "tie": 6
+    },
+    "wins_ndcg": {
+      "Qwen": 9,
+      "Rules": 0,
+      "tie": 2
+    },
+    "by_category": {
+      "S1": {
+        "n_complete_pairs": 4,
+        "A": {
+          "n": 4,
+          "mean_precision_at_5": 0.95,
+          "mean_ndcg_at_5": 0.8263909662672464
+        },
+        "B": {
+          "n": 4,
+          "mean_precision_at_5": 1.0,
+          "mean_ndcg_at_5": 0.977871737694924
+        }
+      },
+      "S2": {
+        "n_complete_pairs": 3,
+        "A": {
+          "n": 3,
+          "mean_precision_at_5": 0.7333333333333334,
+          "mean_ndcg_at_5": 0.6623712417967714
+        },
+        "B": {
+          "n": 3,
+          "mean_precision_at_5": 0.6666666666666667,
+          "mean_ndcg_at_5": 0.8073585323447754
+        }
+      },
+      "S3": {
+        "n_complete_pairs": 4,
+        "A": {
+          "n": 4,
+          "mean_precision_at_5": 0.25,
+          "mean_ndcg_at_5": 0.6489422215916796
+        },
+        "B": {
+          "n": 4,
+          "mean_precision_at_5": 0.8,
+          "mean_ndcg_at_5": 0.9055251512098941
+        }
+      },
+      "S4": {
+        "n_complete_pairs": 0,
+        "A": {
+          "n": 0,
+          "mean_precision_at_5": null,
+          "mean_ndcg_at_5": null
+        },
+        "B": {
+          "n": 0,
+          "mean_precision_at_5": null,
+          "mean_ndcg_at_5": null
+        }
+      }
+    },
+    "per_query": {
+      "S1-01": {
+        "category": "S1",
+        "A": {
+          "eligible": true,
+          "grades": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 4.210318626022307,
+          "idcg": 4.948459118879392,
+          "ndcg_at_5": 0.850834274847108
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 7.845377356638177,
+          "idcg": 8.071671742169094,
+          "ndcg_at_5": 0.9719643720954755
+        },
+        "delta_precision_at_5": 0.0,
+        "delta_ndcg_at_5": 0.12113009724836743
+      },
+      "S1-02": {
+        "category": "S1",
+        "A": {
+          "eligible": true,
+          "grades": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 3.7221647333484755,
+          "idcg": 4.948459118879392,
+          "ndcg_at_5": 0.7521866188906461
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 7.583517849495262,
+          "idcg": 8.071671742169094,
+          "ndcg_at_5": 0.9395225786842205
+        },
+        "delta_precision_at_5": 0.0,
+        "delta_ndcg_at_5": 0.18733595979357442
+      },
+      "S1-03": {
+        "category": "S1",
+        "A": {
+          "eligible": true,
+          "grades": [
+            1,
+            0,
+            2,
+            1,
+            2
+          ],
+          "precision_at_5": 0.8,
+          "dcg": 4.091234979777018,
+          "idcg": 5.823465818787765,
+          "ndcg_at_5": 0.7025429713312312
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 8.845377356638178,
+          "idcg": 8.845377356638178,
+          "ndcg_at_5": 1.0
+        },
+        "delta_precision_at_5": 0.19999999999999996,
+        "delta_ndcg_at_5": 0.2974570286687688
+      },
+      "S1-04": {
+        "category": "S1",
+        "A": {
+          "eligible": true,
+          "grades": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 4.948459118879392,
+          "idcg": 4.948459118879392,
+          "ndcg_at_5": 1.0
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 2.9484591188793923,
+          "idcg": 2.9484591188793923,
+          "ndcg_at_5": 1.0
+        },
+        "delta_precision_at_5": 0.0,
+        "delta_ndcg_at_5": 0.0
+      },
+      "S2-01": {
+        "category": "S2",
+        "A": {
+          "eligible": true,
+          "grades": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 3.7221647333484755,
+          "idcg": 4.948459118879392,
+          "ndcg_at_5": 0.7521866188906461
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            1,
+            2,
+            1
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 7.0716717421690936,
+          "idcg": 7.210318626022307,
+          "ndcg_at_5": 0.9807710461847231
+        },
+        "delta_precision_at_5": 0.0,
+        "delta_ndcg_at_5": 0.22858442729407702
+      },
+      "S2-02": {
+        "category": "S2",
+        "A": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 8.845377356638178,
+          "idcg": 8.845377356638178,
+          "ndcg_at_5": 1.0
+        },
+        "B": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        }
+      },
+      "S2-03": {
+        "category": "S2",
+        "A": {
+          "eligible": true,
+          "grades": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 6.845377356638177,
+          "idcg": 8.071671742169094,
+          "ndcg_at_5": 0.8480742992651265
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            1,
+            2,
+            2,
+            0
+          ],
+          "precision_at_5": 0.8,
+          "dcg": 6.422959427791637,
+          "idcg": 6.823465818787765,
+          "ndcg_at_5": 0.9413045508496032
+        },
+        "delta_precision_at_5": -0.19999999999999996,
+        "delta_ndcg_at_5": 0.09323025158447673
+      },
+      "S2-04": {
+        "category": "S2",
+        "A": {
+          "eligible": true,
+          "grades": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "precision_at_5": 0.2,
+          "dcg": 0.38685280723454163,
+          "idcg": 1.0,
+          "ndcg_at_5": 0.38685280723454163
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "precision_at_5": 0.2,
+          "dcg": 1.5,
+          "idcg": 3.0,
+          "ndcg_at_5": 0.5
+        },
+        "delta_precision_at_5": 0.0,
+        "delta_ndcg_at_5": 0.11314719276545837
+      },
+      "S3-01": {
+        "category": "S3",
+        "A": {
+          "eligible": true,
+          "grades": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ],
+          "precision_at_5": 0.4,
+          "dcg": 3.430676558073393,
+          "idcg": 3.6309297535714578,
+          "ndcg_at_5": 0.944847956559586
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            0,
+            2,
+            1
+          ],
+          "precision_at_5": 0.8,
+          "dcg": 6.5716717421690936,
+          "idcg": 6.823465818787765,
+          "ndcg_at_5": 0.9630988000371629
+        },
+        "delta_precision_at_5": 0.4,
+        "delta_ndcg_at_5": 0.018250843477576884
+      },
+      "S3-02": {
+        "category": "S3",
+        "A": {
+          "eligible": true,
+          "grades": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "precision_at_5": 0.0,
+          "dcg": 0.0,
+          "idcg": 0.0,
+          "ndcg_at_5": 0.0
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 8.845377356638178,
+          "idcg": 8.845377356638178,
+          "ndcg_at_5": 1.0
+        },
+        "delta_precision_at_5": 1.0,
+        "delta_ndcg_at_5": 1.0
+      },
+      "S3-03": {
+        "category": "S3",
+        "A": {
+          "eligible": true,
+          "grades": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "precision_at_5": 0.4,
+          "dcg": 1.0616063116448506,
+          "idcg": 1.6309297535714575,
+          "ndcg_at_5": 0.6509209298071326
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          "precision_at_5": 0.4,
+          "dcg": 2.3927892607143724,
+          "idcg": 3.6309297535714578,
+          "ndcg_at_5": 0.6590018048024133
+        },
+        "delta_precision_at_5": 0.0,
+        "delta_ndcg_at_5": 0.008080874995280762
+      },
+      "S3-04": {
+        "category": "S3",
+        "A": {
+          "eligible": true,
+          "grades": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "precision_at_5": 0.2,
+          "dcg": 1.0,
+          "idcg": 1.0,
+          "ndcg_at_5": 1.0
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            2,
+            2,
+            2,
+            2,
+            1
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 8.071671742169094,
+          "idcg": 8.071671742169094,
+          "ndcg_at_5": 1.0
+        },
+        "delta_precision_at_5": 0.8,
+        "delta_ndcg_at_5": 0.0
+      },
+      "S4-01": {
+        "category": "S4",
+        "A": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        },
+        "B": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        }
+      },
+      "S4-02": {
+        "category": "S4",
+        "A": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        },
+        "B": {
+          "eligible": false,
+          "request_status": "planner_error",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "Qwen 网络请求失败。没有自动重试；预算按单次上限预留。"
+        }
+      },
+      "S4-03": {
+        "category": "S4",
+        "A": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        },
+        "B": {
+          "eligible": true,
+          "grades": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "precision_at_5": 1.0,
+          "dcg": 6.845377356638177,
+          "idcg": 8.071671742169094,
+          "ndcg_at_5": 0.8480742992651265
+        }
+      },
+      "S4-04": {
+        "category": "S4",
+        "A": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        },
+        "B": {
+          "eligible": false,
+          "request_status": "not_run",
+          "retrieval_mode": "not_run",
+          "selected_path": null,
+          "error": "planning failure: no relation-matching branch"
+        }
+      }
+    }
+  },
+  "integrity": {
+    "duplicate_top5_ids": [],
+    "missing_labels_for_top5": [],
+    "top5_id_request_mismatches": []
+  },
+  "qwen_direction_audit": [
+    {
+      "query_id": "S2-01",
+      "expected_source": "Reinforcement Learning",
+      "expected_target": "Model Predictive Control",
+      "raw_source": "Reinforcement Learning (specifically Safe Exploration strategies)",
+      "raw_target": "Model Predictive Control",
+      "raw_relationship": "comparison_transfer",
+      "parsed_source": "",
+      "parsed_target": "Model Predictive Control",
+      "parsed_relationship": "",
+      "qwen_error": null,
+      "raw_direction_present": true
+    },
+    {
+      "query_id": "S2-02",
+      "expected_source": "Transformers",
+      "expected_target": "Convolutional Neural Networks",
+      "raw_source": "Transformers (specifically Attention Mechanisms)",
+      "raw_target": "Convolutional Neural Networks (specifically Feature Fusion modules)",
+      "raw_relationship": "comparison_transfer",
+      "parsed_source": "",
+      "parsed_target": "",
+      "parsed_relationship": "",
+      "qwen_error": "planning failure: no relation-matching branch",
+      "raw_direction_present": true
+    },
+    {
+      "query_id": "S2-03",
+      "expected_source": "Gaussian Processes",
+      "expected_target": "Reinforcement Learning",
+      "raw_source": "Gaussian Process-based Bayesian Optimization",
+      "raw_target": "Reinforcement Learning for Experimental Design",
+      "raw_relationship": "comparison_transfer",
+      "parsed_source": "",
+      "parsed_target": "",
+      "parsed_relationship": "",
+      "qwen_error": null,
+      "raw_direction_present": true
+    },
+    {
+      "query_id": "S2-04",
+      "expected_source": "Convolutional Neural Networks",
+      "expected_target": "Transformers",
+      "raw_source": "Convolutional Neural Networks (CNN)",
+      "raw_target": "Transformer",
+      "raw_relationship": "comparison_transfer",
+      "parsed_source": "Convolutional Neural Networks (CNN)",
+      "parsed_target": "",
+      "parsed_relationship": "",
+      "qwen_error": null,
+      "raw_direction_present": true
+    },
+    {
+      "query_id": "S4-01",
+      "expected_source": "声学超材料局域共振设计",
+      "expected_target": "稳健结构噪声控制",
+      "raw_source": "Local Resonant Acoustic Metamaterials",
+      "raw_target": "Offshore Wind Turbine Noise Mitigation",
+      "raw_relationship": "transfer",
+      "parsed_source": "",
+      "parsed_target": "",
+      "parsed_relationship": "",
+      "qwen_error": "planning failure: no relation-matching branch",
+      "raw_direction_present": true
+    },
+    {
+      "query_id": "S4-02",
+      "expected_source": "微生物组空间代谢互补",
+      "expected_target": "地貌过程解释",
+      "raw_source": null,
+      "raw_target": null,
+      "raw_relationship": null,
+      "parsed_source": null,
+      "parsed_target": null,
+      "parsed_relationship": null,
+      "qwen_error": "Qwen 网络请求失败。没有自动重试；预算按单次上限预留。",
+      "raw_direction_present": false
+    },
+    {
+      "query_id": "S4-03",
+      "expected_source": "城市考古历史地层分析",
+      "expected_target": "热岛遥感分析",
+      "raw_source": "Archaeological stratigraphic analysis and historical land-cover reconstruction",
+      "raw_target": "Remote sensing-based thermal mapping and spatiotemporal modeling",
+      "raw_relationship": "transfer",
+      "parsed_source": "",
+      "parsed_target": "",
+      "parsed_relationship": "",
+      "qwen_error": null,
+      "raw_direction_present": true
+    },
+    {
+      "query_id": "S4-04",
+      "expected_source": "微生物电化学",
+      "expected_target": "冰芯气体记录分析",
+      "raw_source": "Microbial Electrochemical Analysis of Subglacial Environments",
+      "raw_target": "Paleoclimate Reconstruction via Ice Core Gas Isotopes",
+      "raw_relationship": "transfer",
+      "parsed_source": "",
+      "parsed_target": "",
+      "parsed_relationship": "",
+      "qwen_error": "planning failure: no relation-matching branch",
+      "raw_direction_present": true
+    }
+  ],
+  "metrics_consistency": {
+    "checks": {
+      "A_n": true,
+      "B_n": true,
+      "A_mean_P@5": true,
+      "B_mean_P@5": true,
+      "A_mean_nDCG@5": true,
+      "B_mean_nDCG@5": true,
+      "delta_P@5": true,
+      "delta_nDCG@5": true,
+      "paired_n": true,
+      "P@5_wins": true,
+      "nDCG@5_wins": true
+    },
+    "all_passed": true,
+    "source": "Independent calculations from paired_runs.jsonl and relevance_labels.csv compared with prior metrics.json; prior file not overwritten."
+  },
+  "provenance_audit": {
+    "qwen_ledger_attempts": 32,
+    "qwen_ledger_status_counts": {
+      "network_error_unknown_usage": 17,
+      "success": 15
+    },
+    "qwen_calls_with_unknown_usage": 17,
+    "automatic_retries": 0,
+    "historic_ledger_hash_before_after_equal": true,
+    "recorded_output_hash_checks": {
+      "paired_runs.jsonl": true,
+      "qwen_experiment_ledger.json": true,
+      "relevance_labels.csv": true,
+      "metrics.json": true,
+      "intent_audit.json": true,
+      "blind_candidate_pool.jsonl": true,
+      "RESULTS.md": false,
+      "resume_claims.md": true,
+      "metrics_chart.svg": true,
+      "score_and_report.py": true
+    },
+    "manifest_outputs_not_in_this_archive": [],
+    "raw_artifact_hash_checks": {
+      "paired_runs.jsonl": true,
+      "qwen_experiment_ledger.json": true,
+      "relevance_labels.csv": true,
+      "metrics.json": true,
+      "intent_audit.json": true,
+      "blind_candidate_pool.jsonl": true,
+      "resume_claims.md": true,
+      "metrics_chart.svg": true,
+      "score_and_report.py": true
+    },
+    "all_unchanged_raw_artifact_hashes_match": true,
+    "known_hash_exception": "RESULTS.md was intentionally rewritten during this archive round; the historic manifest records its prior version hash and was left unchanged."
+  }
+}

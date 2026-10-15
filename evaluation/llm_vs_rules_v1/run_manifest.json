@@ -1,0 +1,39 @@
+{
+  "finished_at_utc": "2026-10-15T17:03:24.474010+00:00",
+  "freeze_manifest": {
+    "frozen_at_utc": "2026-10-15T16:54:38.250735+00:00",
+    "test_queries_sha256": "dfb37d8b2dd98a93e13c18e9f225d5ae8952def2d285e018b56407ae26a4ba6c",
+    "case_count": 16,
+    "category_counts": {
+      "S1": 4,
+      "S2": 4,
+      "S3": 4,
+      "S4": 4
+    },
+    "source": "synthetic needs, not user interview data",
+    "preregistered_top5_rule": "Before relevance judgments, select the branch with the greatest lexical/semantic match to retrieval_task using intent fields and branch title/purpose/query only; ties resolve by branch order. Apply this same target to both systems. If either has no matching branch, record planning failure and no Top-5 metrics for the pair."
+  },
+  "rules_code_sha256": "65f1d0fb6c131eb209d50bc8b450a9088133ee6cae35aa22297fff0a849428e5",
+  "qwen_code_sha256": "5b801878a69a7575cbd68da6e69741872257d9e471c4738c3c3429cfee8ef463",
+  "retrieval_code_sha256": "16dbf056f0ca8359dc6d09662611e14278b2eb10da1c552ecb4b4c33ffd02a38",
+  "run_records_sha256": "72353f2e5ccd53f1562603b777fe4a9385a55d1e647daa114cff2aae4cf9e668",
+  "historic_qwen_ledger_sha256_before": "5613ff8ff6968c59cd3224ae95c5ea6c37cb921d7622d8468fa4298b0e2146b8",
+  "historic_qwen_ledger_sha256_after": "5613ff8ff6968c59cd3224ae95c5ea6c37cb921d7622d8468fa4298b0e2146b8",
+  "production_settings": "PUBLIC_DEPLOYMENT was checked false. No Redis import/client used. PUBLIC_QWEN_ENABLED and PUBLIC_QWEN_SECURITY_REVIEW_PASSED were not read or modified.",
+  "qwen_experiment_ledger": "qwen_experiment_ledger.json",
+  "qwen_successes": 15,
+  "qwen_failures": 1,
+  "qwen_total_actual_cost_cny": 0.0268923,
+  "evaluation_outputs_sha256": {
+    "paired_runs.jsonl": "72353f2e5ccd53f1562603b777fe4a9385a55d1e647daa114cff2aae4cf9e668",
+    "qwen_experiment_ledger.json": "d2c56c93946ee007fa1fceec7f8be826caf5d0311951e151cdf604c391ced69a",
+    "relevance_labels.csv": "8e125afbb2273130332824770adf396407a4f97455ef76e82c7fc088fe089aab",
+    "metrics.json": "e2708d3229140bfd4d0b80b114a333c6df30c413109130d73e55f483a0935ab2",
+    "intent_audit.json": "ec525a12879fef50dcf91ce90874ef35d57ed72fbe2bef9a82f1cb96f0c77d34",
+    "blind_candidate_pool.jsonl": "448558b73820cada03bc128ba4c0a508935091c3b0bfe0571d96e12ec13178fe",
+    "RESULTS.md": "04be54c04cd1095a3be30299d180d7273e8ee6f62506be773e94501bc1ec18d8",
+    "resume_claims.md": "a4312f2a27aa73f282fbd85c427c96bf04c6e721ed2e914223f24f568822afe7",
+    "metrics_chart.svg": "6239a4e19627600c041a0c2a0919620877f0e5691dedf18625624e824860013a",
+    "score_and_report.py": "f9b6f43d5401f3e154418766a392951102194ff7b3a8f312658f053fdbe95c96"
+  }
+}

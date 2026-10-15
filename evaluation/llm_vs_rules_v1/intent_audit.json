@@ -1,0 +1,1494 @@
+{
+  "S1-01": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: performance assessment of RL adaptive control; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想了解强化学习怎样用于非线性控制系统的自适应控制，重点看控制性能评估。",
+        "theme": "Control Theory / Control Systems Reinforcement Learning",
+        "approach": "Reinforcement Learning",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Control Theory / Control Systems",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务或控制对象"
+        ],
+        "concepts": [
+          "Reinforcement Learning"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: performance assessment of RL adaptive control; observed task='Control Performance Assessment'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想了解强化学习怎样用于非线性控制系统的自适应控制，重点看控制性能评估。",
+        "theme": "Control Theory / Control Systems",
+        "approach": "Reinforcement Learning, Adaptive Control, Nonlinear Systems, Performance Evaluation",
+        "goal": "evaluation",
+        "constraints": "",
+        "domain": "Control Theory / Control Systems",
+        "source_method": "Reinforcement Learning",
+        "target_method": "",
+        "task": "Control Performance Assessment",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Focus on metrics like stability, convergence rate, and tracking error",
+          "Comparison with traditional adaptive control methods"
+        ],
+        "unconfirmed": [
+          "Specific RL algorithms (e.g., PPO, SAC)",
+          "Specific types of nonlinear systems (e.g., robotic arms, chemical processes)"
+        ],
+        "concepts": [
+          "Reinforcement Learning",
+          "Adaptive Control",
+          "Nonlinear Systems",
+          "Performance Evaluation"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "Qwen 根据上下文识别；需用户确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S1-02": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: efficient long-document Transformer summarization; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "在自然语言处理里，我要找 Transformer 做长文档摘要时降低计算开销的方法。",
+        "theme": "Natural Language Processing Transformers",
+        "approach": "Transformers",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Natural Language Processing",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Natural Language Processing（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Transformers"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: efficient long-document Transformer summarization; observed task='Long Document Summarization'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "在自然语言处理里，我要找 Transformer 做长文档摘要时降低计算开销的方法。",
+        "theme": "Natural Language Processing",
+        "approach": "Transformers, Long Document Summarization, Computational Efficiency",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Natural Language Processing",
+        "source_method": "",
+        "target_method": "",
+        "task": "Long Document Summarization",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Focus on reducing quadratic complexity of self-attention",
+          "Maintain or improve summarization quality (ROUGE/BERTScore)",
+          "Applicability to long-context inputs (>1024 tokens)"
+        ],
+        "unconfirmed": [
+          "Specific hardware constraints",
+          "Preference for pre-trained vs. from-scratch models",
+          "Exact definition of 'long' document length"
+        ],
+        "concepts": [
+          "Transformers",
+          "Long Document Summarization",
+          "Computational Efficiency"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S1-03": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: small-lesion segmentation and boundary quality; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "医学影像中的卷积神经网络用于小病灶分割，关注边界识别效果。",
+        "theme": "Medical Imaging Neural Networks Convolutional Neural Networks",
+        "approach": "Neural Networks, Convolutional Neural Networks",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Medical Imaging",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Medical Imaging（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Neural Networks",
+          "Convolutional Neural Networks"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: small-lesion segmentation and boundary quality; observed task='Segmentation of small lesions with emphasis on boundary precision'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "医学影像中的卷积神经网络用于小病灶分割，关注边界识别效果。",
+        "theme": "Medical Imaging",
+        "approach": "Convolutional Neural Networks, Image Segmentation, Small Lesion Detection, Boundary Recognition",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Medical Imaging",
+        "source_method": "Convolutional Neural Networks",
+        "target_method": "",
+        "task": "Segmentation of small lesions with emphasis on boundary precision",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Focus on high-resolution feature maps or attention mechanisms to preserve edge details",
+          "Evaluation metrics likely include Dice coefficient and Boundary IoU (Intersection over Union)"
+        ],
+        "unconfirmed": [
+          "Specific imaging modality (e.g., CT, MRI, Ultrasound)",
+          "Specific lesion type (e.g., lung nodules, liver tumors, brain metastases)"
+        ],
+        "concepts": [
+          "Convolutional Neural Networks",
+          "Image Segmentation",
+          "Small Lesion Detection",
+          "Boundary Recognition"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "Qwen 根据上下文识别；需用户确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S1-04": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: uncertainty-guided next material experiment; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "材料科学里用高斯过程做材料发现，我想了解不确定性估计怎么帮助挑选下一次实验。",
+        "theme": "Materials Science Gaussian Processes",
+        "approach": "Gaussian Processes",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Materials Science",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Materials Science（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Gaussian Processes"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: uncertainty-guided next material experiment; observed task='Sequential Experimental Design for Material Discovery'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "材料科学里用高斯过程做材料发现，我想了解不确定性估计怎么帮助挑选下一次实验。",
+        "theme": "Materials Science",
+        "approach": "Gaussian Processes, Uncertainty Quantification, Active Learning, Bayesian Optimization",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Materials Science",
+        "source_method": "",
+        "target_method": "",
+        "task": "Sequential Experimental Design for Material Discovery",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "The user is interested in how uncertainty metrics (e.g., variance, confidence intervals) guide the selection of next experiments.",
+          "This implies a focus on Active Learning or Bayesian Optimization frameworks within materials science."
+        ],
+        "unconfirmed": [
+          "Specific material systems (e.g., alloys, polymers, perovskites).",
+          "Specific acquisition functions (e.g., Expected Improvement, Upper Confidence Bound)."
+        ],
+        "concepts": [
+          "Gaussian Processes",
+          "Uncertainty Quantification",
+          "Active Learning",
+          "Bayesian Optimization"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S2-01": {
+    "A": {
+      "checks": {
+        "domain": false,
+        "research_goal": true,
+        "source_method": true,
+        "target_method": true,
+        "relationship_direction": true,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: RL/MPC comparison and safe-exploration transfer; observed task='方法比较与研究思路迁移'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想比较机器人控制里的强化学习和模型预测控制，并看看强化学习里哪些安全探索思路能迁移到模型预测控制。",
+        "theme": "Control Theory / Control Systems: Reinforcement Learning, Model Predictive Control",
+        "approach": "Reinforcement Learning, Model Predictive Control",
+        "goal": "transfer",
+        "constraints": "",
+        "domain": "Control Theory / Control Systems",
+        "source_method": "Reinforcement Learning",
+        "target_method": "Model Predictive Control",
+        "task": "方法比较与研究思路迁移",
+        "relationship": "Reinforcement Learning → Model Predictive Control",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务或控制对象"
+        ],
+        "concepts": [
+          "Reinforcement Learning",
+          "Model Predictive Control"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "inferred from mention order and transfer cue",
+          "target_method_role": "inferred from mention order and target cue",
+          "task": "inferred from comparison and transfer language",
+          "relationship_direction": "inferred from concept order and transfer wording",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": true,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: RL/MPC comparison and safe-exploration transfer; observed task='Control and Planning in Robotics'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想比较机器人控制里的强化学习和模型预测控制，并看看强化学习里哪些安全探索思路能迁移到模型预测控制。",
+        "theme": "Robotics",
+        "approach": "Reinforcement Learning, Model Predictive Control, Safe Exploration",
+        "goal": "transfer",
+        "constraints": "",
+        "domain": "Robotics",
+        "source_method": "",
+        "target_method": "Model Predictive Control",
+        "task": "Control and Planning in Robotics",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Focus on safety mechanisms during exploration phase",
+          "Comparison of performance and safety guarantees between RL and MPC",
+          "Identification of transferable algorithms from RL to MPC frameworks"
+        ],
+        "unconfirmed": [
+          "Specific robot types or environments",
+          "Particular safe exploration algorithms (e.g., constrained policy optimization vs. uncertainty-based)"
+        ],
+        "concepts": [
+          "Reinforcement Learning",
+          "Model Predictive Control",
+          "Safe Exploration"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "Qwen 根据上下文识别；需用户确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S2-02": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": true,
+        "target_method": true,
+        "relationship_direction": true,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: CNN/Transformer comparison and attention-to-fusion transfer; observed task='方法比较与研究思路迁移'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "医学影像中我想对比 CNN 和 Transformer 的小样本分割表现，也想知道 Transformer 的注意力机制有没有启发 CNN 特征融合的工作。",
+        "theme": "Medical Imaging: Transformers, Convolutional Neural Networks",
+        "approach": "Transformers, Convolutional Neural Networks",
+        "goal": "transfer",
+        "constraints": "",
+        "domain": "Medical Imaging",
+        "source_method": "Transformers",
+        "target_method": "Convolutional Neural Networks",
+        "task": "方法比较与研究思路迁移",
+        "relationship": "Transformers → Convolutional Neural Networks",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Medical Imaging（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Transformers",
+          "Convolutional Neural Networks"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "inferred from mention order and transfer cue",
+          "target_method_role": "inferred from mention order and target cue",
+          "task": "inferred from comparison and transfer language",
+          "relationship_direction": "inferred from concept order and transfer wording",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: CNN/Transformer comparison and attention-to-fusion transfer; observed task='Few-shot Medical Image Segmentation'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "医学影像中我想对比 CNN 和 Transformer 的小样本分割表现，也想知道 Transformer 的注意力机制有没有启发 CNN 特征融合的工作。",
+        "theme": "Medical Imaging",
+        "approach": "Convolutional Neural Networks, Transformers, Few-shot Segmentation, Attention Mechanisms, Feature Fusion",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Medical Imaging",
+        "source_method": "",
+        "target_method": "",
+        "task": "Few-shot Medical Image Segmentation",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Performance metrics for few-shot segmentation (e.g., Dice, IoU)",
+          "Architectural modifications in CNNs inspired by self-attention"
+        ],
+        "unconfirmed": [
+          "Specific medical imaging modalities (e.g., MRI, CT, Ultrasound)",
+          "Specific datasets used for few-shot evaluation"
+        ],
+        "concepts": [
+          "Convolutional Neural Networks",
+          "Transformers",
+          "Few-shot Segmentation",
+          "Attention Mechanisms",
+          "Feature Fusion"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S2-03": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": true,
+        "target_method": true,
+        "relationship_direction": true,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: GP/RL comparison and BO transfer to RL experiment design; observed task='方法比较与研究思路迁移'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "在材料发现中，高斯过程和强化学习都有人用；请比较二者，并查找高斯过程的贝叶斯优化策略如何迁移到强化学习的实验设计。",
+        "theme": "Materials Science: Gaussian Processes, Reinforcement Learning",
+        "approach": "Gaussian Processes, Reinforcement Learning",
+        "goal": "transfer",
+        "constraints": "",
+        "domain": "Materials Science",
+        "source_method": "Gaussian Processes",
+        "target_method": "Reinforcement Learning",
+        "task": "方法比较与研究思路迁移",
+        "relationship": "Gaussian Processes → Reinforcement Learning",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Materials Science（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Gaussian Processes",
+          "Reinforcement Learning"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "inferred from mention order and transfer cue",
+          "target_method_role": "inferred from mention order and target cue",
+          "task": "inferred from comparison and transfer language",
+          "relationship_direction": "inferred from concept order and transfer wording",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: GP/RL comparison and BO transfer to RL experiment design; observed task='Comparison of GP and RL in materials discovery; Transfer of GP Bayesian optimization strategies to RL experimental design'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "在材料发现中，高斯过程和强化学习都有人用；请比较二者，并查找高斯过程的贝叶斯优化策略如何迁移到强化学习的实验设计。",
+        "theme": "Materials Science",
+        "approach": "Gaussian Processes, Reinforcement Learning, Bayesian Optimization, Experimental Design",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Materials Science",
+        "source_method": "",
+        "target_method": "",
+        "task": "Comparison of GP and RL in materials discovery; Transfer of GP Bayesian optimization strategies to RL experimental design",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Focus on sequential decision-making frameworks",
+          "Analysis of acquisition functions vs. policy learning",
+          "Evaluation of sample efficiency in high-dimensional material spaces"
+        ],
+        "unconfirmed": [
+          "Specific material classes (e.g., alloys, polymers)",
+          "Hardware constraints or simulation fidelity levels",
+          "Hybrid architectures combining GP priors with RL policies"
+        ],
+        "concepts": [
+          "Gaussian Processes",
+          "Reinforcement Learning",
+          "Bayesian Optimization",
+          "Experimental Design"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S2-04": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": true,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: text-classification comparison and CNN-bias transfer to long text; observed task='方法比较与研究思路迁移'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "自然语言处理里，请比较 Transformer 和卷积神经网络用于文本分类的取舍，并找找 CNN 的局部归纳偏置怎样启发 Transformer 的高效长文本建模。",
+        "theme": "Natural Language Processing: Neural Networks, Transformers, Convolutional Neural Networks",
+        "approach": "Neural Networks, Transformers, Convolutional Neural Networks",
+        "goal": "transfer",
+        "constraints": "",
+        "domain": "Natural Language Processing",
+        "source_method": "Neural Networks",
+        "target_method": "Convolutional Neural Networks",
+        "task": "方法比较与研究思路迁移",
+        "relationship": "Neural Networks → Convolutional Neural Networks",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Natural Language Processing（根据术语匹配，需用户确认）",
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Neural Networks",
+          "Transformers",
+          "Convolutional Neural Networks"
+        ],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "inferred from mention order and transfer cue",
+          "target_method_role": "inferred from mention order and target cue",
+          "task": "inferred from comparison and transfer language",
+          "relationship_direction": "inferred from concept order and transfer wording",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": true,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: text-classification comparison and CNN-bias transfer to long text; observed task='Text Classification'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "自然语言处理里，请比较 Transformer 和卷积神经网络用于文本分类的取舍，并找找 CNN 的局部归纳偏置怎样启发 Transformer 的高效长文本建模。",
+        "theme": "Natural Language Processing",
+        "approach": "Text Classification, Transformer Architecture, Convolutional Neural Networks (CNN), Inductive Bias, Long-Sequence Modeling, Computational Efficiency",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Natural Language Processing",
+        "source_method": "Convolutional Neural Networks (CNN)",
+        "target_method": "",
+        "task": "Text Classification",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Comparison focuses on trade-offs between global attention and local convolution.",
+          "Transfer involves adapting CNN's locality/inductive bias to mitigate Transformer's quadratic complexity in long texts."
+        ],
+        "unconfirmed": [
+          "Specific efficiency metrics (e.g., latency vs. accuracy).",
+          "Particular hybrid architectures (e.g., ConvFormer, Local Attention)."
+        ],
+        "concepts": [
+          "Text Classification",
+          "Transformer Architecture",
+          "Convolutional Neural Networks (CNN)",
+          "Inductive Bias",
+          "Long-Sequence Modeling",
+          "Computational Efficiency"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "Qwen 根据上下文识别；需用户确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S3-01": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": null,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: robust robot control with less dependence on precise models; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我最近在做机器人，想用学习方法让它控制得稳一点，最好能少依赖精确模型。现在还没想好具体平台。",
+        "theme": "Robotics",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Robotics",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Robotics（根据术语匹配，需用户确认）"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": null,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: robust robot control with less dependence on precise models; observed task='Stabilization and Control of Robots'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我最近在做机器人，想用学习方法让它控制得稳一点，最好能少依赖精确模型。现在还没想好具体平台。",
+        "theme": "Robotics",
+        "approach": "Reinforcement Learning, Model Predictive Control, Gaussian Processes, Neural Networks",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Robotics",
+        "source_method": "",
+        "target_method": "",
+        "task": "Stabilization and Control of Robots",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Preference for methods that do not require precise dynamic models",
+          "Focus on stability and robustness in control performance",
+          "Platform-agnostic approach due to undecided hardware"
+        ],
+        "unconfirmed": [
+          "Specific robot type (e.g., quadruped, manipulator, mobile base)",
+          "Preferred learning paradigm (model-free vs. model-based)",
+          "Real-time constraints or computational limits"
+        ],
+        "concepts": [
+          "Reinforcement Learning",
+          "Model Predictive Control",
+          "Gaussian Processes",
+          "Neural Networks"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S3-02": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": null,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: trustworthy segmentation under limited labels; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "有一批医学影像但标注不多，我想把分割结果做得更可信些；最好别默认我有额外标注预算。",
+        "theme": "Medical Imaging",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Medical Imaging",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Medical Imaging（根据术语匹配，需用户确认）"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": null,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: trustworthy segmentation under limited labels; observed task='Medical Image Segmentation'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "有一批医学影像但标注不多，我想把分割结果做得更可信些；最好别默认我有额外标注预算。",
+        "theme": "Medical Imaging",
+        "approach": "Semi-supervised Learning, Uncertainty Estimation, Image Segmentation, Data Augmentation",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Medical Imaging",
+        "source_method": "",
+        "target_method": "",
+        "task": "Medical Image Segmentation",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Need for methods that leverage unlabeled data",
+          "Focus on model calibration or uncertainty metrics rather than just accuracy"
+        ],
+        "unconfirmed": [
+          "Specific imaging modality (e.g., MRI, CT)",
+          "Specific anatomical structure to segment",
+          "Preferred architecture (CNN vs Transformer)"
+        ],
+        "concepts": [
+          "Semi-supervised Learning",
+          "Uncertainty Estimation",
+          "Image Segmentation",
+          "Data Augmentation"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S3-03": {
+    "A": {
+      "checks": {
+        "domain": true,
+        "research_goal": false,
+        "source_method": null,
+        "target_method": false,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: practical MPC computation acceleration; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "控制系统的预测控制在真实设备上有时算得太慢，我想看看有没有实用的加速路线；设备类型暂时不重要。",
+        "theme": "Control Theory / Control Systems",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Control Theory / Control Systems",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "研究领域识别：Control Theory / Control Systems（根据术语匹配，需用户确认）"
+        ],
+        "unconfirmed": [
+          "具体应用任务或控制对象"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "explicit term; canonical label normalized",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: practical MPC computation acceleration; observed task='Real-time computation acceleration'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "控制系统的预测控制在真实设备上有时算得太慢，我想看看有没有实用的加速路线；设备类型暂时不重要。",
+        "theme": "Control Theory / Control Systems",
+        "approach": "Model Predictive Control, Artificial Intelligence, Neural Networks, Reinforcement Learning",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Control Theory / Control Systems",
+        "source_method": "Model Predictive Control",
+        "target_method": "",
+        "task": "Real-time computation acceleration",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Hardware-independent optimization strategies",
+          "Approximation methods for MPC cost functions or constraints",
+          "Learning-based surrogates for MPC dynamics"
+        ],
+        "unconfirmed": [
+          "Specific AI architecture preference (e.g., Transformers vs. CNNs)",
+          "Required latency thresholds",
+          "Safety guarantees in accelerated models"
+        ],
+        "concepts": [
+          "Model Predictive Control",
+          "Artificial Intelligence",
+          "Neural Networks",
+          "Reinforcement Learning"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "Qwen 根据上下文识别；需用户确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S3-04": {
+    "A": {
+      "checks": {
+        "domain": false,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: explore GP for fewer material experiments while retaining ambiguity; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想试试高斯过程能不能帮材料实验少走弯路，但还说不清是先筛配方还是优化某个性能。",
+        "theme": "Gaussian Processes",
+        "approach": "Gaussian Processes",
+        "goal": "map",
+        "constraints": "",
+        "domain": "",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "方法概念由中英文术语词表规范化，需用户确认角色"
+        ],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [
+          "Gaussian Processes"
+        ],
+        "field_provenance": {
+          "domain": "unconfirmed",
+          "concepts": "explicit bilingual terms; canonical labels normalized",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": null,
+        "target_method": true,
+        "relationship_direction": null,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: explore GP for fewer material experiments while retaining ambiguity; observed task='Material Discovery and Optimization'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想试试高斯过程能不能帮材料实验少走弯路，但还说不清是先筛配方还是优化某个性能。",
+        "theme": "Materials Science",
+        "approach": "Gaussian Processes, Bayesian Optimization, Active Learning, High-Throughput Screening",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Materials Science",
+        "source_method": "Gaussian Processes",
+        "target_method": "",
+        "task": "Material Discovery and Optimization",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "The user is exploring the application of Gaussian Processes in materials science.",
+          "The specific workflow (screening vs. optimization) is undecided, implying a need for comparative or exploratory literature on GP-based workflows."
+        ],
+        "unconfirmed": [
+          "Specific material classes (e.g., alloys, polymers, ceramics).",
+          "Specific performance metrics to be optimized.",
+          "Whether the goal is purely predictive modeling or closed-loop experimental control."
+        ],
+        "concepts": [
+          "Gaussian Processes",
+          "Bayesian Optimization",
+          "Active Learning",
+          "High-Throughput Screening"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "Qwen 根据上下文识别；需用户确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S4-01": {
+    "A": {
+      "checks": {
+        "domain": false,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: robust offshore wind noise control using acoustic metamaterials; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想把声学超材料的局域共振设计和海上风机噪声控制连起来，找一种能在波浪载荷变化时仍稳健工作的结构方案。",
+        "theme": "我想把声学超材料的局域共振设计和海上风机噪声控制连起来，找一种能在波浪载荷变化时仍稳健工作的结构方案。",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "unconfirmed",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: robust offshore wind noise control using acoustic metamaterials; observed task='Design a robust noise control structure for offshore wind turbines under varying wave loads using local resonance principles.'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我想把声学超材料的局域共振设计和海上风机噪声控制连起来，找一种能在波浪载荷变化时仍稳健工作的结构方案。",
+        "theme": "Acoustic Metamaterials, Wind Energy Engineering",
+        "approach": "Local Resonance, Noise Control, Wave Load Variability, Robust Structural Design",
+        "goal": "transfer",
+        "constraints": "",
+        "domain": "Acoustic Metamaterials, Wind Energy Engineering",
+        "source_method": "",
+        "target_method": "",
+        "task": "Design a robust noise control structure for offshore wind turbines under varying wave loads using local resonance principles.",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "The design must account for dynamic environmental conditions (wave loads).",
+          "Robustness is a key performance metric."
+        ],
+        "unconfirmed": [
+          "Specific frequency ranges of interest.",
+          "Material composition constraints.",
+          "Computational or experimental validation methods preferred."
+        ],
+        "concepts": [
+          "Local Resonance",
+          "Noise Control",
+          "Wave Load Variability",
+          "Robust Structural Design"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S4-02": {
+    "A": {
+      "checks": {
+        "domain": false,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: connect salt-lake microbial metabolism with mineral geomorphology; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "能不能用古菌群落的空间代谢互补来解释极端盐湖里矿物纹理怎么形成？我想找把微生物组和地貌过程放到一起的研究。",
+        "theme": "能不能用古菌群落的空间代谢互补来解释极端盐湖里矿物纹理怎么形成？我想找把微生物组和地貌过程放到一起的研究。",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "unconfirmed",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": false,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": false
+      },
+      "goal_rationale": "no parsed intent",
+      "intent": null
+    }
+  },
+  "S4-03": {
+    "A": {
+      "checks": {
+        "domain": false,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: infer historic thermal exposure from strata and canopy change; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我关心城市考古和热岛遥感：能否从街区尺度的历史地层与树冠变化中推断过去的热暴露差异？",
+        "theme": "我关心城市考古和热岛遥感：能否从街区尺度的历史地层与树冠变化中推断过去的热暴露差异？",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "unconfirmed",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: infer historic thermal exposure from strata and canopy change; observed task='Inference of past thermal exposure differences from historical urban fabric and vegetation data'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "我关心城市考古和热岛遥感：能否从街区尺度的历史地层与树冠变化中推断过去的热暴露差异？",
+        "theme": "Urban Archaeology, Remote Sensing, Urban Climatology",
+        "approach": "Historical Stratigraphy, Tree Canopy Dynamics, Urban Heat Island (UHI), Thermal Exposure, Block-scale Analysis",
+        "goal": "methods",
+        "constraints": "",
+        "domain": "Urban Archaeology, Remote Sensing, Urban Climatology",
+        "source_method": "",
+        "target_method": "",
+        "task": "Inference of past thermal exposure differences from historical urban fabric and vegetation data",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Integration of multi-temporal remote sensing data with archaeological records",
+          "Spatiotemporal modeling at the block scale",
+          "Correlation between built density/vegetation cover and surface temperature proxies"
+        ],
+        "unconfirmed": [
+          "Specific resolution requirements for historical thermal proxies",
+          "Availability of high-resolution historical tree canopy datasets",
+          "Validation metrics for inferred thermal exposure"
+        ],
+        "concepts": [
+          "Historical Stratigraphy",
+          "Tree Canopy Dynamics",
+          "Urban Heat Island (UHI)",
+          "Thermal Exposure",
+          "Block-scale Analysis"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  },
+  "S4-04": {
+    "A": {
+      "checks": {
+        "domain": false,
+        "research_goal": false,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field does not preserve the frozen target: assess causal links between microbial electrochemistry and ice-core gases; observed task='探索研究版图'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "想研究冰川下湖的微生物电化学和冰芯气体记录之间有没有可追溯的因果联系，最好能连接地球化学与极端环境微生物学。",
+        "theme": "想研究冰川下湖的微生物电化学和冰芯气体记录之间有没有可追溯的因果联系，最好能连接地球化学与极端环境微生物学。",
+        "approach": "",
+        "goal": "map",
+        "constraints": "",
+        "domain": "",
+        "source_method": "",
+        "target_method": "",
+        "task": "探索研究版图",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [],
+        "unconfirmed": [
+          "具体应用任务"
+        ],
+        "concepts": [],
+        "field_provenance": {
+          "domain": "unconfirmed",
+          "concepts": "unconfirmed",
+          "source_method_role": "unconfirmed",
+          "target_method_role": "unconfirmed",
+          "task": "unconfirmed",
+          "relationship_direction": "unconfirmed",
+          "constraints": "none stated",
+          "goal": "inferred from wording"
+        },
+        "parser_version": "rules_v2"
+      }
+    },
+    "B": {
+      "checks": {
+        "domain": true,
+        "research_goal": true,
+        "source_method": false,
+        "target_method": false,
+        "relationship_direction": false,
+        "no_invented_hard_constraints": true
+      },
+      "goal_rationale": "task field preserves the frozen target: assess causal links between microbial electrochemistry and ice-core gases; observed task='Establishing traceable causal links between microbial metabolic signatures and atmospheric gas records'. AI-assisted semantic judgment; human review pending.",
+      "intent": {
+        "original_interest": "想研究冰川下湖的微生物电化学和冰芯气体记录之间有没有可追溯的因果联系，最好能连接地球化学与极端环境微生物学。",
+        "theme": "Geochemistry, Microbiology, Paleoclimatology",
+        "approach": "Subglacial Lakes, Microbial Electrochemistry, Ice Core Gas Records, Extreme Environment Microbiology, Causal Inference",
+        "goal": "map",
+        "constraints": "",
+        "domain": "Geochemistry, Microbiology, Paleoclimatology",
+        "source_method": "",
+        "target_method": "",
+        "task": "Establishing traceable causal links between microbial metabolic signatures and atmospheric gas records",
+        "relationship": "",
+        "explicit_constraints": [],
+        "inferred": [
+          "Interdisciplinary integration of geochemical proxies and biological activity markers",
+          "Temporal correlation analysis between subglacial processes and ice core layers"
+        ],
+        "unconfirmed": [
+          "Specific isotopic ratios linking microbial metabolism to trapped gases",
+          "Quantitative models for tracing microbial electrochemical signals in ice cores"
+        ],
+        "concepts": [
+          "Subglacial Lakes",
+          "Microbial Electrochemistry",
+          "Ice Core Gas Records",
+          "Extreme Environment Microbiology",
+          "Causal Inference"
+        ],
+        "field_provenance": {
+          "domain": "Qwen 推断；需用户确认",
+          "concepts": "从原文规范化；需用户确认",
+          "source_method_role": "未确认",
+          "target_method_role": "未确认",
+          "task": "Qwen 理解；需用户确认",
+          "relationship_direction": "未确认",
+          "constraints": "未明确提出",
+          "goal": "Qwen 推断；需用户确认"
+        },
+        "parser_version": "qwen_intent_v1"
+      }
+    }
+  }
+}

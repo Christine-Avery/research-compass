@@ -35,6 +35,21 @@ The [v2 evidence audit](docs/GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) documents why the
 
 The three editable Streamlit pages have genuine browser viewport captures: [Intent Studio](docs/prototypes/01_AI_Intent_Studio.png), [Path Explorer](docs/prototypes/02_Research_Path_Explorer.png), and [Evidence & Next Steps](docs/prototypes/03_Evidence_Next_Steps.png). Each image is 1440×900 pixels and shows a naturally sized page viewport, not a smaller image padded onto a larger canvas. Page 3 shows the path 1 → Card A Golden Case v2 state; the evidence card continues below the viewport and can be scrolled in the live app. See [design spec](docs/prototypes/DESIGN_SPEC.md) for capture and snapshot provenance.
 
+## LLM vs Rules：增量价值实验
+
+Rules V1 already plans structured searches for known terms. This exploratory paired evaluation asks whether Qwen adds value on ambiguous, relational and long-tail requests. A uses Rules V1 and B uses Qwen V2; both share the same workflow, OpenAlex retrieval and post-processing.
+
+| Machine-assisted provisional metric | Rules V1 | Qwen V2 |
+|---|---:|---:|
+| Precision@5 | 0.636 | **0.836** |
+| nDCG@5 | 0.717 | **0.905** |
+
+The frozen synthetic set contains 16 requests; **11/16** formed a complete live Top 5 pair. Qwen's source/target direction field was preserved in **0/8** applicable parsed intents, and its median end-to-end latency was **19.8 s** versus **1.6 s** for Rules. This supports a **Rules-first + Selective LLM** product direction: keep rules as the fast default and evaluate optional Qwen for complex requests, with relation validation and user confirmation.
+
+These are machine-assisted provisional relevance labels, not completed human adjudication. S4 long-tail had no complete pair, and the implemented path selector chose the first relationship-cue match rather than the preregistered highest semantic match. See the [full report and audit](evaluation/llm_vs_rules_v1/RESULTS.md); the chart below uses the independently recalculated aggregate values.
+
+![Rules V1 and Qwen V2 provisional paired evaluation](evaluation/llm_vs_rules_v1/metrics_chart.svg)
+
 ## Run locally
 
 Use Python 3.11 (the current development version):
