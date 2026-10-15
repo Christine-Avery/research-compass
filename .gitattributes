@@ -1,2 +1,15 @@
 # This frozen snapshot is verified by SHA256 of its original bytes.
 evaluation/runs/v3_20261014/human_labels.csv -text whitespace=cr-at-eol
+
+# Preserve the exact bytes whose SHA-256 values were frozen in run_manifest.json.
+# These files are raw evaluation evidence; do not normalize line endings on checkout.
+evaluation/llm_vs_rules_v1/paired_runs.jsonl -text
+evaluation/llm_vs_rules_v1/qwen_experiment_ledger.json -text whitespace=cr-at-eol
+evaluation/llm_vs_rules_v1/relevance_labels.csv -text whitespace=cr-at-eol
+evaluation/llm_vs_rules_v1/metrics.json -text whitespace=cr-at-eol
+evaluation/llm_vs_rules_v1/intent_audit.json -text whitespace=cr-at-eol
+evaluation/cases/badcase_001/original_trace.json -text whitespace=cr-at-eol
+evaluation/llm_vs_rules_v1/test_queries.json -text
+evaluation/llm_vs_rules_v1/blind_candidate_pool.jsonl -text whitespace=cr-at-eol
+evaluation/llm_vs_rules_v1/resume_claims.md -text whitespace=cr-at-eol
+evaluation/llm_vs_rules_v1/score_and_report.py -text

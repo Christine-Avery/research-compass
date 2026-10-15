@@ -778,6 +778,7 @@
       "score_and_report.py": true
     },
     "manifest_outputs_not_in_this_archive": [],
+    "manifest_outputs_not_in_this_archive_note": "Manifest-listed paths absent from this archive are reported in manifest_outputs_not_in_this_archive and are never treated as passing hash checks. Any missing file expected hash comes only from run_manifest.json and cannot be independently verified without committed bytes.",
     "raw_artifact_hash_checks": {
       "paired_runs.jsonl": true,
       "qwen_experiment_ledger.json": true,

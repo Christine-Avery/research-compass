@@ -168,6 +168,7 @@ def calculate():
         "historic_ledger_hash_before_after_equal": run_manifest.get("historic_qwen_ledger_sha256_before") == run_manifest.get("historic_qwen_ledger_sha256_after"),
         "recorded_output_hash_checks": file_hash_checks,
         "manifest_outputs_not_in_this_archive": sorted(name for name, ok in file_hash_checks.items() if ok is None),
+        "manifest_outputs_not_in_this_archive_note": "Manifest-listed paths absent from this archive are reported in manifest_outputs_not_in_this_archive and are never treated as passing hash checks. Any missing file expected hash comes only from run_manifest.json and cannot be independently verified without committed bytes.",
         "raw_artifact_hash_checks": raw_hash_checks,
         "all_unchanged_raw_artifact_hashes_match": all(raw_hash_checks.values()),
         "known_hash_exception": "RESULTS.md was intentionally rewritten during this archive round; the historic manifest records its prior version hash and was left unchanged.",

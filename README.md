@@ -27,7 +27,7 @@ Core retrieval uses [PyAlex](https://github.com/J535D165/pyalex) and [OpenAlex](
 
 ## Evaluation snapshot
 
-On one frozen Chinese Golden Case, the rule baseline V0 scored Precision@5 **0.0500** and nDCG@5 **0.1077**; optimized rules V1 scored **0.8000** and **0.8111**. V0 and V1 had different branch sets, so this is an initial case comparison, not a controlled paired experiment and not evidence of Qwen uplift. See [the evaluation case study](docs/EVALUATION_CASE_STUDY.md).
+On one frozen Chinese Golden Case, V0 branch-macro P@5 was **0.0500** (1 relevant result across 4 branch-level Top-5 lists, or 1/20) and nDCG@5 was **0.1077**; optimized rules V1 scored **0.8000** (12/15 across 3 branches) and **0.8210**. The branch sets differ, so this is not a controlled paired experiment or evidence of Qwen uplift. See [the evaluation case study](docs/EVALUATION_CASE_STUDY.md).
 
 The [v2 evidence audit](docs/GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) documents why the human-curated cards have different evidence coverage. The v2 demonstration does not change the frozen labels or V0/V1 scores.
 

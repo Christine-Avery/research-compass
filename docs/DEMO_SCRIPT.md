@@ -20,7 +20,7 @@
 
 ### 2:30–3:00｜评测与诚实边界
 
-展示单一中文 Golden Case 的规则 V0/V1 指标：Precision@5 为 0.05/0.80，nDCG@5 为 0.1077/0.8111。两版分支集合不同，35 条是论文结果记录，不是 35 个查询。该结果不能证明泛化或 Qwen 提升。公开 Qwen 保持关闭，Actionable Research Plan Completion 尚未通过用户研究测量。
+展示单一中文 Golden Case 的规则 V0/V1 指标：branch-macro P@5 为 0.05/0.80 (V0: 1/20 across 4 branches; V1: 12/15 across 3 branches)，nDCG@5 为 0.1077/0.8210。两版分支集合不同，35 条是论文结果记录，不是 35 个查询。该结果不能证明泛化或 Qwen 提升。公开 Qwen 保持关闭，Actionable Research Plan Completion 尚未通过用户研究测量。
 
 ## 一分钟版本
 

@@ -7,7 +7,7 @@ The frozen comparison is one Chinese Golden Case about exploring neural-network 
 | Version | Precision@5 | nDCG@5 |
 | --- | ---: | ---: |
 | V0 rule baseline | 0.0500 (1/20 judged top-five items; macro-average across 4 branches) | 0.1077 (macro-average across 4 branches) |
-| V1 optimized rules | 0.8000 (12/15 judged top-five items; macro-average across 3 branches) | 0.8111 (macro-average across 3 branches) |
+| V1 optimized rules | 0.8000 (12/15 judged top-five items; macro-average across 3 branches) | 0.8210 (macro-average across 3 branches) |
 
 Relevance threshold is human label ≥1. nDCG uses graded gains 0/1/3 for labels 0/1/2 and raw rank, normalized per branch before macro averaging. All 35 source rows have relevance judgments. These figures describe this single frozen case only and do not establish statistical significance, general quality improvement, or an LLM uplift.
 

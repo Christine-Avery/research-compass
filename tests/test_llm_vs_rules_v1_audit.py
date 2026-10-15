@@ -22,6 +22,8 @@ def test_labels_and_top5_paper_ids_are_complete_and_provisional():
     assert report["provenance_audit"]["automatic_retries"] == 0
     assert report["provenance_audit"]["historic_ledger_hash_before_after_equal"] is True
     assert report["provenance_audit"]["all_unchanged_raw_artifact_hashes_match"] is True
+    assert report["provenance_audit"]["manifest_outputs_not_in_this_archive"] == []
+    assert "never treated as passing hash checks" in report["provenance_audit"]["manifest_outputs_not_in_this_archive_note"]
 
 
 def test_s4_has_no_complete_pairs_and_five_cases_are_unpaired():
