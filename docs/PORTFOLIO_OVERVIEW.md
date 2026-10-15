@@ -20,7 +20,7 @@
 - [Path Explorer](prototypes/02_Research_Path_Explorer.png)
 - [Evidence & Next Steps](prototypes/03_Evidence_Next_Steps.png)
 
-截图文件为 1440×900 像素，但网页实际捕获视口只有 932×654 CSS 像素，其余区域为空白；它们不是完整桌面视口截图。线上 Golden Case v2 的映射为 path1→A 稳定性与安全、path2→C NN 结构与 GP 表达、path3→B 在线学习与 GP 更新。该页面为人工策划历史案例，不是 Qwen 实时结果。
+三张 PNG 均为 1440×900 像素的真实浏览器页面视口截图，未把小图扩画布或填充空白。Page 3 展示路径 1 → Card A 的 Golden Case v2 状态；卡片内容在视口下方可滚动查看。线上映射为 path1→A 稳定性与安全、path2→C NN 结构与 GP 表达、path3→B 在线学习与 GP 更新。该页面为人工策划历史案例，不是 Qwen 实时结果。
 
 ## 关键产品决策
 
@@ -43,8 +43,8 @@
 1. Safely recover abandoned concurrency slots without releasing capacity while a model request may still be running; test conservatively, then repeat Cloud security review.
 2. Add independent labeled English, non-transfer and cross-domain cases; adjudicate the pending NLP label in a new freeze.
 3. Measure Actionable Research Plan Completion with researcher tasks before claiming user value.
-4. Capture genuine full 1440×900 browser viewport screenshots when real desktop capture is available.
+4. Validate responsive behavior at narrow desktop and mobile widths; the portfolio captures document the 1440×900 desktop viewport.
 
 ## 当前可声明的交付
 
-Online rule-based MVP, OpenAlex retrieval, human-curated Golden Case v2, frozen single-case evaluation, CI success and local isolated Redis safety acceptance. Not yet evidenced: public Qwen operation, user growth, task efficiency gain, commercial revenue, broad search-quality generalization or full desktop screenshot validation.
+Online rule-based MVP, OpenAlex retrieval, human-curated Golden Case v2, frozen single-case evaluation, CI success, local isolated Redis safety acceptance, and genuine 1440×900 browser viewport captures. Not yet evidenced: public Qwen operation, user growth, task efficiency gain, commercial revenue or broad search-quality generalization.

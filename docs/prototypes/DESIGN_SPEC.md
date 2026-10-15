@@ -19,9 +19,9 @@ The screenshots use the Golden Case’s previously recorded **real Qwen response
 
 ## Browser capture note
 
-The three PNG files are genuine browser renders saved as 1440 × 900 pixel images. The browser's actual CSS viewport at capture was only 932 × 654, so the visible app occupies only that smaller viewport; the remaining canvas is blank. They are not full 1440 × 900 desktop screenshots and do not validate the full-width desktop layout. This limitation is disclosed rather than filled or represented as a larger browser capture.
+The three supplied screenshots are 1440 × 900 pixel browser viewport captures. Visual inspection confirms the app content is laid out across the viewport rather than a smaller capture surrounded by blank padding. Page 1 shows the Golden Case intent preview and rule-mode state; Page 2 shows the three exploration paths; Page 3 shows the path 1 → Card A human-curated Golden Case v2 state. Page 3's card continues below the viewport and is scrollable in the live app.
 
-The screenshots document the actual Streamlit page states, not a separate mockup. Page 1 and Page 2 use the saved Golden Case history. Page 3 uses the human-curated Golden Case v2 card content. None of the screenshots represents a new Qwen or OpenAlex request.
+These are actual Streamlit page renders, not mockups. They use the saved Golden Case history and human-reviewed v2 card data. They do not represent a new Qwen or OpenAlex request, nor a live Qwen result. See `docs/GOLDEN_CASE_V2_EVIDENCE_AUDIT.md` for the human-curation and evidence provenance.
 
 ## Files
 

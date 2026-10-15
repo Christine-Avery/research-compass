@@ -8,7 +8,7 @@ Last checked: 2026-10-15. Public app: https://research-compass-ai.streamlit.app/
 | Golden Case v2 | `research_compass/golden_v2.py`, `research_compass/golden_v2_ui.py`; Page 2 and Page 3 | Yes | Public browser: path 1→A, 2→C, 3→B; only selected card; no stale card on switch | Human-curated saved evidence, not live Qwen | Already public |
 | PRD | `docs/PRD_v1.md` | Yes | Scope, three pages, metric, failure handling, current boundary | User outcome not yet studied | Local final changes need push for GitHub copy |
 | Evaluation | `docs/EVALUATION_CASE_STUDY.md` | Yes | Frozen metrics and limits stated; labels and traces untouched | One query; pending NLP decision | Local copy fix needs push |
-| Prototype screenshots | `docs/prototypes/01_AI_Intent_Studio.png`, `02_Research_Path_Explorer.png`, `03_Evidence_Next_Steps.png` | Partial | Files are actual browser renders, each 1440×900 px | Browser CSS viewport was 932×654; blank canvas, not full desktop capture | No replacement this round |
+| Prototype screenshots | `docs/prototypes/01_AI_Intent_Studio.png`, `02_Research_Path_Explorer.png`, `03_Evidence_Next_Steps.png` | Yes | Genuine 1440×900 browser viewport captures inspected; Page 3 shows path 1→Card A | Card content continues below viewport and scrolls; captures are historical Golden Case data | Include in portfolio |
 | Design specification | `docs/prototypes/DESIGN_SPEC.md` | Yes | Captured viewport and data provenance disclosed | Full desktop visual validation pending | Local final changes need push |
 | README | `README.md` | Yes | Public URL, flow, architecture, metrics and limits present | Mentions deployed public Evaluation copy issue | Local final changes need push |
 | Resume project | `docs/RESUME_PROJECT.md` | Yes | 100–150 Chinese character summary plus role-tailored bullets | No user growth/efficiency claims | Local final changes need push |
@@ -23,4 +23,4 @@ Last checked: 2026-10-15. Public app: https://research-compass-ai.streamlit.app/
 
 ## Release decision
 
-This project is ready to use as an AI PM portfolio demo with explicit limits. Before calling the latest local docs and Evaluation copy fix part of the public release, review the local diff and authorize an ordinary push. Do not enable public Qwen until concurrency-slot recovery and a fresh cloud security review pass. Replace prototype screenshots only after capturing a real 1440×900 browser viewport; do not stretch or pad the existing renders.
+This project is ready to use as an AI PM portfolio demo with explicit limits. The genuine desktop viewport captures and their provenance are included in the portfolio files. Do not enable public Qwen until concurrency-slot recovery and a fresh cloud security review pass. Any outstanding documentation or Evaluation copy patch still requires its own reviewed commit and ordinary-push authorization before it becomes public.

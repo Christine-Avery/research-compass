@@ -33,7 +33,7 @@ The [v2 evidence audit](docs/GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) documents why the
 
 ## Screenshots
 
-The three editable Streamlit pages have browser-rendered prototype captures: [Intent Studio](docs/prototypes/01_AI_Intent_Studio.png), [Path Explorer](docs/prototypes/02_Research_Path_Explorer.png), and [Evidence & Next Steps](docs/prototypes/03_Evidence_Next_Steps.png). The PNG dimensions are 1440×900, but the actual browser viewport at capture was 932×654 CSS pixels and the unused area is blank. They are **not full 1440×900 desktop screenshots or desktop-layout validation**. See [design spec](docs/prototypes/DESIGN_SPEC.md).
+The three editable Streamlit pages have genuine browser viewport captures: [Intent Studio](docs/prototypes/01_AI_Intent_Studio.png), [Path Explorer](docs/prototypes/02_Research_Path_Explorer.png), and [Evidence & Next Steps](docs/prototypes/03_Evidence_Next_Steps.png). Each image is 1440×900 pixels and shows a naturally sized page viewport, not a smaller image padded onto a larger canvas. Page 3 shows the path 1 → Card A Golden Case v2 state; the evidence card continues below the viewport and can be scrolled in the live app. See [design spec](docs/prototypes/DESIGN_SPEC.md) for capture and snapshot provenance.
 
 ## Run locally
 
