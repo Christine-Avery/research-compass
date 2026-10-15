@@ -21,6 +21,8 @@ The two GP control papers at `target_method` ranks 4 and 5 were reviewed by the 
 
 The opt-in v2 demonstration maps three historical Page 2 paths to three manually reviewed Research Opportunity Cards; Page 3 shows only the selected path's card. [Its evidence audit](GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) ties each background statement to a saved OpenAlex abstract and the original Evidence Gate decision. Papers from another historical branch are marked as cross-path supplements. Papers with `Retrieved` / human eligibility `no` are labeled Further Reading, including a relevant GP online-update paper and two cross-method theory papers. No historical Trace, label, correction event, or V0/V1 score is revised. **This curated presentation is not a Qwen output or an evaluation of Qwen uplift.**
 
+The deployed demonstration mapping is `uncertainty_comparison` → A (stability and safety), `architecture_insights` → C (NN structure and GP expressiveness), and `hybrid_control_strategies` → B (online learning and GP updates). These are manually curated cards over the Golden Case's saved literature, not three independently evaluated search directions. The card order is a UX mapping, not an academic quality ranking. Public Qwen remains off.
+
 ## Interpretation and limitations
 
 - The historical comparison is not controlled for equivalent branch composition: V0 has overview/methods/applications/challenges; V1 has source method/target method/comparison-transfer.
@@ -40,3 +42,7 @@ The opt-in v2 demonstration maps three historical Page 2 paths to three manually
 ## Next evaluation
 
 Resolve the NLP judgment with the reviewer, freeze a new adjudication version rather than editing the old one, then add independent English and non-transfer tasks. Keep the same query set, branch-level relevance thresholds, evidence eligibility definitions, and human review protocol across variants. Publish denominators and uncertainty; do not infer an LLM uplift from the current case.
+
+## Live product status
+
+The public app and Golden Case v2 path-to-card interaction were browser-checked on 2026-10-15. This is a functional walkthrough, not a new retrieval-quality evaluation. The public Evaluation route displays frozen human judgments; the reviewed local UI patch further removes editable controls and misleading save/review copy in public mode and requires a separate release before that copy change is live. Existing historical reports, labels, and hashes remain the evaluation source of truth.

@@ -35,7 +35,8 @@ def test_public_evaluation_route_runs_read_only(tmp_path, monkeypatch):
     test = AppTest.from_file(str(root / "app.py"), default_timeout=15).run()
     test.switch_page("pages/2_Evaluation.py").run()
     assert not test.exception
-    assert test.selectbox
-    test.selectbox[0].set_value(test.selectbox[0].options[1]).run()
-    assert not test.exception
-    assert any("read-only" in element.value for element in test.info)
+    assert not test.selectbox
+    assert any("公网评测仅展示" in element.value for element in test.info)
+    assert all(button.disabled for button in test.button if button.label.startswith(("保存", "跳过")))
+    assert all(radio.disabled for radio in test.radio)
+    assert not (tmp_path / "public_labels.csv").exists()

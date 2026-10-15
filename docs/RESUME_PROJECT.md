@@ -1,15 +1,22 @@
-# Resume Project — Research Compass
+# 简历项目｜Research Compass
 
-## AI Search / AI Product Manager project
+## 100–150 字项目简介
 
-**Research Compass — AI Exploratory Search for Research** | Product strategy, prototype and evaluation | 2026
+面向科研新手交付 Research Compass 探索式学术搜索 MVP，将模糊兴趣转为结构化意图、研究路径、OpenAlex 真实文献和下一步检索。负责产品定义、规则与 Qwen 分工、证据工作流、人工评测及发布安全。线上采用规则规划，实时 Qwen 关闭。
 
-- Framed an unmet search need for novice researchers: translating vague interests into intent, candidate search paths, source inspection and a verifiable next step.
-- Defined a three-page workflow: editable intent clarification, user-selected OpenAlex search paths, and abstract-grounded evidence/next steps.
-- Built a Streamlit/PyAlex prototype around OpenAlex rather than implementing a new scholarly corpus; separated retrieved, relevant, evidence-eligible and claim-supported states.
-- Preserved a Golden Case and 35 branch-level human judgments. In one case, rule V1 measured P@5 0.80 and nDCG@5 0.8111 versus V0 0.05 and 0.1077; variants had different branch sets, so results are directional and not statistically generalizable.
-- Designed a fail-closed public Qwen budget gate using atomic Upstash Redis reservation. An isolated real-service acceptance passed locally; stale active-slot recovery and cloud validation remain release blockers, so public Qwen stays disabled.
+## 三条成果描述
 
-## Interview framing
+- 定义并实现三页核心旅程：意图确认 → 用户选择研究路径并检索真实文献 → 证据边界与可执行 Next Search；使用 OpenAlex/PyAlex 复用现有学术索引。
+- 建立 35 条分支级人工论文判断与 V0/V1 单案例评测：V0 P@5 0.05、nDCG@5 0.1077；V1 0.80、0.8111。不同分支集合、单个查询，结果不代表显著或泛化提升。
+- 设计 Upstash Redis 原子预算门、访客限额、并发保护和 fail-closed 降级；真实隔离 Redis 验收通过，识别未知请求可能占住并发槽，因此公开 Qwen 仍关闭。
 
-Emphasize product discovery framing, evidence-aware UX, explicit uncertainty, human evaluation and cost-aware rollout. State clearly that the work is a prototype with a single Golden Case, not a deployed product or measured user outcome. Do not claim production security, a hard invoice cap, Qwen quality lift, or user growth.
+## 岗位适配重点
+
+- **AI 应用 PM：** 意图编辑、证据透明、失败降级与候选问题待验证。
+- **AI Search PM：** 查询规划、分支探索、真实检索、人工相关性评测与 Bad Case 归因。
+- **AI 平台 PM：** 模型/检索分工、预算预留、安全开关、并发门和可追溯日志。
+- **通用 AI PM：** 用户问题定义、范围取舍、实验口径、交付协作与风险披露。
+
+## 面试中的边界说明
+
+这是公开可访问的 MVP，不是已经验证商业价值的成熟服务。公开 Qwen 未启用；评测仅有一个 Golden Case，尚无代表性用户研究或 Actionable Research Plan Completion 实测。Codex 用于协助代码与文档产出；本人负责需求范围、产品决策、历史数据与验收约束审查，不将模型辅助开发表述为独立手工完成全部代码。

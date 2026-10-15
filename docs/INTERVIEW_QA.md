@@ -1,12 +1,53 @@
-# AI Search PM Interview Q&A
+# AI Search PM 面试问答
 
-1. **What user problem did you choose?** Early researchers can have a topic but lack the vocabulary and structure to formulate a productive query. The product supports exploration from intent to a next search.
-2. **How is this different from an AI paper search engine?** Search remains grounded in OpenAlex, while the product adds visible intent clarification, distinct paths, user choice and evidence-aware next steps.
-3. **Why OpenAlex/PyAlex?** Reuse an existing scholarly index and client to focus MVP effort on the user workflow rather than building corpus infrastructure.
-4. **How do you avoid hallucinated research gaps?** Separate abstract-supported limitations from AI-inferred opportunities, label questions as hypotheses, and state when the retrieved evidence is insufficient.
-5. **What is the difference between relevance and evidence eligibility?** A paper may be relevant to a topic while its available abstract does not support a particular evidence-generation use. Claim-level support is a third distinct check.
-6. **What did the evaluation show?** On one Golden Case, rule V1 P@5 was 0.80 / nDCG@5 0.8111 vs V0 0.05 / 0.1077. Branch sets differ, sample size is one query, and the result is preliminary.
-7. **Did Qwen improve quality?** No such claim is supported. The frozen quality comparison is V0/V1 rules, not a controlled Qwen comparison.
-8. **How do you control model cost?** A persistent Redis atomic reservation enforces the app-side ¥5 budget counter, per-visitor quota, concurrency cap and breaker. Isolated real Upstash acceptance passed locally; however, ambiguous timeouts can retain concurrency slots indefinitely, so cloud release and public Qwen remain blocked until recovery is safely implemented and tested. This is not a provider invoice cap.
-9. **What is the primary product metric?** Actionable Research Plan Completion: the share of starters who finish with confirmed objective, selected path, inspected source and a concrete next action, measured in a defined task study. It has not yet been measured with participants.
-10. **What would you do next?** Finish real Cloud budget verification, adjudicate the remaining NLP label without editing history, collect more diverse human-labeled tasks, and evaluate plan completion before scaling features.
+## 1. 为什么做这个产品？
+
+科研新手的瓶颈常常不是没有论文，而是不知道如何把兴趣变成关键词、分支和可验证问题。因此我做的是搜索前后的探索工作流，不是再做一个论文列表页。
+
+## 2. 与普通搜索或聊天机器人相比，价值是什么？
+
+系统先澄清并展示意图，再由用户选择研究路径；检索用真实 OpenAlex 记录，结果保留摘要、链接和筛选解释。聊天模型的研究假设不会被呈现为文献事实。
+
+## 3. 为什么选择 Qwen、OpenAlex 与规则工作流？
+
+OpenAlex/PyAlex 复用学术检索基础设施；规则规划让 MVP 可运行、可解释且在模型不可用时降级；Qwen 只用于意图理解和动态查询规划。当前公开版实时 Qwen 关闭，历史 Golden Case 也不代表当场调用。
+
+## 4. 为什么没有做完整 RAG、微调或 Multi-Agent？
+
+三天 MVP 的核心假设是用户是否能从模糊意图走到下一步研究计划。摘要级检索和清晰证据边界足以验证工作流；全文索引、多智能体和微调会增加数据、成本与评测复杂度，不能优先验证核心假设。
+
+## 5. 为什么只有一个 Golden Case？怎样避免过拟合？
+
+它是一个可复现 Bad Case，用于迭代和人工证据审查，不能代表不同领域或用户。Golden Case v2 是人工策划展示，不计入模型质量成绩。下一步需加入独立中英文、非迁移需求并冻结统一标注协议。
+
+## 6. Precision@5 和 nDCG@5 如何计算？
+
+Precision@5 是前五结果中人工相关性标签 ≥1 的比例；nDCG 用 0/1/2 标签对应 0/1/3 gain，按原始排名折损并按理想排序归一。当前按完整分支计算后宏平均，标注和分母都按分支结果记录说明。
+
+## 7. 检索相关性与最终任务价值有什么区别？
+
+论文相关不代表摘要足以支持某条事实，更不代表用户能形成有用计划。系统分别显示 paper relevance、Evidence Generation eligibility 和 claim-level support；计划完成率才是拟议的任务价值指标，目前没有用户研究数据。
+
+## 8. 如何处理幻觉、证据不足或模型失败？
+
+事实陈述必须能回到真实摘要；只拿到摘要时不声称核验全文。研究问题标为待验证假设。证据不足时说明缺口；模型或 Redis 门失败则走标记清楚的规则降级。
+
+## 9. Token 成本、延迟和降级如何考虑？
+
+原规划希望一次 Qwen 响应同时产出意图与多条路径，避免多次模型请求；记录 token、延迟和估算费用。开发调用额度已用完，公开模型保持关闭，所以目前没有可引用的公网实时成本/延迟基准。
+
+## 10. Redis 预算与公网安全门是什么？
+
+Upstash Redis EVAL 原子预留独立预算、访客日限额和全局并发，失败时 fail-closed。隔离真实 Redis 验收已通过，但未知模型结果会保留费用预留且可能占用并发名额。没有安全恢复机制前不开放 Qwen；应用预算也不是云厂商账户账单的绝对硬上限。
+
+## 11. 如何看待检索质量指标？
+
+单例里 V0 P@5=0.05、nDCG@5=0.1077；V1 为 0.80、0.8111。V0 有 4 个分支、V1 有 3 个，不能当作等条件对照、统计显著提升或 Qwen 收益。35 是论文结果行数，不是 35 个独立查询。
+
+## 12. 个人贡献和 Codex 辅助开发的边界？
+
+我定义产品问题、范围、证据与评测约束、数据冻结规则、发布门和验收标准，并审查实现与演示。Codex 辅助代码、测试和文档的生成及调试；我不会把协作产出的每行实现都宣称为独立手写。
+
+## 13. 下一阶段如何验证用户价值与商业化？
+
+先让目标用户完成相同探索任务，观察 Actionable Research Plan Completion 的 numerator/denominator、完成时间和主观信心，并记录失败点；用多领域案例做人工检索与证据评估。只有显示出持续任务价值后，再研究潜在付费人群和成本模型；目前没有收入或增长证据。

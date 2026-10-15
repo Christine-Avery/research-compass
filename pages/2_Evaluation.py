@@ -19,11 +19,13 @@ TRACE_JSON = ROOT / "evaluation" / "cases" / "badcase_001" / "original_trace.jso
 LABELS_CSV = Path(os.getenv("RESEARCH_COMPASS_HUMAN_LABELS_PATH", str(RUN_DIR / "human_labels.csv")))
 LABEL_FIELDS = ["review_id", "human_relevance_label", "human_evidence_eligible_label", "evidence_reason", "claim_support_label", "reviewer", "notes", "review_status"]
 HISTORY_READ_ONLY = LABELS_CSV.resolve() == (RUN_DIR / "human_labels.csv").resolve() and LABELS_CSV.exists()
+PUBLIC_READ_ONLY = os.getenv("PUBLIC_DEPLOYMENT", "false").lower() == "true"
 
 st.set_page_config(page_title="Research Compass · Evaluation", page_icon="🧭", layout="wide")
 st.title("Human Evaluation")
 st.page_link("pages/1_Intent_Studio.py", label="返回 Research Compass 首页", icon="🏠")
-st.caption("对 V0 / V1 的检索结果进行人工判断。所有标签由评审者填写，不会自动生成。")
+st.caption("展示 V0 / V1 的历史人工评测结果。" if PUBLIC_READ_ONLY else
+           "对 V0 / V1 的检索结果进行人工判断。所有标签由评审者填写，不会自动生成。")
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -65,7 +67,7 @@ def load_rows() -> list[dict[str, Any]]:
 
 
 def save_rows(rows: list[dict[str, Any]]) -> None:
-    if os.getenv("PUBLIC_DEPLOYMENT", "false").lower() == "true":
+    if PUBLIC_READ_ONLY:
         raise PermissionError("Public Evaluation is read-only")
     if HISTORY_READ_ONLY:
         raise PermissionError("Historical human_labels.csv is read-only; use targeted review")
@@ -78,7 +80,11 @@ def save_rows(rows: list[dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-review_mode = st.selectbox("评测视图", ["历史评测（只读）", "定向复核 7 条"])
+if PUBLIC_READ_ONLY:
+    st.info("公网评测仅展示已保存的历史标签与指标；匿名访客不能保存或定向复核。")
+    review_mode = "历史评测（只读）"
+else:
+    review_mode = st.selectbox("评测视图", ["历史评测（只读）", "定向复核 7 条"])
 if review_mode == "定向复核 7 条":
     from research_compass.targeted_review_ui import render
 
@@ -91,7 +97,7 @@ if review_mode == "定向复核 7 条":
     )
     st.stop()
 
-if HISTORY_READ_ONLY:
+if HISTORY_READ_ONLY and not PUBLIC_READ_ONLY:
     st.info("历史 human_labels.csv 已冻结为 V1 标注快照。请切换到“定向复核 7 条”保存修正版标签。")
 
 rows = load_rows()
@@ -134,16 +140,16 @@ ev_value = parse_yes_no(row.get("human_evidence_eligible_label"))
 ev_default = "未标注" if ev_value is None else (ev_options[1] if ev_value else ev_options[2])
 
 with st.form(f"review_form_{idx}"):
-    relevance_choice = st.radio("人工相关性（与证据准入分别判断）", rel_options, index=rel_options.index(rel_default), horizontal=True)
-    evidence_choice = st.radio("是否适合进入 Evidence Generation", ev_options, index=ev_options.index(ev_default))
-    evidence_reason = st.text_area("证据准入判断原因（请说明摘要/主题依据）", value=row.get("evidence_reason", ""), height=100)
-    reviewer = st.text_input("评审者（可选）", value=row.get("reviewer", ""))
-    notes = st.text_area("其他备注（可选）", value=row.get("notes", ""), height=70)
+    relevance_choice = st.radio("人工相关性（与证据准入分别判断）", rel_options, index=rel_options.index(rel_default), horizontal=True, disabled=PUBLIC_READ_ONLY)
+    evidence_choice = st.radio("是否适合进入 Evidence Generation", ev_options, index=ev_options.index(ev_default), disabled=PUBLIC_READ_ONLY)
+    evidence_reason = st.text_area("证据准入判断原因（请说明摘要/主题依据）", value=row.get("evidence_reason", ""), height=100, disabled=PUBLIC_READ_ONLY)
+    reviewer = st.text_input("评审者（可选）", value=row.get("reviewer", ""), disabled=PUBLIC_READ_ONLY)
+    notes = st.text_area("其他备注（可选）", value=row.get("notes", ""), height=70, disabled=PUBLIC_READ_ONLY)
     buttons = st.columns(4)
-    save_only = buttons[0].form_submit_button("保存进度", type="primary", disabled=HISTORY_READ_ONLY)
-    previous = buttons[1].form_submit_button("保存并上一条", disabled=HISTORY_READ_ONLY)
-    following = buttons[2].form_submit_button("保存并下一条", disabled=HISTORY_READ_ONLY)
-    skip = buttons[3].form_submit_button("跳过（不保存本条）")
+    save_only = buttons[0].form_submit_button("保存进度", type="primary", disabled=HISTORY_READ_ONLY or PUBLIC_READ_ONLY)
+    previous = buttons[1].form_submit_button("保存并上一条", disabled=HISTORY_READ_ONLY or PUBLIC_READ_ONLY)
+    following = buttons[2].form_submit_button("保存并下一条", disabled=HISTORY_READ_ONLY or PUBLIC_READ_ONLY)
+    skip = buttons[3].form_submit_button("跳过（不保存本条）", disabled=PUBLIC_READ_ONLY)
 
 if save_only or previous or following:
     row["human_relevance_label"] = "" if relevance_choice == "未标注" else relevance_choice[0]

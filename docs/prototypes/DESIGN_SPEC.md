@@ -1,4 +1,4 @@
-# Research Compass · M2 Design Spec
+# Research Compass · Prototype Design Spec
 
 ## Visual system
 
@@ -19,9 +19,9 @@ The screenshots use the Golden Case’s previously recorded **real Qwen response
 
 ## Browser capture note
 
-M3 delivery note: these images are genuine browser renders, but the 1440×900 files were captured with only a 932×654 CSS-pixel browser viewport. Do not present them as full desktop-layout validation; the blank image area is not additional rendered UI.
+The three PNG files are genuine browser renders saved as 1440 × 900 pixel images. The browser's actual CSS viewport at capture was only 932 × 654, so the visible app occupies only that smaller viewport; the remaining canvas is blank. They are not full 1440 × 900 desktop screenshots and do not validate the full-width desktop layout. This limitation is disclosed rather than filled or represented as a larger browser capture.
 
-The integrated browser used for this handoff exposes a 932 × 654 CSS-pixel page viewport. The saved screenshot canvas is 1440 × 900, but the app-rendered region is limited to the browser's 932 × 654 viewport with unused canvas space to the right and below. The 1440 × 900 composition therefore still needs a final visual check in a full desktop browser; the screenshots are genuine Streamlit browser renders and are not resized mockups.
+The screenshots document the actual Streamlit page states, not a separate mockup. Page 1 and Page 2 use the saved Golden Case history. Page 3 uses the human-curated Golden Case v2 card content. None of the screenshots represents a new Qwen or OpenAlex request.
 
 ## Files
 

@@ -14,6 +14,10 @@ When I have a broad topic but do not know the right academic terms or questions,
 2. **Research Path Explorer** — show two or three distinct paths and English academic queries. Search OpenAlex only after a path is selected. Display real title, abstract, year, source link, OpenAlex ID and relevance explanation. Cache completed path searches in the session.
 3. **Evidence & Next Steps** — separate Evidence Landscape, Candidate Research Questions and Next Search. Keep paper relevance, eligibility for evidence generation, and claim-level support as distinct decisions. Cite abstract excerpts; label questions as hypotheses to verify; provide a copyable Research Plan Summary.
 
+### Golden Case v2 demonstration
+
+The opt-in demonstration is a human-curated presentation over frozen historical material. Its stable path mapping is: `uncertainty_comparison` → Card A, stability and safety; `architecture_insights` → Card C, NN structure and GP expressiveness; `hybrid_control_strategies` → Card B, online learning and GP updates. Page 3 displays only the card for the selected path. This mapping is demonstration-only; ordinary research topics use their selected live/rule-generated path and do not inherit these cards.
+
 ## Success measures
 
 **Primary product outcome — Actionable Research Plan Completion:** among evaluation participants who start the workflow, the proportion who complete a plan containing a confirmed research objective, a selected path, at least one inspected source, and a concrete next search/action. Report numerator, denominator, task protocol and sample size. No representative user study has been completed yet; this is a proposed measure, not a measured result.
@@ -38,6 +42,10 @@ When I have a broad topic but do not know the right academic terms or questions,
 - OpenAlex outage: visibly label demo snapshot/fallback; never mix demo papers with live results.
 - Too few eligible sources: state that evidence is insufficient; do not fabricate a landscape, limitation or research question.
 - Unknown Qwen timeout outcome: retain the reservation and concurrency slot conservatively.
+
+## Current delivery boundary
+
+The public Streamlit app is deployed at [research-compass-ai.streamlit.app](https://research-compass-ai.streamlit.app/) with V1 rule planning, OpenAlex retrieval, read-only Evaluation display and the opt-in historical Golden Case v2. Public Qwen remains disabled; no public live Qwen request has passed safety acceptance. The v2 cards are manually curated from reviewed historical abstracts and do not measure Qwen output quality. Full 1440 × 900 desktop screenshots and participant-based outcome measurements remain unverified.
 
 ## Roadmap
 
