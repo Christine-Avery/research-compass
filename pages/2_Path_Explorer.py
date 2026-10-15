@@ -30,6 +30,9 @@ st.caption(f"已确认目标：{intent.task or intent.theme} · {intent.domain o
            f"{intent.source_method or '无来源方法'} → {intent.target_method or '无目标方法'}")
 st.subheader("研究路径")
 st.caption("选择后才会执行检索；已检索路径会从缓存切换，不重复请求。")
+if st.session_state.get("golden_v2_next_card") and st.session_state.get("next_query_draft"):
+    st.info(f"来自 Human-curated Golden Case v2 的方向 {st.session_state.golden_v2_next_card} 查询草稿。"
+            "请在下方确认检索式并点击 OpenAlex 检索；新结果将标为 LIVE，历史 Snapshot 不会被改写。")
 
 selected = st.session_state.get("selected_path")
 path_columns = st.columns(min(3, max(1, len(branches[:3]))))
@@ -104,6 +107,7 @@ if selected:
                         st.session_state.selected_outcome = new_outcome
                         st.session_state.selected_report = new_report
                         st.session_state.pop("next_query_draft", None)
+                        st.session_state.pop("golden_v2_next_card", None)
                         st.rerun()
         st.divider()
         st.subheader(f"所选路径的论文 · {branch.title if branch else selected}")

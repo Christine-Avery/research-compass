@@ -13,9 +13,13 @@ Relevance threshold is human label ≥1. nDCG uses graded gains 0/1/3 for labels
 
 ## Evidence gate adjudication
 
-The corrected V1 gate report contains 15 V1 records: 8 system-admitted and 7 rejected. Among the 15, human evidence eligibility has 11 "yes" and 4 "no" labels; TP=8, FP=0, FN=3, TN=4. Gate Precision = 8/(8+0)=100%; Recall = 8/(8+3)=72.73%. The eligible-label denominator is 15. Irrelevant admitted evidence = 0/8. These values are the frozen adjudicated rule evaluation, not production guarantees.
+The final frozen adjudication has 15 V1 records: 8 system-admitted and 7 rejected. One NLP paper remains **pending user decision** and is excluded from final Gate denominators. In the 14 decided records, TP=8, FP=0, FN=0, TN=6; Gate Precision = 8/(8+0)=100% and irrelevant admitted evidence = 0/8. **Final Gate Recall is N/A** until the pending paper is adjudicated. These are single-case rule results, not production guarantees.
 
-The two GP control papers at `target_method` ranks 4 and 5 were reviewed by the user as relevant papers whose abstracts were not sufficient for the intended evidence-generation task. This distinguishes **paper relevance** from **abstract evidence eligibility**; their accepted exclusion is not a false rejection. The NLP paper label conflict remains open and is not changed by this report; do not reuse a disputed recall claim without consulting the frozen adjudication artifact.
+The two GP control papers at `target_method` ranks 4 and 5 were reviewed by the user as relevant papers whose abstracts were not sufficient for the intended evidence-generation task. This distinguishes **paper relevance** from **abstract evidence eligibility**; their accepted exclusion is not a false rejection. The NLP paper label conflict remains open and is not changed by this report.
+
+## Human-curated Golden Case v2 demonstration
+
+The opt-in Page 3 v2 snapshot presents three manually reviewed Research Opportunity Cards. [Its evidence audit](GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) ties each background statement to a saved OpenAlex abstract and the original Evidence Gate decision. Papers with `Retrieved` / human eligibility `no` are labeled Further Reading, including a relevant GP online-update paper and two cross-method theory papers. No historical Trace, label, correction event, or V0/V1 score is revised. **This curated presentation is not a Qwen output or an evaluation of Qwen uplift.**
 
 ## Interpretation and limitations
 

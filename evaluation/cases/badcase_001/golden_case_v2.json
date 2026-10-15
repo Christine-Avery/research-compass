@@ -1,0 +1,97 @@
+{
+  "schema_version": "golden_case_v2_human_curated_20261015",
+  "case_id": "badcase_001",
+  "label": "Human-curated Golden Case v2 Snapshot",
+  "source_retrieval": "evaluation/runs/v3_20261014/live_openalex_golden.json",
+  "source_adjudication": "evaluation/freeze/final_20261014/final_adjudication.csv",
+  "scope": "Historical OpenAlex abstracts and human-reviewed evidence eligibility; no new Qwen or OpenAlex call",
+  "cards": [
+    {
+      "key": "A",
+      "title": "稳定性与安全验证",
+      "evidence_maturity": "NN 与 GP 两侧均有摘要证据；迁移关系未验证",
+      "research_question": "如何比较 NN 控制稳定性条件与 GP 控制的概率性安全保证，并识别可以进一步检验的共同假设？",
+      "evidence_backed_background": [
+        {
+          "paper_id": "https://openalex.org/W2406620654",
+          "claim": "NN 控制相关的 NLq 理论提供若干稳定性与耗散性的充分条件。",
+          "quote": "Within NLq theory sufficient conditions for global asymptotic stability, input-output stability and dissipativity are available."
+        },
+        {
+          "paper_id": "https://openalex.org/W2298163601",
+          "claim": "一项 GP 安全学习方法在其模型误差假设下，使用 Lyapunov 函数确定高概率渐近稳定区域。",
+          "quote": "Based on regularity assumptions on the model errors in terms of a Gaussian process prior, we use an underlying Lyapunov function in order to determine a region in which an equilibrium point is asymptotically stable with high probability."
+        },
+        {
+          "paper_id": "https://openalex.org/W4295046714",
+          "claim": "一项分布式 GP 多智能体控制研究使用 Lyapunov 理论分析其所提控制律的稳定性。",
+          "quote": "analyze its stability using the Lyapunov theory."
+        }
+      ],
+      "transfer_hypothesis": "待验证：NN 控制的稳定性分析思路能否启发 GP 控制器的证明设计；现有三篇摘要没有证明可直接迁移。",
+      "evidence_gaps": [
+        "控制对象、模型误差假设与确定性/概率性保证并不相同，尚无可直接比较的统一基准。",
+        "冻结检索中没有通过 Evidence Gate 的 NN→GP 稳定性理论迁移论文。"
+      ],
+      "further_reading": [],
+      "next_action": "检索 NN 与 GP 控制的 Lyapunov 假设和安全保证，建立逐项对照表后再提出迁移试验。",
+      "english_search_query": "neural network control stability Lyapunov gaussian process safe control region of attraction comparison"
+    },
+    {
+      "key": "B",
+      "title": "在线学习与 GP 模型更新",
+      "evidence_maturity": "GP 侧有摘要证据；NN 在线学习与数据选择来源缺失",
+      "research_question": "哪些 NN 控制中的在线学习或数据选择策略值得进一步检索，并可能用于 GP 控制模型的持续更新？",
+      "evidence_backed_background": [
+        {
+          "paper_id": "https://openalex.org/W2018705428",
+          "claim": "一项 GP 机器人控制研究学习概率性的 GP 转移模型，并将模型不确定性用于规划与控制器学习。",
+          "quote": "In particular, we learn a probabilistic, non-parametric Gaussian process transition model of the system."
+        }
+      ],
+      "transfer_hypothesis": "待验证：从尚待检索的 NN 在线学习/数据选择文献中提取策略，能否改善 GP 控制模型更新的数据效率和计算代价？",
+      "evidence_gaps": [
+        "当前已准入 NN 来源摘要没有明确支持具体在线学习或数据选择机制。",
+        "直接讨论 GP 在线更新的论文未获本案例 Evidence Generation 准入；需新检索及人工复核。"
+      ],
+      "further_reading": [
+        {
+          "paper_id": "https://openalex.org/W2798274031",
+          "reason": "摘要提及信息性数据选择与闭环在线 GP 更新，但原系统状态为 Retrieved、最终人工准入为 no；仅作延伸阅读。"
+        }
+      ],
+      "next_action": "先寻找 NN 控制中的在线学习与主动数据选择来源，再与 GP 更新论文逐一比较。",
+      "english_search_query": "neural network online learning active data selection gaussian process model update adaptive control"
+    },
+    {
+      "key": "C",
+      "title": "NN 结构与 GP 表达能力",
+      "evidence_maturity": "仅有 NN 结构背景；控制场景的跨方法证据缺失",
+      "research_question": "具体 NN 架构或特征表示能否构成适用于 GP 控制模型的结构先验，并在控制任务中接受验证？",
+      "evidence_backed_background": [
+        {
+          "paper_id": "https://openalex.org/W2156562940",
+          "claim": "一篇 NN 工业控制综述讨论循环网络和前馈网络，并考察控制等应用。",
+          "quote": "Recurrent networks and feedforward networks are discussed. Application to pattern recognition, information processing, design, planning, diagnosis, and control are examined."
+        }
+      ],
+      "transfer_hypothesis": "待验证：选定一种 NN 特征表示或结构先验后，检验其能否改善 GP 控制模型在指定任务上的表达能力；目前没有本案例证据证明该效果。",
+      "evidence_gaps": [
+        "缺少已准入的 NN 结构向 GP 控制模型迁移的直接论文。",
+        "缺少针对具体控制任务的 GP 表达能力与控制效果验证。"
+      ],
+      "further_reading": [
+        {
+          "paper_id": "https://openalex.org/W1545951971",
+          "reason": "讨论 Bayesian NN 结构与 GP 回归网络，但不涉及本案例控制场景；原相关性 0、准入 no。"
+        },
+        {
+          "paper_id": "https://openalex.org/W2913473169",
+          "reason": "讨论宽 NN 的 GP 极限，但不验证控制应用；原相关性 0、准入 no。"
+        }
+      ],
+      "next_action": "先明确一种 NN 结构、GP 构造和控制基准，再检索有控制应用验证的交叉文献。",
+      "english_search_query": "neural network feature representation structured Gaussian process control dynamics architecture evaluation"
+    }
+  ]
+}

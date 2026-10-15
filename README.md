@@ -10,6 +10,8 @@ Research Compass helps novice researchers turn a broad interest into a source-gr
 2. **Research Path Explorer** — compare two or three exploration paths and English queries. Selecting a path triggers OpenAlex retrieval. Results retain OpenAlex IDs, abstracts, original links, rank and relevance explanation.
 3. **Evidence & Next Steps** — organize the retrieved abstract evidence, distinguish paper relevance from eligibility for evidence generation, provide candidate questions as hypotheses to verify, and copy a Research Plan Summary.
 
+The current source also contains an **opt-in Human-curated Golden Case v2 Snapshot** on Page 3. It presents three parallel Research Opportunity Cards about stability, GP model updates, and NN structure. Each separates admitted abstract evidence, a hypothesis to verify, evidence gaps, and papers kept only as further reading. Open the local demonstration at `http://localhost:8501/evidence?prototype_snapshot=golden&opportunities=v2`; this v2 view is **not on the public site until this patch is reviewed and deployed**. Its archived Qwen/OpenAlex inputs are historical; the cards are human-curated and do not measure Qwen quality. An edited card query goes to Page 2 and requires a separate click before live OpenAlex retrieval.
+
 ## Architecture
 
 ```text
@@ -26,6 +28,8 @@ Core retrieval uses [PyAlex](https://github.com/J535D165/pyalex) and [OpenAlex](
 ## Evaluation snapshot
 
 On one frozen Chinese Golden Case, the rule baseline V0 scored Precision@5 **0.0500** and nDCG@5 **0.1077**; optimized rules V1 scored **0.8000** and **0.8111**. V0 and V1 had different branch sets, so this is an initial case comparison, not a controlled paired experiment and not evidence of Qwen uplift. See [the evaluation case study](docs/EVALUATION_CASE_STUDY.md).
+
+The [v2 evidence audit](docs/GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) documents why the human-curated cards have different evidence coverage. The v2 demonstration does not change the frozen labels or V0/V1 scores.
 
 ## Screenshots
 
