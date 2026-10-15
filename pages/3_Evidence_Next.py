@@ -24,6 +24,36 @@ if not intent or not outcome:
     st.warning("请先确认意图并检索一条研究路径。")
     st.stop()
 
+golden_v2_mode = (outcome.mode == "snapshot"
+                  and st.session_state.get("_prototype_snapshot_loaded")
+                  and st.session_state.get("golden_v2_mode"))
+if golden_v2_mode:
+    from research_compass.golden_v2 import load_golden_v2_path
+    from research_compass.golden_v2_ui import render_golden_v2_card
+
+    path_id = st.session_state.get("selected_path_id") or selected
+    current_branch = next((item for item in branches if item.key == path_id), None)
+    cached = st.session_state.get("path_outcomes", {}).get(path_id)
+    if not current_branch or not cached:
+        st.warning("当前研究路径的历史检索结果不可用，请返回路径页重新选择。")
+        st.stop()
+    current_outcome = cached[0] if isinstance(cached, tuple) else cached
+    if current_outcome.mode != "snapshot":
+        st.warning("当前路径已进入新一轮检索，请使用实时结果的证据页。")
+        st.stop()
+    try:
+        mapping, card = load_golden_v2_path(path_id)
+    except (OSError, ValueError, KeyError, TypeError):
+        st.error("演示证据无法核验，请返回路径页。")
+        st.stop()
+    st.session_state.selected_path = path_id
+    st.session_state.selected_outcome = current_outcome
+    st.query_params["prototype_snapshot"] = "golden"
+    st.query_params["opportunities"] = "v2"
+    st.query_params["path"] = path_id
+    render_golden_v2_card(mapping, card, current_branch.title)
+    st.stop()
+
 # Local extraction is deterministic and free; refresh it from the stored papers
 # without repeating an OpenAlex or Qwen request.
 report = build_report(outcome, intent, {branch.key: branch.title} if branch else {})
@@ -36,24 +66,6 @@ if outcome.mode == "demo" or report is None:
 st.caption("当前路径：" + (branch.title if branch else selected or "未知") + " · 来源：OpenAlex 摘要；全文未核验")
 if outcome.mode == "snapshot":
     st.info("历史 Snapshot · 本页内容来自已保存的 OpenAlex 真实记录和摘要抽取；未进行实时 API 调用。")
-    golden_demo = (st.session_state.get("_prototype_snapshot_loaded")
-                   and st.session_state.get("plan_source") == "qwen_snapshot")
-    show_golden_v2 = False
-    if golden_demo:
-        show_golden_v2 = st.checkbox(
-            "展示 Human-curated Golden Case v2 Snapshot（三条人工策划研究机会）",
-            value=st.query_params.get("opportunities") == "v2",
-            key="show_golden_v2",
-        )
-    if show_golden_v2:
-        from research_compass.golden_v2 import load_golden_v2
-        from research_compass.golden_v2_ui import render_golden_v2_cards
-
-        try:
-            render_golden_v2_cards(load_golden_v2())
-        except (OSError, ValueError, KeyError, TypeError) as exc:
-            st.error(f"Golden Case v2 快照校验失败，卡片未展示：{type(exc).__name__}")
-        st.divider()
 st.subheader("Evidence Landscape")
 st.caption("先区分三层：Retrieved 是检索返回；Relevant 是主题相关；Evidence Eligible 是摘要和来源满足准入条件。事实性陈述还需逐句对应摘要。")
 for row in report.landscape:

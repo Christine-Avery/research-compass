@@ -69,10 +69,13 @@ def activate_golden_snapshot(step: int) -> None:
     st.session_state.plan_notice = "Historical snapshot loaded from saved files; no API request was made."
     st.session_state.path_outcomes = outcomes
     st.session_state._prototype_snapshot_loaded = True
+    if st.query_params.get("opportunities") == "v2":
+        st.session_state.golden_v2_mode = True
     if step >= 2:
         st.session_state.confirmed_intent = intent
         st.session_state.paths_confirmed = True
         st.session_state.selected_path = selected
+        st.session_state.selected_path_id = selected
         cached = outcomes.get(selected)
         if cached:
             st.session_state.selected_outcome, st.session_state.selected_report = cached

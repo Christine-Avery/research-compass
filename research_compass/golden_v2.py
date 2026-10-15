@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT_PATH = ROOT / "evaluation/cases/badcase_001/golden_case_v2.json"
 RETRIEVAL_PATH = ROOT / "evaluation/runs/v3_20261014/live_openalex_golden.json"
 ADJUDICATION_PATH = ROOT / "evaluation/freeze/final_20261014/final_adjudication.csv"
+PLANNING_PATH = ROOT / "evaluation/runs/v3_20261014/golden_qwen_live_20261014.json"
 FORBIDDEN_PAPER_ID = "https://openalex.org/W1888026739"  # Pending NLP adjudication.
 
 
@@ -72,6 +73,7 @@ def load_golden_v2() -> list[dict]:
             item["openalex_url"] = paper_id
             item["source_url"] = paper.get("source_url") or paper_id
             item["role"] = "NN source" if row["branch"] == "source_method" else "GP target"
+            item["retrieval_branch"] = row["branch"]
         reading_ids: set[str] = set()
         for item in reading:
             paper_id = item.get("paper_id")
@@ -86,6 +88,29 @@ def load_golden_v2() -> list[dict]:
             item["openalex_url"] = paper_id
             item["human_relevance_label"] = row["human_relevance_label"]
             item["human_evidence_eligible_label"] = row["human_evidence_eligible_label"]
+            item["retrieval_branch"] = row["branch"]
     if len(used_evidence) != 5:
         raise ValueError("Golden Case v2 evidence set differs from the reviewed content")
     return cards
+
+
+def load_golden_v2_path(path_id: str) -> tuple[dict, dict]:
+    """Resolve one reviewed opportunity by the saved, stable path ID."""
+    cards = load_golden_v2()
+    snapshot = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    saved_plan = json.loads(PLANNING_PATH.read_text(encoding="utf-8"))
+    mappings = snapshot.get("path_card_map")
+    path_ids = [branch["key"] for branch in saved_plan["branches"]]
+    if (not isinstance(mappings, list) or len(mappings) != 3
+            or [item.get("path_id") for item in mappings] != path_ids
+            or {item.get("card_id") for item in mappings} != {"A", "B", "C"}
+            or [item.get("retrieval_branch") for item in mappings]
+            != ["target_method", "source_method", "comparison_transfer"]
+            or any(not isinstance(item.get("progression"), str) or not item["progression"].strip()
+                   for item in mappings)):
+        raise ValueError("Golden Case v2 path-card mapping is invalid")
+    mapping = next((item for item in mappings if item["path_id"] == path_id), None)
+    if mapping is None:
+        raise ValueError("Selected path is not part of Golden Case v2")
+    card = next(item for item in cards if item["key"] == mapping["card_id"])
+    return mapping, card

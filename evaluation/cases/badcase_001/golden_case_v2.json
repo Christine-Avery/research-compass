@@ -5,6 +5,26 @@
   "source_retrieval": "evaluation/runs/v3_20261014/live_openalex_golden.json",
   "source_adjudication": "evaluation/freeze/final_20261014/final_adjudication.csv",
   "scope": "Historical OpenAlex abstracts and human-reviewed evidence eligibility; no new Qwen or OpenAlex call",
+  "path_card_map": [
+    {
+      "path_id": "uncertainty_comparison",
+      "card_id": "A",
+      "retrieval_branch": "target_method",
+      "progression": "从 NN 与 GP 控制的不确定性比较出发，进一步检验稳定性分析和安全保证。"
+    },
+    {
+      "path_id": "architecture_insights",
+      "card_id": "C",
+      "retrieval_branch": "source_method",
+      "progression": "从 NN 架构与训练思路出发，进一步探索 GP 模型的结构先验与表达能力。"
+    },
+    {
+      "path_id": "hybrid_control_strategies",
+      "card_id": "B",
+      "retrieval_branch": "comparison_transfer",
+      "progression": "从 NN–GP 混合控制中的自适应机制出发，进一步探索数据选择与 GP 在线模型更新。"
+    }
+  ],
   "cards": [
     {
       "key": "A",

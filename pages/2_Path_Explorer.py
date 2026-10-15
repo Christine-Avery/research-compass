@@ -31,10 +31,14 @@ st.caption(f"已确认目标：{intent.task or intent.theme} · {intent.domain o
 st.subheader("研究路径")
 st.caption("选择后才会执行检索；已检索路径会从缓存切换，不重复请求。")
 if st.session_state.get("golden_v2_next_card") and st.session_state.get("next_query_draft"):
-    st.info(f"来自 Human-curated Golden Case v2 的方向 {st.session_state.golden_v2_next_card} 查询草稿。"
-            "请在下方确认检索式并点击 OpenAlex 检索；新结果将标为 LIVE，历史 Snapshot 不会被改写。")
+    st.info("来自上一页研究方向的查询草稿。请在下方确认检索式并执行下一轮 OpenAlex 检索；"
+            "已保存的历史结果不会被改写。")
 
 selected = st.session_state.get("selected_path")
+if st.session_state.get("_prototype_snapshot_loaded") and st.session_state.get("golden_v2_mode") and selected:
+    st.query_params["prototype_snapshot"] = "golden"
+    st.query_params["opportunities"] = "v2"
+    st.query_params["path"] = selected
 path_columns = st.columns(min(3, max(1, len(branches[:3]))))
 for index, branch in enumerate(branches[:3], start=1):
     with path_columns[index - 1]:
@@ -69,6 +73,8 @@ for index, branch in enumerate(branches[:3], start=1):
                     report = build_report(outcome, intent, {branch.key: branch.title})
                 st.session_state.setdefault("path_outcomes", {})[branch.key] = (outcome, report)
             st.session_state.selected_path = branch.key
+            if st.session_state.get("_prototype_snapshot_loaded"):
+                st.session_state.selected_path_id = branch.key
             st.session_state.selected_outcome = outcome
             st.session_state.selected_report = report
             st.rerun()
@@ -142,4 +148,12 @@ if selected:
                         st.link_button("OpenAlex 记录", paper.openalex_url)
                     st.caption("仅据摘要筛选；全文尚未核验。")
         if outcome.mode != "demo":
-            st.page_link("pages/3_Evidence_Next.py", label="查看 Evidence & Next Steps →", icon="🔎")
+            if outcome.mode == "snapshot" and st.session_state.get("_prototype_snapshot_loaded"):
+                if st.button("形成下一步研究计划", type="primary"):
+                    st.session_state.golden_v2_mode = True
+                    st.session_state.selected_path_id = selected
+                    st.session_state.selected_outcome = outcome
+                    st.session_state.selected_report = report
+                    st.switch_page("pages/3_Evidence_Next.py")
+            else:
+                st.page_link("pages/3_Evidence_Next.py", label="查看 Evidence & Next Steps →", icon="🔎")

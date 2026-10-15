@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 from streamlit.testing.v1 import AppTest
 
-from research_compass.golden_v2 import SNAPSHOT_PATH, load_golden_v2
+from research_compass.golden_v2 import SNAPSHOT_PATH, load_golden_v2, load_golden_v2_path
 from research_compass.prototype_snapshot import load_golden_snapshot
 from research_compass.retrieval import QueryRecord, SearchOutcome
 
@@ -73,7 +73,16 @@ def test_frozen_trace_labels_and_adjudication_content_hashes():
     )
 
 
-def test_v2_cards_are_opt_in_and_query_uses_existing_live_search(monkeypatch):
+def test_v2_path_ids_map_to_reviewed_cards():
+    expected = {"uncertainty_comparison": "A", "architecture_insights": "C",
+                "hybrid_control_strategies": "B"}
+    for path_id, card_id in expected.items():
+        mapping, card = load_golden_v2_path(path_id)
+        assert mapping["card_id"] == card_id == card["key"]
+        assert mapping["progression"]
+
+
+def test_v2_single_card_path_switch_and_query_uses_existing_live_search(monkeypatch):
     import research_compass.retrieval as retrieval
     import research_compass.qwen_planning as qwen
 
@@ -95,26 +104,33 @@ def test_v2_cards_are_opt_in_and_query_uses_existing_live_search(monkeypatch):
     app.session_state.confirmed_intent = intent
     app.session_state.draft_paths = branches
     app.session_state.selected_path = selected
+    app.session_state.selected_path_id = selected
     app.session_state.selected_outcome = outcome
     app.session_state.selected_report = report
     app.session_state.path_outcomes = outcomes
+    app.session_state._prototype_snapshot_loaded = True
+    app.session_state.golden_v2_mode = True
     app.switch_page("pages/3_Evidence_Next.py").run()
     assert not app.exception
-    assert not any("Research Opportunity Cards" in item.value for item in app.subheader)
-    assert not app.checkbox  # An unrelated snapshot cannot expose this Golden Case.
+    assert any("研究方向 · 稳定性与安全验证" in item.value for item in app.markdown)
+    assert sum("研究方向 · " in item.value for item in app.markdown) == 1
     assert searches == []
 
-    app.session_state._prototype_snapshot_loaded = True
-    app.session_state.plan_source = "qwen_snapshot"
-    app.run()
-    assert len(app.checkbox) == 1
-    app.checkbox[0].set_value(True).run()
-    assert not app.exception
-    assert any("Research Opportunity Cards" in item.value for item in app.subheader)
-    assert len([field for field in app.text_input if field.label == "Editable English Search Query"]) == 3
+    for next_index, expected_title in [(1, "NN 结构与 GP 表达能力"), (2, "在线学习与 GP 模型更新")]:
+        app.switch_page("pages/2_Path_Explorer.py").run()
+        next(button for button in app.button if button.key == f"choose_{next_index + 1}").click().run()
+        app.switch_page("pages/2_Path_Explorer.py").run()
+        assert app.session_state.selected_path_id == branches[next_index].key
+        next(button for button in app.button if button.label == "形成下一步研究计划").click().run()
+        app.switch_page("pages/3_Evidence_Next.py").run()
+        assert not app.exception
+        assert any(f"研究方向 · {expected_title}" in item.value for item in app.markdown)
+        assert sum("研究方向 · " in item.value for item in app.markdown) == 1
+        assert searches == []
+
     query = "neural network online learning gaussian process model update control"
-    next(field for field in app.text_input if field.key == "golden_v2_query_B").set_value(query).run()
-    next(button for button in app.button if button.key == "golden_v2_search_B").click().run()
+    next(field for field in app.text_input if field.key == "golden_v2_query_hybrid_control_strategies").set_value(query).run()
+    next(button for button in app.button if button.label == "继续检索").click().run()
     assert not app.exception
     assert app.session_state.next_query_draft == query
     assert app.session_state.golden_v2_next_card == "B"
@@ -126,3 +142,6 @@ def test_v2_cards_are_opt_in_and_query_uses_existing_live_search(monkeypatch):
     assert searches == [query]
     assert app.session_state.selected_outcome.mode == "live"
     assert app.session_state.get("golden_v2_next_card") is None
+    app.switch_page("pages/3_Evidence_Next.py").run()
+    assert not app.exception
+    assert not any("研究方向 · " in item.value for item in app.markdown)

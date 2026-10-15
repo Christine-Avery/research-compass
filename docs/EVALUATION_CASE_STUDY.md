@@ -19,7 +19,7 @@ The two GP control papers at `target_method` ranks 4 and 5 were reviewed by the 
 
 ## Human-curated Golden Case v2 demonstration
 
-The opt-in Page 3 v2 snapshot presents three manually reviewed Research Opportunity Cards. [Its evidence audit](GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) ties each background statement to a saved OpenAlex abstract and the original Evidence Gate decision. Papers with `Retrieved` / human eligibility `no` are labeled Further Reading, including a relevant GP online-update paper and two cross-method theory papers. No historical Trace, label, correction event, or V0/V1 score is revised. **This curated presentation is not a Qwen output or an evaluation of Qwen uplift.**
+The opt-in v2 demonstration maps three historical Page 2 paths to three manually reviewed Research Opportunity Cards; Page 3 shows only the selected path's card. [Its evidence audit](GOLDEN_CASE_V2_EVIDENCE_AUDIT.md) ties each background statement to a saved OpenAlex abstract and the original Evidence Gate decision. Papers from another historical branch are marked as cross-path supplements. Papers with `Retrieved` / human eligibility `no` are labeled Further Reading, including a relevant GP online-update paper and two cross-method theory papers. No historical Trace, label, correction event, or V0/V1 score is revised. **This curated presentation is not a Qwen output or an evaluation of Qwen uplift.**
 
 ## Interpretation and limitations
 
