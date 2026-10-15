@@ -67,7 +67,7 @@ snapshot_clicked = st.button("载入已验证 Golden Case（历史 Snapshot · �
 
 if snapshot_clicked:
     intent, branches, metadata, outcomes = load_golden_snapshot()
-    for key in ("selected_path", "selected_outcome", "selected_report", "confirmed_intent", "next_query_draft"):
+    for key in ("selected_path", "selected_path_id", "selected_outcome", "selected_report", "confirmed_intent", "next_query_draft"):
         st.session_state.pop(key, None)
     st.session_state.interest = intent.original_interest
     st.session_state.draft_intent = intent
@@ -75,6 +75,10 @@ if snapshot_clicked:
     st.session_state.plan_source = "qwen_snapshot"
     st.session_state.plan_meta = metadata
     st.session_state.path_outcomes = outcomes
+    # The explicit saved-snapshot action opts into the curated v2 demo flow.
+    # Ordinary planning never sets these flags.
+    st.session_state._prototype_snapshot_loaded = True
+    st.session_state.golden_v2_mode = True
     st.session_state.plan_notice = "Historical snapshot: saved Qwen planning and OpenAlex V1 records. No API call was made."
     st.rerun()
 
@@ -83,7 +87,8 @@ if submitted:
         st.error("请先输入研究兴趣。")
     else:
         for key in ("selected_path", "selected_outcome", "selected_report", "path_outcomes", "confirmed_intent",
-                    "paths_confirmed", "clarification_seen", "plan_meta", "next_query_draft"):
+                    "paths_confirmed", "clarification_seen", "plan_meta", "next_query_draft",
+                    "_prototype_snapshot_loaded", "golden_v2_mode", "selected_path_id"):
             st.session_state.pop(key, None)
         st.session_state.interest = interest.strip()
         st.session_state.plan_notice = ""
@@ -149,7 +154,8 @@ if intent:
         if answer_submitted or skipped:
             st.session_state.clarification_seen = True
             if answer_submitted and answer.strip():
-                for key in ("selected_path", "selected_outcome", "selected_report", "path_outcomes", "confirmed_intent"):
+                for key in ("selected_path", "selected_path_id", "selected_outcome", "selected_report", "path_outcomes", "confirmed_intent",
+                            "_prototype_snapshot_loaded", "golden_v2_mode"):
                     st.session_state.pop(key, None)
                 st.session_state.draft_intent = replace(intent, domain=intent.domain or answer.strip(),
                     relationship=intent.relationship or (answer.strip() if intent.source_method and intent.target_method else ""))
@@ -174,7 +180,8 @@ if intent:
                     intent.relationship, intent.constraints)
         changed = values != original
         if changed:
-            for key in ("selected_path", "selected_outcome", "selected_report", "path_outcomes", "confirmed_intent", "next_query_draft"):
+            for key in ("selected_path", "selected_path_id", "selected_outcome", "selected_report", "path_outcomes", "confirmed_intent", "next_query_draft",
+                        "_prototype_snapshot_loaded", "golden_v2_mode"):
                 st.session_state.pop(key, None)
             revised = replace(intent, domain=values[0], theme=values[0] or intent.theme,
                 source_method=values[1], target_method=values[2], task=values[3], relationship=values[4],

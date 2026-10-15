@@ -36,6 +36,48 @@ def test_ordinary_rule_query_reaches_path_cards_without_forced_question():
     assert app.session_state.confirmed_intent.domain == "Control Theory / Control Systems"
 
 
+@pytest.mark.parametrize(("path_number", "expected_path_id", "expected_card_id"), [
+    (1, "uncertainty_comparison", "A"),
+    (2, "architecture_insights", "C"),
+    (3, "hybrid_control_strategies", "B"),
+])
+def test_page1_golden_snapshot_action_enters_single_card_v2_without_network(path_number, expected_path_id, expected_card_id, monkeypatch):
+    """The explicit saved-snapshot button carries v2 state through normal navigation."""
+    import research_compass.qwen_planning as qwen
+    import research_compass.retrieval as retrieval
+    from research_compass.golden_v2 import load_golden_v2_path
+
+    monkeypatch.setattr(qwen, "plan_with_qwen", lambda *a, **k: pytest.fail("No Qwen call allowed"))
+    monkeypatch.setattr(retrieval, "search_papers", lambda *a, **k: pytest.fail("No OpenAlex call allowed"))
+    app = _app()
+    next(button for button in app.button if "Golden Case" in button.label).click().run()
+    assert not app.exception
+    assert app.session_state._prototype_snapshot_loaded is True
+    assert app.session_state.golden_v2_mode is True
+
+    # The final Page 1 button is the explicit intent confirmation.
+    app.button[-1].click().run()
+    assert not app.exception
+    app.switch_page("pages/2_Path_Explorer.py").run()
+    next(button for button in app.button if button.key == f"choose_{path_number}").click().run()
+    app.switch_page("pages/2_Path_Explorer.py").run()
+    assert not app.exception
+    app.button[-1].click().run()  # Form the next-step plan for that selected path.
+    assert not app.exception
+    app.switch_page("pages/3_Evidence_Next.py").run()
+    assert not app.exception
+
+    assert app.session_state.selected_path_id == expected_path_id
+    mapping, card = load_golden_v2_path(app.session_state.selected_path_id)
+    assert mapping["card_id"] == expected_card_id
+    assert card["key"] == expected_card_id
+    heading = f"### 研究方向 · {card['title']}"
+    assert sum(heading in item.value for item in app.markdown) == 1
+    assert app.session_state.selected_path_id == mapping["path_id"]
+    assert app.session_state.selected_outcome.mode == "snapshot"
+
+
+
 def test_key_ambiguity_asks_at_most_once_and_can_skip():
     app = _app()
     app.text_area[0].set_value("我想研究一种新的机器学习方法")
@@ -159,6 +201,7 @@ def test_no_eligible_evidence_has_no_claims_or_questions():
     assert not app.exception
     assert report.current_work == report.explicit_limitations == report.candidate_questions == []
     assert any("没有足够合格证据" in item.value for item in app.info)
+    assert not any("研究方向 ·" in item.value for item in app.markdown)
     assert any("Research Plan Summary" in item.value for item in app.subheader)
 
 
@@ -183,11 +226,15 @@ def test_editing_intent_invalidates_cached_search_and_updates_query():
     previous = app.session_state.draft_paths[0].query
     app.session_state.selected_outcome = object()
     app.session_state.path_outcomes = {"old": object()}
+    app.session_state._prototype_snapshot_loaded = True
+    app.session_state.golden_v2_mode = True
     next(field for field in app.text_input if field.label == "研究领域").set_value("Medical Imaging")
     _button(app, "保存修改并更新路径").click().run()
     assert not app.exception
     assert app.session_state.get("selected_outcome") is None
     assert app.session_state.get("path_outcomes") is None
+    assert not app.session_state.get("_prototype_snapshot_loaded", False)
+    assert not app.session_state.get("golden_v2_mode", False)
     assert app.session_state.draft_paths[0].query != previous
     assert "Medical Imaging" in app.session_state.draft_paths[0].query
 
